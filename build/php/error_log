@@ -1,0 +1,156 @@
+[06-Apr-2021 13:47:37 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 110
+[06-Apr-2021 13:48:00 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:48:00 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:49:08 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 110
+[06-Apr-2021 13:50:20 UTC] PHP Warning:  include_once(/home/u110727410/domains/embr8.com/public_html/universe/build/phpdbcon.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 3
+[06-Apr-2021 13:50:20 UTC] PHP Warning:  include_once(): Failed opening '/home/u110727410/domains/embr8.com/public_html/universe/build/phpdbcon.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 3
+[06-Apr-2021 13:50:20 UTC] PHP Notice:  Undefined variable: db_con in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 32
+[06-Apr-2021 13:50:20 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/newproject_ajax.php on line 32
+[06-Apr-2021 13:55:47 UTC] PHP Warning:  require_once(vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:55:47 UTC] PHP Fatal error:  require_once(): Failed opening required 'vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:56:53 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:56:53 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:56:53 UTC] PHP Fatal error:  require(): Failed opening required '/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:57:48 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:57:48 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php): failed to open stream: Permission denied in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 13:57:48 UTC] PHP Fatal error:  require(): Failed opening required '/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/autoload.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php on line 3
+[06-Apr-2021 14:05:53 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:05:53 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:05:53 UTC] PHP Fatal error:  require(): Failed opening required '/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:05:56 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:05:56 UTC] PHP Warning:  require(/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:05:56 UTC] PHP Fatal error:  require(): Failed opening required '/home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/../markbaker/matrix/classes/src/Functions/adjoint.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/composer/autoload_real.php on line 71
+[06-Apr-2021 14:12:00 UTC] PHP Fatal error:  Uncaught Error: Class 'PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner' not found in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php:67
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php(72): PhpOffice\PhpSpreadsheet\Reader\Xlsx->__construct()
+#1 /home/u110727410/domains/embr8.com/public_html/universe/build/php/load_projectclasses.php(9): PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx')
+#2 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php on line 67
+[24-May-2021 11:19:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/u110727410/domains/embr8.com/public_html/universe/build/php/dologin.php:27
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/logincon.php(15): USER->doLogin('admin', '123456')
+#1 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/dologin.php on line 27
+[25-May-2021 01:01:10 UTC] PHP Warning:  include_once(/home/u110727410/domains/embr8.com/public_html/universe/build/php\dbcon.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 4
+[25-May-2021 01:01:10 UTC] PHP Warning:  include_once(): Failed opening '/home/u110727410/domains/embr8.com/public_html/universe/build/php\dbcon.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 4
+[25-May-2021 01:01:10 UTC] PHP Notice:  Undefined variable: db_con in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 50
+[25-May-2021 01:01:10 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 50
+[25-May-2021 01:01:28 UTC] PHP Warning:  include_once(/home/u110727410/domains/embr8.com/public_html/universe/build/php\dbcon.php): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 4
+[25-May-2021 01:01:28 UTC] PHP Warning:  include_once(): Failed opening '/home/u110727410/domains/embr8.com/public_html/universe/build/php\dbcon.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 4
+[25-May-2021 01:01:28 UTC] PHP Notice:  Undefined variable: db_con in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 50
+[25-May-2021 01:01:28 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php:50
+Stack trace:
+#0 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/ajax_functions.php on line 50
+[25-May-2021 05:47:22 UTC] PHP Warning:  move_uploaded_file(uploads/FINAL_DAW.xlsx): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php on line 25
+[25-May-2021 05:47:22 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpF69O1f' to 'uploads/FINAL_DAW.xlsx' in /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php on line 25
+[25-May-2021 05:47:22 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: File "uploads/FINAL_DAW.xlsx" does not exist. in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php:135
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php(320): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('uploads/FINAL_D...')
+#1 /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php(32): PhpOffice\PhpSpreadsheet\Reader\Xlsx->load('uploads/FINAL_D...')
+#2 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php on line 135
+[25-May-2021 05:48:00 UTC] PHP Warning:  move_uploaded_file(uploads/FINAL_DAW.xlsx): failed to open stream: No such file or directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php on line 25
+[25-May-2021 05:48:00 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpOjBcxH' to 'uploads/FINAL_DAW.xlsx' in /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php on line 25
+[25-May-2021 05:48:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: File "uploads/FINAL_DAW.xlsx" does not exist. in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php:135
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php(320): PhpOffice\PhpSpreadsheet\Shared\File::assertFile('uploads/FINAL_D...')
+#1 /home/u110727410/domains/embr8.com/public_html/universe/build/php/import_ajax.php(32): PhpOffice\PhpSpreadsheet\Reader\Xlsx->load('uploads/FINAL_D...')
+#2 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Shared/File.php on line 135
+[23-Jun-2021 07:17:05 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:17:22 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:17:28 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:17:43 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:17:43 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:17:43 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:17:43 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:17:49 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:17:49 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:02 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:02 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:03 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:03 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:03 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:03 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:06 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:06 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:10 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:10 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:10 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:18:10 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:18:57 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:19:36 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:36 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:40 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  unlink(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 83
+[23-Jun-2021 07:19:44 UTC] PHP Warning:  rmdir(uploads/permits/wwdp/c78239d6dd432a3776fe273a8bad5dde): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 84
+[23-Jun-2021 07:20:17 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:20:17 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:20:26 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[23-Jun-2021 07:20:29 UTC] PHP Warning:  unlink(uploads/permits/dp/c78239d6dd432a3776fe273a8bad5dde/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_update.php on line 187
+[19-Jul-2021 07:40:13 UTC] PHP Warning:  mkdir(): File exists in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_add.php on line 110
+[05-Aug-2021 08:07:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in /home/u110727410/domains/embr8.com/public_html/universe/build/php/notice.php:112
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/notice.php(112): PDOStatement->execute()
+#1 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/notice.php on line 112
+[21-Apr-2022 03:27:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 25
+[21-Apr-2022 03:27:57 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 03:27:57 UTC] PHP Warning:  unlink(uploads/monitoring/air//): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 03:27:57 UTC] PHP Warning:  rmdir(uploads/monitoring/air/): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 34
+[21-Apr-2022 03:45:06 UTC] PHP Warning:  Undefined variable $sql in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php on line 19
+[21-Apr-2022 03:45:06 UTC] PHP Fatal error:  Uncaught ValueError: PDO::prepare(): Argument #1 ($query) cannot be empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php:19
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php(19): PDO->prepare()
+#1 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php on line 19
+[21-Apr-2022 03:45:09 UTC] PHP Warning:  Undefined variable $sql in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php on line 19
+[21-Apr-2022 03:45:09 UTC] PHP Fatal error:  Uncaught ValueError: PDO::prepare(): Argument #1 ($query) cannot be empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php:19
+Stack trace:
+#0 /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php(19): PDO->prepare()
+#1 {main}
+  thrown in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazupdate.php on line 19
+[21-Apr-2022 04:02:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazfunctions.php on line 25
+[21-Apr-2022 04:02:09 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazfunctions.php on line 33
+[21-Apr-2022 04:02:09 UTC] PHP Warning:  unlink(uploads/monitoring/toxic//): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazfunctions.php on line 33
+[21-Apr-2022 04:02:09 UTC] PHP Warning:  rmdir(uploads/monitoring/toxic/): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/hazfunctions.php on line 34
+[21-Apr-2022 05:31:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 25
+[21-Apr-2022 05:31:18 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:31:18 UTC] PHP Warning:  unlink(uploads/monitoring/water//): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:31:18 UTC] PHP Warning:  rmdir(uploads/monitoring/water/): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 34
+[21-Apr-2022 05:36:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 25
+[21-Apr-2022 05:36:36 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:36:36 UTC] PHP Warning:  unlink(uploads/monitoring/air//): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:36:36 UTC] PHP Warning:  rmdir(uploads/monitoring/air/): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 34
+[21-Apr-2022 05:40:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 25
+[21-Apr-2022 05:40:23 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:40:23 UTC] PHP Warning:  unlink(uploads/monitoring/water//): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 33
+[21-Apr-2022 05:40:23 UTC] PHP Warning:  rmdir(uploads/monitoring/water/): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/awsfunctions.php on line 34
+[24-May-2022 01:43:37 UTC] PHP Warning:  unlink(uploads/permits/hwgid/a945371071cb91494757bc3286f55118/): Is a directory in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 163
+[24-May-2022 01:43:37 UTC] PHP Warning:  rmdir(uploads/permits/hwgid/a945371071cb91494757bc3286f55118): Directory not empty in /home/u110727410/domains/embr8.com/public_html/universe/build/php/permits_delete.php on line 164
