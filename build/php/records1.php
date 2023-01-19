@@ -18,10 +18,7 @@
         $return_val = $record->fetchData($project_id);
         $nob = $project_specific_subtype_s[$return_val['ProjectSpecificSubtype']];
         $return_val['nob'] = $nob;
-		// var_dump($data['ProjectSpecificSubtype']);
-		// var_dump($project_specific_subtype_s);
         echo json_encode($return_val);
-        // var_dump($return_val);
     }
 
 ?>

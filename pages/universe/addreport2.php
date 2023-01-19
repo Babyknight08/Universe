@@ -220,31 +220,31 @@
             <div class="row d-flex justify-content-around p-3">
             <div class="">				
               <input type="hidden" name="Air" value ="false">
-              <input type="checkbox" name="Air" id="Air" value ="false">
+              <input type="checkbox" name="Air" id="Air" value ="true">
 							<label for="Air" class="control-label"><strong>RA8749(AIR)</strong></label>
 						</div>
                     
             <div class="">				
               <input type="hidden" name="Water" value ="false">
-              <input type="checkbox" name="Water" id="Water" value ="false">
+              <input type="checkbox" name="Water" id="Water" value ="true">
 							<label for="Water" class="control-label"><strong>RA9275(WATER)</strong></label>
 						</div>
 
             <div class="">				
               <input type="hidden" name="EIA" value ="false">
-              <input type="checkbox" name="EIA" id="EIA" value ="false">
+              <input type="checkbox" name="EIA" id="EIA" value ="true">
 							<label for="EIA" class="control-label"><strong>PD1586(EIA)</strong></label>
 						</div>
 
             <div class="">				
               <input type="hidden" name="CHWMS" value ="false">
-              <input type="checkbox" name="CHWMS" id="CHWMS" value ="false">
+              <input type="checkbox" name="CHWMS" id="CHWMS" value ="true">
 							<label for="CHWMS" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
 						</div>
 
             <div class="">				
               <input type="hidden" name="SolidWaste" value ="false">
-              <input type="checkbox" name="SolidWaste" id="SolidWaste" value ="false">
+              <input type="checkbox" name="SolidWaste" id="SolidWaste" value ="true">
 							<label for="SolidWaste" class="control-label"><strong>RA9003(SOLID WASTE)</strong></label>
 						</div>
             </div>       
@@ -341,13 +341,12 @@
           </div>
 
           <div class="row">
-            <div class="form-group">
-                <div>
-                    <input type="checkbox">
-                    <label for="dp-check">Verify accuracy of information submitted by the establishment pertaining to new permit
+          <div class="">
+              <input type="hidden" value="false" name="VerifyAccuracy">
+              <input type="checkbox" id="verify" value="true" name="VerifyAccuracy"/>
+              <label for="verify">Verify accuracy of information submitted by the establishment pertaining to new permit
                     applications, renewals, or modifications.</label>
-                </div>                              
-              </div>
+            </div>
           </div>
 
 
@@ -368,9 +367,9 @@
               <label for="" style="width:20rem">PMPIN Hazardous </label>
               </div>
               <div>
-              <input type="radio" name="PMPINHaz" value="NEW" class="mr-5">
-              <input type="radio" name="PMPINHaz" value="RENEW" class="mr-5">
-              <input type="radio" name="PMPINHaz" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousNew" value="NEW" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousRenew" value="RENEW" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousNA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -378,12 +377,12 @@
           <div class="row justify-content-around">
             <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
              
-              <label for="" style="width:20rem">HAZARDOUS WASTE ID REGISTRATION </label>
+              <label for="" style="width:20rem">Hazardous Waste ID Registration </label>
               </div>
               <div>
-              <input type="radio" name="hazid" value="NEW" class="mr-5">
-              <input type="radio" name="hazid" value="RENEW" class="mr-5">
-              <input type="radio" name="hazid" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationNew" value="NEW" class="mr-5">
+              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationRenew" value="RENEW" class="mr-5">
+              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationNA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -392,12 +391,25 @@
           <div class="row justify-content-around">
             <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
              
-              <label for="" style="width:20rem">HAZARDOUS WASTE TRANSPORTER REGISTRATION </label>
+              <label for="" style="width:20rem">Hazardous Waste Transporter Registration </label>
               </div>
               <div>
-              <input type="radio" name="haztrans" value="NEW" class="mr-5">
-              <input type="radio" name="haztrans" value="RENEW" class="mr-5">
-              <input type="radio" name="haztrans" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="HWTRegistration" id = "HWTRegistrationNew" value="NEW" class="mr-5">
+              <input type="radio" name="HWTRegistration" id = "HWTRegistrationRenew" value="RENEW" class="mr-5">
+              <input type="radio" name="HWTRegistration" id = "HWTRegistrationNA" value="NOT APPLICABLE" class="mr-5">
+              </div>
+          </div>
+
+          
+          <div class="row justify-content-around">
+            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
+             
+              <label for="" style="width:20rem">HAZARDOUS WASTE TSD REGISTRATION </label>
+              </div>
+              <div>
+              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationNew" value="NEW" class="mr-5">
+              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationRenew"value="RENEW" class="mr-5">
+              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationNA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -407,9 +419,9 @@
               <label for="" style="width:20rem"> Permit to Operate Air Pollution Control Installation </label>
               </div>
               <div>
-              <input type="radio" name="haztrans" value="NEW" class="mr-5">
-              <input type="radio" name="haztrans" value="RENEW" class="mr-5">
-              <input type="radio" name="haztrans" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="PTOAPCI" id="PTOAPCINew" value="NEW" class="mr-5">
+              <input type="radio" name="PTOAPCI" id="PTOAPCIRenew" value="RENEW" class="mr-5">
+              <input type="radio" name="PTOAPCI" id="PTOAPCINA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -419,15 +431,16 @@
               <label for="" style="width:20rem"> Discharge Permit </label>
               </div>
               <div>
-              <input type="radio" name="haztrans" value="NEW" class="mr-5">
-              <input type="radio" name="haztrans" value="RENEW" class="mr-5">
-              <input type="radio" name="haztrans" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="DischargePermit" id="DischargePermitNew" value="NEW" class="mr-5">
+              <input type="radio" name="DischargePermit" id="DischargePermitRenew" value="RENEW" class="mr-5">
+              <input type="radio" name="DischargePermit" id="DischargePermitNA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
           <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
+            <input type="checkbox" id="otherspv" name="otherspv" onclick="others()" value="true">
             <label for="">Others: &nbsp; </label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  ></textarea>
+            <input type="text" class="form-control" style="display:none" id="otherspv_text" name="otherspv_text">
           </div>
           <div class="row">
               <div class="form-group">
@@ -487,7 +500,7 @@
             <div class="form-group">
                   <div class="icheck-success">
                       <input type="checkbox" id="others1">
-                      <label for="others1">Others</label>
+                      <!-- <label for="others1">Others</label> -->
                       <input type="text" class="form-control">
                   </div>                              
               </div>
@@ -680,8 +693,8 @@
             </div>
 
             <div class="">
-              <input type="hidden" value="false" name="VerifyAccuracy">
-               <input type="checkbox" checked id="verify" value="true" name="VerifyAccuracy"/>
+              <input type="hidden" value="false" name="VerifyAccuracy1">
+               <input type="checkbox" checked id="verify1" value="true" name="VerifyAccuracy1"/>
               <label for="verify">Verify accuracy of information submitted by the establishment pertaining to new permit
                     applications, renewals, or modifications.</label>
             </div>
@@ -704,9 +717,9 @@
               <label for="" style="width:20rem">PMPIN Hazardous </label>
               </div>
               <div>
-              <input type="radio" name="PMPIN_Hazardous" value="NEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous" value="RENEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1New" value="NEW" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1Renew" value="RENEW" class="mr-5">
+              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1NA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -717,9 +730,9 @@
               <label for="" style="width:20rem">Hazardous Waste ID Registration </label>
               </div>
               <div>
-              <input type="radio" name="HWIDRegistration" value="NEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration" value="RENEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="HWIDRegistration1" value="NEW" class="mr-5">
+              <input type="radio" name="HWIDRegistration1" value="RENEW" class="mr-5">
+              <input type="radio" name="HWIDRegistration1" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -731,9 +744,9 @@
               <label for="" style="width:20rem">Hazardous Waste Transporter Registration </label>
               </div>
               <div>
-              <input type="radio" name="HWTRegistration" value="NEW" class="mr-5">
-              <input type="radio" name="HWTRegistration" value="RENEW" class="mr-5">
-              <input type="radio" name="HWTRegistration" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="HWTRegistration1" value="NEW" class="mr-5">
+              <input type="radio" name="HWTRegistration1" value="RENEW" class="mr-5">
+              <input type="radio" name="HWTRegistration1" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
    
@@ -743,9 +756,9 @@
               <label for="" style="width:20rem">Hazardous Waste TSD Registration </label>
               </div>
               <div>
-              <input type="radio" name="HWTSDRegistration" value="NEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration" value="RENEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="HWTSDRegistration1" value="NEW" class="mr-5">
+              <input type="radio" name="HWTSDRegistration1" value="RENEW" class="mr-5">
+              <input type="radio" name="HWTSDRegistration1" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
           <div class="row justify-content-around">
@@ -754,9 +767,9 @@
               <label for="" style="width:20rem"> Permit to Operate Air Pollution Control Installation </label>
               </div>
               <div>
-              <input type="radio" name="PTOAPCI" value="NEW" class="mr-5">
-              <input type="radio" name="PTOAPCI" value="RENEW" class="mr-5">
-              <input type="radio" name="PTOAPCI" value="NOT APPLICABLE" class="mr-5">
+              <input type="radio" name="PTOAPCI1" id="PTOAPCI1New" value="NEW" class="mr-5">
+              <input type="radio" name="PTOAPCI1" id="PTOAPCI1Renew" value="RENEW" class="mr-5">
+              <input type="radio" name="PTOAPCI1" id="PTOAPCI1NA" value="NOT APPLICABLE" class="mr-5">
               </div>
           </div>
 
@@ -766,56 +779,63 @@
                 <label for="" style="width:20rem"> Discharge Permit </label>
                 </div>
                 <div class="">
-                <input type="radio" name="DischargePermit" value="NEW" class="mr-5">
-                <input type="radio" name="DischargePermit" value="RENEW" class="mr-5">
-                <input type="radio" name="DischargePermit" value="NOT APPLICABLE" class="mr-5">
+                <input type="radio" name="DischargePermit1" id="DischargePermit1New" value="NEW" class="mr-5">
+                <input type="radio" name="DischargePermit1" id="DischargePermit1Renew" value="RENEW" class="mr-5">
+                <input type="radio" name="DischargePermit1" id="DischargePermit1NA" value="NOT APPLICABLE" class="mr-5">
                 </div>
             </div>
 
           <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
-            <input type="checkbox" id="otherspv" onclick="others()">
+            <input type="hidden" name="otherspv1" value="false">
+            <input type="checkbox" id="otherspv1" name="otherspv1" onclick="others()" value="true">
             <label for="">Others: &nbsp;</label><br>
-            <input type="text" class="form-control" style="display:none" id="otherspv_text">
+            <input type="text" class="form-control" style="display:none" id="otherspv1_text" name="otherspv1_text">
           </div><br>
 
           <div class="row">
               <div class="form-group">
-                        <input type="checkbox" id="determinecompliance">
+                        <input type="hidden" name = "determinecompliance1" value = "false">
+                        <input type="checkbox" name = "determinecompliance1" value = "true">
                         <label for="determinecompliance">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>                   
-                </div>
+              </div>
             </div>
 
           <div class="row">
             <div class="form-group">
-                      <input type="checkbox" id="investigatecomplaints">
+                      <input type="hidden" name = "investigatecomplaints1" value = "false">
+                      <input type="checkbox" name = "investigatecomplaints1" value = "true">
                       <label for="investigatecomplaints">Investigate community complaints</label>                          
             </div>
           </div>
 
           <div class="row">
             <div class="form-group">
-                      <input type="checkbox" id="statuscommitments">
+                      <input type="hidden" name = "statuscommitments1" value = "false">
+                      <input type="checkbox" name = "statuscommitments1" value = "true">
                       <label for="statuscommitments">Check status of commitment(s)</label>                           
             </div>
           </div>
 
           <div class="row ml-4">
             <div class="form-group">
-                      <input type="checkbox" id="ewatchprogram">
+                     <input type="hidden" name = "ewatchprogram1" value = "false">
+                      <input type="checkbox" name = "ewatchprogram1" value = "true">
                       <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
             </div>
           </div>
           
           <div class="row ml-4">
             <div class="form-group">
-                      <input type="checkbox" id="PEPP">
+                     <input type="hidden" name = "PEPP1" value = "false">
+                      <input type="checkbox" name = "PEPP1" value = "true">
                       <label for="PEPP">Philippine Environmental Partnership Program (PEPP)</label>                       
             </div>
           </div>
           
           <div class="row ml-4">
             <div class="form-group">
-                      <input type="checkbox" id="pab">
+                      <input type="hidden" name = "pab1" value = "false">
+                      <input type="checkbox" name = "pab1" value = "true">
                       <label for="pab">Pollution Adjudication Board (PAB)</label>                     
               </div>
           </div>

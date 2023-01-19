@@ -1,7 +1,7 @@
 <?php
-include_once 'Database.php';
-include_once 'Records.php';
-include_once 'arrays.php';
+include 'Database.php';
+include 'Records.php';
+include 'arrays.php';
 
 $database = new Databases();
 $db = $database->getConnection();
@@ -21,6 +21,11 @@ if(!empty($_POST['action']) && $_POST['action'] == 'addRecord') {
 if(!empty($_POST['action']) && $_POST['action'] == 'getRecord') {
 	$record->id = $_POST["id"];
 	$record->getRecord();
+}
+
+if(!empty($_POST['action']) && $_POST['action'] == 'pdfRecord') {
+	$record->id = $_POST["id"];
+	$record->pdfRecord();
 }
 
 if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
@@ -43,7 +48,13 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->yearestablished = $_POST["YearEstablished"];
 	$record->mhead = $_POST["MHead"];
 	$record->pcoaccreditation = $_POST["PCOAccreditation"];
-	// $record->pco = $_POST["PCO"];
+	$record->VerifyAccuracy = $_POST["VerifyAccuracy"];
+	$record->PMPIN_Hazardous = $_POST["PMPIN_Hazardous"];
+	$record->HWIDRegistration = $_POST["HWIDRegistration"];
+	$record->HWTRegistration = $_POST["HWTRegistration"];
+	$record->HWTSDRegistration = $_POST["HWTSDRegistration"];
+	$record->PTOAPCI = $_POST["PTOAPCI"];
+	$record->DischargePermit = $_POST["DischargePermit"];
 	$record->updateRecord();
 }
 
@@ -60,7 +71,6 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->reportcontrol = $_POST["reportcontrol1"];
 	$record->doi = $_POST["doi1"];
 	$record->missionorder = $_POST["missionorder1"];
-	// $record->laws = $_POST["laws1"];
 	$record->air = $_POST["Air1"];
 	$record->water = $_POST["Water1"];
 	$record->eia = $_POST["EIA1"];
@@ -77,11 +87,22 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->pco = $_POST["PCO1"];
 	$record->mhead = $_POST["MHead1"];
 	$record->PCOAccreditation = $_POST["PCOAccreditation1"];
-	$record->VerifyAccuracy = $_POST["VerifyAccuracy"];
-	$record->PMPIN_Hazardous = $_POST["PMPIN_Hazardous"];
-	$record->HWIDRegistration = $_POST["HWIDRegistration"];
-	$record->HWTRegistration = $_POST["HWTRegistration"];
-	$record->HWTSDRegistration = $_POST["HWTSDRegistration"];
+	$record->VerifyAccuracy = $_POST["VerifyAccuracy1"];
+	$record->PMPIN_Hazardous = $_POST["PMPIN_Hazardous1"];
+	$record->HWIDRegistration = $_POST["HWIDRegistration1"];
+	$record->HWTRegistration = $_POST["HWTRegistration1"];
+	$record->HWTSDRegistration = $_POST["HWTSDRegistration1"];
+	$record->PTOAPCI = $_POST["PTOAPCI1"];
+	$record->DischargePermit = $_POST["DischargePermit1"];
+	$record->OthersPV = $_POST["otherspv1"];
+	$record->otherspv_text = $_POST["otherspv1_text"];
+	$record->DetermineCompliance = $_POST["determinecompliance1"];
+	$record->InvestigateComplaints = $_POST["investigatecomplaints1"];
+	$record->StatusCommitments = $_POST["statuscommitments1"];
+	$record->EwatchProgram = $_POST["ewatchprogram1"];
+	$record->PEPP = $_POST["PEPP1"];
+	$record->PAB = $_POST["pab1"];
+
 	$record->createRecord();
 }
 
@@ -89,9 +110,7 @@ if(!empty($_POST['action']) && $_POST['action'] == 'searchRecord') {
 	$record->search();
 }
 
-// if(!empty($_POST['action']) && $_POST['action'] == 'pageLoad') {
-// 	$record->pageLoad();
-// }
+
 
 ?>
 

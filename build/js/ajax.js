@@ -147,6 +147,7 @@ $(document).ready(function () {
         $("#YearEstablished").val(data.YearEstablished);
         $("#MHead").val(data.ManagingHead);
         $("#PCOAccreditation").val(data.PCOAccreditation);
+        $("#otherspv_text").val(data.OthersPV_Text);
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
         $("#save").val("Save");
@@ -166,6 +167,114 @@ $(document).ready(function () {
         if (data.ReportRA9003 == "true") {
           document.getElementById("SolidWaste").checked = true;
         }
+
+        if (data.VerifyAccuracy == "true") {
+          document.getElementById("verify").checked = true;
+        }
+
+        if (data.PMPIN_Hazardous == "NEW") {
+          document.getElementById("PMPIN_HazardousNew").checked = true;
+        }
+
+        if (data.PMPIN_Hazardous == "RENEW") {
+          document.getElementById("PMPIN_HazardousRenew").checked = true;
+        }
+
+        if (data.PMPIN_Hazardous == "NOT APPLICABLE") {
+          document.getElementById("PMPIN_HazardousNA").checked = true;
+        }
+
+        if (data.HWIDRegistration == "NEW") {
+          document.getElementById("HWIDRegistrationNew").checked = true;
+        }
+
+        if (data.HWIDRegistration == "RENEW") {
+          document.getElementById("HWIDRegistrationRenew").checked = true;
+        }
+
+        if (data.HWIDRegistration == "NOT APPLICABLE") {
+          document.getElementById("HWIDRegistrationNA").checked = true;
+        }
+
+        if (data.HWTRegistration == "NEW") {
+          document.getElementById("HWTRegistrationNew").checked = true;
+        }
+
+        if (data.HWTRegistration == "RENEW") {
+          document.getElementById("HWTRegistrationRenew").checked = true;
+        }
+
+        if (data.HWTRegistration == "NOT APPLICABLE") {
+          document.getElementById("HWTRegistrationNA").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "NEW") {
+          document.getElementById("HWTSDRegistrationNew").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "RENEW") {
+          document.getElementById("HWTSDRegistrationRenew").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "NOT APPLICABLE") {
+          document.getElementById("HWTSDRegistrationNA").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "NEW") {
+          console.log("wtf");
+          document.getElementById("HWTSDRegistrationNew").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "RENEW") {
+          document.getElementById("HWTSDRegistrationRenew").checked = true;
+        }
+
+        if (data.HWTSDRegistration == "NOT APPLICABLE") {
+          document.getElementById("HWTSDRegistrationNA").checked = true;
+        }
+
+        if (data.PTOAPCI == "NEW") {
+          document.getElementById("PTOAPCINew").checked = true;
+        }
+
+        if (data.PTOAPCI == "RENEW") {
+          document.getElementById("PTOAPCIRenew").checked = true;
+        }
+
+        if (data.PTOAPCI == "NOT APPLICABLE") {
+          document.getElementById("PTOAPCINA").checked = true;
+        }
+
+        if (data.DischargePermit == "NEW") {
+          document.getElementById("DischargePermitNew").checked = true;
+        }
+
+        if (data.DischargePermit == "RENEW") {
+          document.getElementById("DischargePermitRenew").checked = true;
+        }
+
+        if (data.DischargePermit == "NOT APPLICABLE") {
+          document.getElementById("DischargePermitNA").checked = true;
+        }
+
+        // --------------------------------
+        if (data.OthersPV == "true") {
+          $("#otherspv").prop("checked", true);
+          $("#otherspv_text").show();
+        } else {
+          $("#otherspv_text").hide();
+        }
+
+        $("#otherspv").click(function () {
+          if ($(this).is(":checked")) {
+            // Show the hidden input
+            $("#otherspv_text").show();
+          } else {
+            // Hide the hidden input
+            $("#otherspv_text").hide();
+          }
+        });
+        // -----------------------------------
       },
     });
   });
@@ -261,33 +370,21 @@ $(document).ready(function () {
     });
   });
 
-  // Export PDF button
-  $("#recordListing").on("click", "#pdf", function () {
-    Swal.fire({
-      title: "Hello there!",
-      text: "This feature is under maintenance. Thank you!",
-      imageUrl: "/universe1/undermaintenance.png",
-      imageWidth: 400,
-      imageHeight: 400,
-      imageAlt: "Custom image",
-      customClass: "swal-wide",
-      allowOutsideClick: false,
-    });
-  });
-
   $("#closebtn").click(function () {
     document.getElementById("recordForm").reset();
   });
 });
 
 function others() {
+  otherspv1 = document.getElementById("otherspv1");
+  otherspv_text1 = document.getElementById("otherspv1_text");
   otherspv = document.getElementById("otherspv");
-  otherspv_text = document.getElementById("otherspv_text");
 
-  if (otherspv.checked == true) {
-    otherspv_text.style.display = "block";
+  if (otherspv1.checked == true) {
+    otherspv_text1.style.display = "block";
+    otherspv1.val == "true";
   } else {
-    otherspv_text.style.display = "none";
+    otherspv_text1.style.display = "none";
   }
 
   var others2 = document.getElementById("others2");
@@ -299,3 +396,18 @@ function others() {
     display2.style.display = "none";
   }
 }
+
+// Export PDF button
+$("#recordListing").on("click", ".pdf", function () {
+  var id = $(this).attr("id");
+  console.log(id);
+  var action = "pdfRecord";
+  $.ajax({
+    url: "../../build/php/ajax_action.php",
+    method: "POST",
+    data: { id: id, action: action },
+    // success: function (data) {
+    //   window.location.href = "../../build/php/Records.php";
+    // },
+  });
+});
