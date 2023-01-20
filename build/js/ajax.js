@@ -221,7 +221,6 @@ $(document).ready(function () {
         }
 
         if (data.HWTSDRegistration == "NEW") {
-          console.log("wtf");
           document.getElementById("HWTSDRegistrationNew").checked = true;
         }
 
@@ -262,6 +261,7 @@ $(document).ready(function () {
           $("#otherspv").prop("checked", true);
           $("#otherspv_text").show();
         } else {
+          $("#otherspv_text").val = "";
           $("#otherspv_text").hide();
         }
 
@@ -271,6 +271,7 @@ $(document).ready(function () {
             $("#otherspv_text").show();
           } else {
             // Hide the hidden input
+            $("#otherspv_text").val("");
             $("#otherspv_text").hide();
           }
         });
@@ -382,7 +383,6 @@ function others() {
 
   if (otherspv1.checked == true) {
     otherspv_text1.style.display = "block";
-    otherspv1.val == "true";
   } else {
     otherspv_text1.style.display = "none";
   }
@@ -406,8 +406,5 @@ $("#recordListing").on("click", ".pdf", function () {
     url: "../../build/php/ajax_action.php",
     method: "POST",
     data: { id: id, action: action },
-    // success: function (data) {
-    //   window.location.href = "../../build/php/Records.php";
-    // },
   });
 });

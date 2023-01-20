@@ -7,7 +7,6 @@ include_once 'dologin.php';
 class Records {	
    
 	private $tblreports = 'tblreports';
-	private $tblreports1 = 'tblprojects';
 	public $id;
     public $name;
     public $specificaddress;
@@ -25,6 +24,7 @@ class Records {
 	public $latitude;
 	public $longitude;
 	public $yearestablished;
+	public $pco;
 	public $nob;
 	public $laws;
 	public $air;
@@ -102,7 +102,7 @@ class Records {
 			$rows[] = $record['DateofInspection'];	
 			$rows[] = $record['datecreated'];					
 			$rows[] = '<div class="d-flex justify-content-around"><button type="button" name="update" id="'.$record["id"].'" class="btn btn-success btn update" >Update</button><button type="button" name="delete" id="'.$record["id"].'" class="btn btn-danger btn delete" >Delete</button></div>';
-			$rows[] = '<div class="d-flex justify-content-center"><a class="fa fa-file-pdf pdf" name="pdf" id="'.$record["id"].'" style="font-size:36px;color:red" ></a></div>';
+			$rows[] = '<div class="d-flex justify-content-center"><a href="ExportPDF.php?id='.$record['id'].'" class="fa fa-file-pdf pdf" name="pdf" id="'.$record["id"].'" style="font-size:36px;color:red" ></a></div>';
 			$records[] = $rows;
 		}
 		
@@ -134,7 +134,7 @@ class Records {
 		if($this->id) {	
 			
 			$stmt = $this->conn->prepare("
-			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?, ReportRA8749 =?, ReportRA9275 =?, ReportPD1586 =?, ReportRA6969 =?, ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, ManagingHead = ?, PCOAccreditation = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ? WHERE id = ?");
+			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?, ReportRA8749 =?, ReportRA9275 =?, ReportPD1586 =?, ReportRA6969 =?, ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, ManagingHead = ?, PCOAccreditation = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ?, OthersPV = ?, OthersPV_Text = ? WHERE id = ?");
 	 
 			$this->id = htmlspecialchars(strip_tags($this->id));
 			$this->reportcontrol = htmlspecialchars(strip_tags($this->reportcontrol));
@@ -161,10 +161,12 @@ class Records {
 			$this->HWTSDRegistration = htmlspecialchars(strip_tags($this->HWTSDRegistration));
 			$this->PTOAPCI = htmlspecialchars(strip_tags($this->PTOAPCI));
 			$this->DischargePermit = htmlspecialchars(strip_tags($this->DischargePermit));
+			$this->OthersPV = htmlspecialchars(strip_tags($this->OthersPV));
+			$this->otherspv_text = htmlspecialchars(strip_tags($this->otherspv_text));
 			
 		
 			
-			$stmt->bind_param("sssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit, $this->id);
+			$stmt->bind_param("sssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text, $this->id);
 			if($stmt->execute()){
 				return true;
 			}	
@@ -202,7 +204,7 @@ class Records {
 			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,$userid)";
 			$stmt = $this->conn->prepare($query);
 			
-			$this->ID = htmlspecialchars(strip_tags(strtoupper($this->id)));
+			$this->id = htmlspecialchars(strip_tags(strtoupper($this->id)));
 			$this->reportcontrol = htmlspecialchars(strip_tags(strtoupper($this->reportcontrol)));
 			$this->doi = htmlspecialchars(strip_tags($this->doi));
 			$this->missionorder = htmlspecialchars(strip_tags(strtoupper($this->missionorder)));
@@ -239,7 +241,7 @@ class Records {
 			$this->PEPP = htmlspecialchars(strip_tags($this->PEPP));
 			$this->PAB = htmlspecialchars(strip_tags($this->PAB));
 			
-			$stmt->bind_param("ssssssssssssssssssssssssssssssssssss",$this->ID,$this->reportcontrol,$this->doi,$this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->mhead,$this->PCOAccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->datecreated);
+			$stmt->bind_param("ssssssssssssssssssssssssssssssssssss",$this->id,$this->reportcontrol,$this->doi,$this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->datecreated);
 				if($stmt->execute()){
 				return true;
 
@@ -275,17 +277,19 @@ class Records {
 		}
 	}
 
-	public function pdfRecord(){
-		if($this->id) {
+	public function pdfRecord($recordid){
+
+		// if($this->id) {
 
 			// include "../../pages/universe/fpdf.php";
 			// $pdf = new FPDF;
 			// $pdf->Output();
 			
-			$query = "SELECT * FROM tblreports INNER JOIN tblprojects ON tblreports.ProjectName = tblprojects.ID WHERE tblreports.ID = $this->id";
+			$query = "SELECT * FROM tblreports INNER JOIN tblprojects ON tblreports.ProjectName = tblprojects.ID WHERE tblreports.ID = $recordid";
 			$stmt = $this->conn->prepare($query);
     		$stmt->execute();
 			$result = $stmt->get_result();
+			$aahh = $result->fetch_assoc();
 			while ($row = $result->fetch_assoc()) {
 				echo "Report Control Number: " .$row['Reportcontrol']; echo "<br>";
 				echo "Mission Order: " .$row['MissionOrder']; echo "<br>";
@@ -296,11 +300,12 @@ class Records {
 				echo "Longitude: ". $row['Longitude']; echo "<br>";
 			
 			}
-
+			return $aahh;
 			
 
-		}
+		// }
 	}
+	
 }
 
 ?>

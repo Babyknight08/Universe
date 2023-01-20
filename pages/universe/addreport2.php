@@ -438,61 +438,56 @@
           </div>
 
           <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
+            <input type="hidden" name="otherspv" value="false">
             <input type="checkbox" id="otherspv" name="otherspv" onclick="others()" value="true">
             <label for="">Others: &nbsp; </label>
             <input type="text" class="form-control" style="display:none" id="otherspv_text" name="otherspv_text">
           </div>
           <div class="row">
               <div class="form-group">
-                    <div class="icheck-success">
-                        <input type="checkbox" id="determinecompliance1">
-                        <label for="determinecompliance1">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>
-                    </div>                              
-                </div>
+                        <input type="hidden" name = "determinecompliance" value = "false">
+                        <input type="checkbox" name = "determinecompliance" id="determinecompliance" value = "true">
+                        <label for="determinecompliance">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>                   
+              </div>
             </div>
 
           <div class="row">
             <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="investigatecomplaints1" value="false">
-                      <label for="investigatecomplaints1">Investigate community complaints</label>
-                  </div>                              
-              </div>
+                      <input type="hidden" name = "investigatecomplaints" value = "false">
+                      <input type="checkbox" name = "investigatecomplaints" id="investigatecomplaints" value = "true">
+                      <label for="investigatecomplaints">Investigate community complaints</label>                          
+            </div>
           </div>
 
           <div class="row">
             <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="statuscommitments1">
-                      <label for="statuscommitments1">Check status of commitment(s)</label>
-                  </div>                              
-              </div>
+                      <input type="hidden" name = "statuscommitments" value = "false">
+                      <input type="checkbox" name = "statuscommitments" id="statuscommitments" value = "true">
+                      <label for="statuscommitments">Check status of commitment(s)</label>                           
+            </div>
           </div>
 
           <div class="row ml-4">
             <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="ewatchprogram1">
-                      <label for="ewatchprogram1">Industrial EcoWatch Program</label>
-                  </div>                              
-              </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="PEPP1">
-                      <label for="PEPP1">Philippine Environmental Partnership Program (PEPP)</label>
-                  </div>                              
+                     <input type="hidden" name = "ewatchprogram" value = "false">
+                      <input type="checkbox" name = "ewatchprogram" id="ewatchprogram" value = "true">
+                      <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
             </div>
           </div>
           
           <div class="row ml-4">
             <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="pab1">
-                      <label for="pab1">Pollution Adjudication Board (PAB)</label>
-                  </div>                              
+                     <input type="hidden" name = "PEPP" value = "false">
+                      <input type="checkbox" name = "PEPP" id="PEPP" value = "true">
+                      <label for="PEPP">Philippine Environmental Partnership Program (PEPP)</label>                       
+            </div>
+          </div>
+          
+          <div class="row ml-4">
+            <div class="form-group">
+                      <input type="hidden" name = "pab1" value = "false">
+                      <input type="checkbox" name = "pab1" value = "true">
+                      <label for="pab">Pollution Adjudication Board (PAB)</label>                     
               </div>
           </div>
           

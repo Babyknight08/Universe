@@ -10,23 +10,23 @@ $record = new Records($db);
 if(!empty($_POST['action']) && $_POST['action'] == 'listRecords') {
 	$record->listRecords();
 }
-if(!empty($_POST['action']) && $_POST['action'] == 'addRecord') {	
-	$record->name = $_POST["name"];
-    $record->age = $_POST["age"];
-    $record->skills = $_POST["skills"];
-	$record->address = $_POST["address"];
-	$record->designation = $_POST["designation"];
-	$record->addRecord();
-}
+// if(!empty($_POST['action']) && $_POST['action'] == 'addRecord') {	
+// 	$record->name = $_POST["name"];
+//     $record->age = $_POST["age"];
+//     $record->skills = $_POST["skills"];
+// 	$record->address = $_POST["address"];
+// 	$record->designation = $_POST["designation"];
+// 	$record->addRecord();
+// }
 if(!empty($_POST['action']) && $_POST['action'] == 'getRecord') {
 	$record->id = $_POST["id"];
 	$record->getRecord();
 }
 
-if(!empty($_POST['action']) && $_POST['action'] == 'pdfRecord') {
-	$record->id = $_POST["id"];
-	$record->pdfRecord();
-}
+// if(!empty($_POST['action']) && $_POST['action'] == 'pdfRecord') {
+// 	$record->id = $_POST["id"];
+// 	$record->pdfRecord();
+// }
 
 if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->id = $_POST["id"];
@@ -55,6 +55,8 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->HWTSDRegistration = $_POST["HWTSDRegistration"];
 	$record->PTOAPCI = $_POST["PTOAPCI"];
 	$record->DischargePermit = $_POST["DischargePermit"];
+	$record->OthersPV = $_POST["otherspv"];
+	$record->otherspv_text = $_POST["otherspv_text"];
 	$record->updateRecord();
 }
 
@@ -86,7 +88,7 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->yearestablished = $_POST["YearEstablished1"];
 	$record->pco = $_POST["PCO1"];
 	$record->mhead = $_POST["MHead1"];
-	$record->PCOAccreditation = $_POST["PCOAccreditation1"];
+	$record->pcoaccreditation = $_POST["PCOAccreditation1"];
 	$record->VerifyAccuracy = $_POST["VerifyAccuracy1"];
 	$record->PMPIN_Hazardous = $_POST["PMPIN_Hazardous1"];
 	$record->HWIDRegistration = $_POST["HWIDRegistration1"];
@@ -104,10 +106,6 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->PAB = $_POST["pab1"];
 
 	$record->createRecord();
-}
-
-if(!empty($_POST['action']) && $_POST['action'] == 'searchRecord') {	
-	$record->search();
 }
 
 
