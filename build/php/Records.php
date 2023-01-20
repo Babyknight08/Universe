@@ -164,8 +164,6 @@ class Records {
 			$this->OthersPV = htmlspecialchars(strip_tags($this->OthersPV));
 			$this->otherspv_text = htmlspecialchars(strip_tags($this->otherspv_text));
 			
-		
-			
 			$stmt->bind_param("sssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text, $this->id);
 			if($stmt->execute()){
 				return true;

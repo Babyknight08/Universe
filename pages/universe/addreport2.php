@@ -695,15 +695,15 @@
             </div>
 
       
-        <div class="row justify-content-around m-2">
+          <div class="row justify-content-around m-2">
             <div class="form-group d-flex flex-row bd-highlight justify-content-around">
               <label for="" style="width:20rem">&nbsp; PERMIT</label>
               </div>
               <div>
-             <label for="">NEW/</label>
-             <label for="">RENEW/</label>
-             <label for="">NOT APPLICABLE</label>
-              </div>
+              <label for="">NEW/</label>
+              <label for="">RENEW/</label>
+              <label for="">NOT APPLICABLE</label>
+            </div>
           </div>
 
           <div class="row justify-content-around">
