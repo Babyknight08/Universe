@@ -219,18 +219,6 @@
 
             <div class="row d-flex justify-content-around p-3">
             <div class="">				
-              <input type="hidden" name="Air" value ="false">
-              <input type="checkbox" name="Air" id="Air" value ="true">
-							<label for="Air" class="control-label"><strong>RA8749(AIR)</strong></label>
-						</div>
-                    
-            <div class="">				
-              <input type="hidden" name="Water" value ="false">
-              <input type="checkbox" name="Water" id="Water" value ="true">
-							<label for="Water" class="control-label"><strong>RA9275(WATER)</strong></label>
-						</div>
-
-            <div class="">				
               <input type="hidden" name="EIA" value ="false">
               <input type="checkbox" name="EIA" id="EIA" value ="true">
 							<label for="EIA" class="control-label"><strong>PD1586(EIA)</strong></label>
@@ -240,6 +228,18 @@
               <input type="hidden" name="CHWMS" value ="false">
               <input type="checkbox" name="CHWMS" id="CHWMS" value ="true">
 							<label for="CHWMS" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
+						</div>
+            
+            <div class="">				
+              <input type="hidden" name="Air" value ="false">
+              <input type="checkbox" name="Air" id="Air" value ="true">
+							<label for="Air" class="control-label"><strong>RA8749(AIR)</strong></label>
+						</div>
+                    
+            <div class="">				
+              <input type="hidden" name="Water" value ="false">
+              <input type="checkbox" name="Water" id="Water" value ="true">
+							<label for="Water" class="control-label"><strong>RA9275(WATER)</strong></label>
 						</div>
 
             <div class="">				
@@ -316,24 +316,58 @@
 						</div>
           </div>
 
+          <div class="row">
+              <div class="form-group col-md-4">
+                <label for="operating_day">Operating Hours/Day </label>
+                <input type="text" class="form-control" name="operating_day" id="operating_day" placeholder="Operation Hours/Day">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="operating_week">Operating Days/Week </label>
+                <input type="text" class="form-control" name="operating_week" id="operating_week" placeholder="Operation Days/Week">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="operating_year">Operating Days/Year </label>
+                <input type="text" class="form-control" name="operating_year" id="operating_year" placeholder="Operation Days/Year">
+              </div>
+            </div>
+
+
 
           <div class="row">
-            
-          <div class="form-group col-md-4" >
-							<label for="Mhead" class="control-label">Managing Head</label>							
-							<input type="text" class="form-control"  id="MHead" name="MHead" placeholder="Managing Head" >							
-						</div>		
-
             <div class="form-group col-md-4" >
-							<label for="PCO" class="control-label">PCO</label>							
-							<input type="text" class="form-control"  id="PCO" name="PCO" placeholder="PCO" readonly required>							
-						</div>	
+                <label for="Mhead" class="control-label">Managing Head</label>							
+                <input type="text" class="form-control"  id="MHead" name="MHead" placeholder="Managing Head" >							
+              </div>		
 
-            <div class="form-group col-md-4" >
-							<label for="PCOAccreditation" class="control-label">PCO Accreditation</label>							
-							<input type="text" class="form-control"  id="PCOAccreditation" name="PCOAccreditation" placeholder="PCO Accreditation" >							
-						</div>	
+              <div class="form-group col-md-4" >
+                <label for="PCO" class="control-label">PCO</label>							
+                <input type="text" class="form-control"  id="PCO" name="PCO" placeholder="PCO" required>							
+              </div>	
+
+              <div class="form-group col-md-4" >
+                <label for="PCOAccreditation" class="control-label">PCO Accreditation</label>							
+                <input type="text" class="form-control"  id="PCOAccreditation" name="PCOAccreditation" placeholder="PCO Accreditation" >							
+              </div>	
           </div>
+
+
+          <div class="row">
+              <div class="form-group col-md-4">
+                <label for="PCOA_Date" class="control-label">Date of Effectivity (PCO Accreditation)</label>							
+                <input type="date" class="form-control"  id="PCOA_Date" name="PCOA_Date" placeholder="Date of Effectivity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="contactnumber" class="control-label">Phone/Fax: </label>							
+                <input type="text" class="form-control"  id="contactnumber" name="contactnumber" placeholder="Contact Number">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="email_address" class="control-label">Email Address: </label>							
+                <input type="email" class="form-control"  id="email_address" name="email_address" placeholder="Email Address">
+              </div>
+            </div>
+
+
+
           <div class="row">
             <div class="col-md-12">
               <h4 class="text-secondary"><em>2. Purpose of Verification</em></h4>
@@ -439,7 +473,7 @@
 
           <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
             <input type="hidden" name="otherspv" value="false">
-            <input type="checkbox" id="otherspv" name="otherspv" onclick="others()" value="true">
+            <input type="checkbox" id="otherspv" name="otherspv" value="true">
             <label for="">Others: &nbsp; </label>
             <input type="text" class="form-control" style="display:none" id="otherspv_text" name="otherspv_text">
           </div>
@@ -485,20 +519,19 @@
           
           <div class="row ml-4">
             <div class="form-group">
-                      <input type="hidden" name = "pab1" value = "false">
-                      <input type="checkbox" name = "pab1" value = "true">
-                      <label for="pab">Pollution Adjudication Board (PAB)</label>                     
+                    <input type="hidden" name = "pab" value = "false">
+                    <input type="checkbox" name = "pab" id = "pab" value = "true">
+                    <label for="pab">Pollution Adjudication Board (PAB)</label>                     
               </div>
           </div>
           
           <div class="row ml-4">
             <div class="form-group">
-                  <div class="icheck-success">
-                      <input type="checkbox" id="others1">
-                      <!-- <label for="others1">Others</label> -->
-                      <input type="text" class="form-control">
-                  </div>                              
-              </div>
+                    <input type="hidden" name = "others" value ="false">
+                    <input type="checkbox" id="others" name="others" value ="true">
+                    <label for="">Others</label>
+                    <input type="text" class="form-control" name="others_text" style="display:none" id="others_text">                            
+            </div>
           </div>
 
 
@@ -563,25 +596,14 @@
   
 
             <div class="row d-flex justify-content-around p-3">
-            <div class="">				
-              <input type="hidden" name="Air1" value ="false">
-              <input type="checkbox" name="Air1" value = "true">
-							<label for="Air1" class="control-label"><strong>RA8749(AIR)</strong></label>
-						</div>
 
-
-            <div class="">				
-              <input type="hidden" name="Water1" value ="false">
-              <input type="checkbox" name="Water1" value ="true">
-							<label for="Water1" class="control-label"><strong>RA9275(WATER)</strong></label>
-						</div>
 
             <div class="">				
               <input type="hidden" name="EIA1" value ="false"> 
               <input type="checkbox" name="EIA1" value ="true">
 							<label for="EIA1" class="control-label"><strong>PD1586(EIA)</strong></label>
-      
 						</div>
+
 
             <div class="">				
               <input type="hidden" name="CHWMS1" value ="false">
@@ -589,6 +611,20 @@
 							<label for="CHWMS1" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
 						</div>
 
+
+            <div class="">				
+              <input type="hidden" name="Air1" value ="false">
+              <input type="checkbox" name="Air1" value = "true">
+							<label for="Air1" class="control-label"><strong>RA8749(AIR)</strong></label>
+						</div>
+
+            <div class="">				
+              <input type="hidden" name="Water1" value ="false">
+              <input type="checkbox" name="Water1" value ="true">
+							<label for="Water1" class="control-label"><strong>RA9275(WATER)</strong></label>
+						</div>
+
+  
             <div class="">				
               <input type="hidden" name="SolidWaste1" value ="false">
               <input type="checkbox" name="SolidWaste1" value ="true">
@@ -628,6 +664,89 @@
               <option value="06">06</option>
               <option value="07100">07100</option>
               <option value="0722">0722</option>
+              <option value="07291">07291</option>
+              <option value="07292">07292</option>
+              <option value="07293">07293</option>
+              <option value="07294">07294</option>
+              <option value="08913">08913</option>
+              <option value="08914">08914</option>
+              <option value="10110">10110</option>
+              <option value="10120">10120</option>
+              <option value="1020">1020</option>
+              <option value="10205">10205</option>
+              <option value="1030">1030</option>
+              <option value="104">104</option>
+              <option value="105">105</option>
+              <option value="106">106</option>
+              <option value="10610">10610</option>
+              <option value="10621">10621</option>
+              <option value="107">107</option>
+              <option value="1072">1072</option>
+              <option value="10800">10800</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15110">15110</option>
+              <option value="1621">1621</option>
+              <option value="17012">17012</option>
+              <option value="17013">17013</option>
+              <option value="18110">18110</option>
+              <option value="19100">19100</option>
+              <option value="19200">19200</option>
+              <option value="19900">19900</option>
+              <option value="20111">20111</option>
+              <option value="20112">20112</option>
+              <option value="20113">20113</option>
+              <option value="20115">20115</option>
+              <option value="20120">20120</option>
+              <option value="2013">2013</option>
+              <option value="20210">20210</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="20294">20294</option>
+              <option value="20299">20299</option>
+              <option value="2030">2030</option>
+              <option value="21001">21001</option>
+              <option value="2310">2310</option>
+              <option value="239">239</option>
+              <option value="23940">23940</option>
+              <option value="241">241</option>
+              <option value="24210">24210</option>
+              <option value="24220">24220</option>
+              <option value="24230">24230</option>
+              <option value="24240">24240</option>
+              <option value="24290">24290</option>
+              <option value="2431">2431</option>
+              <option value="2432">2432</option>
+              <option value="25920">25920</option>
+              <option value="261">261</option>
+              <option value="2720">2720</option>
+              <option value="35100">35100</option>
+              <option value="35200">35200</option>
+              <option value="35300">35300</option>
+              <option value="36000">36000</option>
+              <option value="37000">37000</option>
+              <option value="38210">38210</option>
+              <option value="38220">38220</option>
+              <option value="39000">39000</option>
+              <option value="452">452</option>
+              <option value="47300">47300</option>
+              <option value="52104">52104</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="681">681</option>
+              <option value="71200">71200</option>
+              <option value="72100">72100</option>
+              <option value="75">75</option>
+              <option value="86">86</option>
+              <option value="86900">86900</option>
+              <option value="96210">96210</option>
+              <option value="96300">96300</option>
+              <option value="OC1">OC1</option>
+              <option value="OC2">OC2</option>
+              <option value="OC3">OC3</option>
+              <option value="OC4">OC4</option>
               </select>
 						</div>	
 
@@ -641,6 +760,44 @@
               <option value="Extraction of Crude and Petroleum and Natural Gas, and Support Activities">Extraction of Crude and Petroleum and Natural Gas, and Support Activities</option>
               <option value="Mining of Iron Ores">Mining of Iron Ores</option>
               <option value="Mining of Precious Metal Ores">Mining of Precious Metal Ores</option>
+              <option value="Gold Ore Mining">Gold Ore Mining</option>
+              <option value="Silver Ore Mining">Silver Ore Mining</option>
+              <option value="Platinum Ore Mining">Platinum Ore Mining</option>
+              <option value="Copper One Mining">Copper One Mining</option>
+              <option value="Chromite Ore Mining">Chromite Ore Mining</option>
+              <option value="Manganese Mining">Manganese Mining</option>
+              <option value="Nickel Ore Mining">Nickel Ore Mining</option>
+              <option value="Pyrite Mining">Pyrite Mining</option>
+              <option value="Rock Phosphate Mining">Rock Phosphate Mining</option>
+              <option value="Slaughtering and Meat Packing">Slaughtering and Meat Packing</option>
+              <option value="Production Processing and Preserving of Meat and Meat Products">Production Processing and Preserving of meat and meat Products</option>
+              <option value="Processing and Preserving of Fish, Crustaceans and Mollusks(Except Carrageenan)">Processing and Preserving of Fish, Crustaceans and Mollusks(Except Carrageenan)</option>
+              <option value="Processing of Seaweeds; Manufacture of Agar-Agar of Carrageenan">Processing of Seaweeds; Manufacture of Agar-Agar of Carrageenan</option>
+              <option value="Manufacure of Animal Oils and Fats">Manufacure of Animal Oils and Fats</option>
+              <option value="Manufacture of Dairy Products">Manufacture of Dairy Products</option>
+              <option value="Manufacture of Grain Mill Products, Starches and Starch Products (Except Rice, Corn, and Cassava Flour Milling">Manufacture of Grain Mill Products, Starches and Starch Products (Except Rice, Corn, and Cassava Flour Milling</option>
+              <option value="Rice/Corn Milling">Rice/Corn Milling</option>
+              <option value="Manufacture of Other Food Products(Except Sugar)">Manufacture of Other Food Products(Except Sugar)</option>
+              <option value="Manufacture of Sugar">Manufacture of Sugar</option>
+              <option value="Sugar Milling">Sugar Milling</option>
+              <option value="Manufacture of Prepared Animal Feeds">Manufacture of Prepared Animal Feeds</option>
+              <option value="Manufacture of Beverages">Manufacture of Beverages</option>
+              <option value="Manufacture of Tobacco Products">Manufacture of Tobacco Products</option>
+              <option value="Manufacture of Textile">Manufacture of Textile</option>
+              <option value="Manufacture of Wearing Apparel">Manufacture of Wearing Apparel</option>
+              <option value="Tanning and Dressing of Leather">Tanning and Dressing of Leather</option>
+              <option value="Manufacture of Veener Sheets; Manufacture of Plywood, Laminated Board, Particle Board and Other Panels and Board; Wooden Window and Screens">Manufacture of Veener Sheets; Manufacture of Plywood, Laminated Board, Particle Board and Other Panels and Board; Wooden Window and Screens</option>
+              <option value="Pulp Mining Including Manufacture of Pulp, Paper and Paperboard">Pulp Mining Including Manufacture of Pulp, Paper and Paperboard</option>
+              <option value="Paper and Paperboard Milling">Paper and Paperboard Milling</option>
+              <option value="Printing">Printing</option>
+              <option value="Manufacture of Coke Oven Products">Manufacture of Coke Oven Products</option>
+              <option value="Manufacture of Refined Petroleum Products">Manufacture of Refined Petroleum Products</option>
+              <option value="Manufacture of Other Fuel Products(Biodiesel)">Manufacture of Other Fuel Products(Biodiesel)</option>
+              <option value="Tanning">Tanning</option>
+              <option value="Tanning">Tanning</option>
+              <option value="Tanning">Tanning</option>
+              <option value="Tanning">Tanning</option>
+
               </select>
 						</div>
             </div>
@@ -661,6 +818,20 @@
 						</div>
             </div>
             
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="operating_day1">Operating Hours/Day </label>
+                <input type="text" class="form-control" name="operating_day1" id="operating_day1" placeholder="Operation Hours/Day">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="operating_week1">Operating Days/Week </label>
+                <input type="text" class="form-control" name="operating_week1" id="operating_week1" placeholder="Operation Days/Week">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="operating_year1">Operating Days/Year </label>
+                <input type="text" class="form-control" name="operating_year1" id="operating_year1" placeholder="Operation Days/Year">
+              </div>
+            </div>
 
 
             <div class="row">
@@ -682,9 +853,24 @@
             </div>
 
             <div class="row">
-                      <div class="col-md-12">
-                        <h4 class="text-secondary"><em>2. Purpose of Verification</em></h4>
-                      </div>
+              <div class="form-group col-md-4">
+                <label for="PCOA_Date1" class="control-label">Date of Effectivity (PCO Accreditation)</label>							
+                <input type="date" class="form-control"  id="PCOA_Date1" name="PCOA_Date1" placeholder="Date of Effectivity">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="contactnumber1" class="control-label">Phone/Fax: </label>							
+                <input type="text" class="form-control"  id="contactnumber1" name="contactnumber1" placeholder="Contact Number">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="email_address1" class="control-label">Email Address: </label>							
+                <input type="email" class="form-control"  id="email_address1" name="email_address1" placeholder="Email Address">
+              </div>
+            </div>
+
+            <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-secondary"><em>2. Purpose of Verification</em></h4>
+            </div>
             </div>
 
             <div class="">
@@ -837,9 +1023,10 @@
           
           <div class="row ml-4">
             <div class="form-group">
-                      <input type="checkbox" id="others2" onclick="others()">
+                      <input type="hidden" name="others1" value="false">
+                      <input type="checkbox" name="others1" id="others1" onclick="others()" value = "true">
                       <label for="others">Others</label>
-                      <input type="text" class="form-control" style="display:none" id="display2">                       
+                      <input type="text" class="form-control" name="others1_text" style="display:none" id="others1_text">                       
             </div>
           </div>
 

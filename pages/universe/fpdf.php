@@ -772,6 +772,8 @@ function MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false)
 	$this->x = $this->lMargin;
 }
 
+
+
 function Write($h, $txt, $link='')
 {
 	// Output text in flowing mode
@@ -1931,5 +1933,7 @@ protected function _enddoc()
 	$this->state = 3;
 	$this->CreationDate = time();
 }
+
+
 }
 ?>

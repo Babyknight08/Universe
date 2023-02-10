@@ -145,9 +145,16 @@ $(document).ready(function () {
         $("#Latitude").val(data.Latitude);
         $("#Longitude").val(data.Longitude);
         $("#YearEstablished").val(data.YearEstablished);
+        $("#operating_day").val(data.OperatingDay);
+        $("#operating_week").val(data.OperatingWeek);
+        $("#operating_year").val(data.OperatingYear);
         $("#MHead").val(data.ManagingHead);
         $("#PCOAccreditation").val(data.PCOAccreditation);
+        $("#PCOA_Date").val(data.PCOA_Date);
+        $("#contactnumber").val(data.ContactNumber);
+        $("#email_address").val(data.EmailAddress);
         $("#otherspv_text").val(data.OthersPV_Text);
+        $("#others_text").val(data.Others_Text);
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
         $("#save").val("Save");
@@ -256,6 +263,30 @@ $(document).ready(function () {
           document.getElementById("DischargePermitNA").checked = true;
         }
 
+        if (data.DetermineCompliance == "true") {
+          document.getElementById("determinecompliance").checked = true;
+        }
+
+        if (data.InvestigateComplaints == "true") {
+          document.getElementById("investigatecomplaints").checked = true;
+        }
+
+        if (data.StatusCommitments == "true") {
+          document.getElementById("statuscommitments").checked = true;
+        }
+
+        if (data.EwatchProgram == "true") {
+          document.getElementById("ewatchprogram").checked = true;
+        }
+
+        if (data.PEPP == "true") {
+          document.getElementById("PEPP").checked = true;
+        }
+
+        if (data.PAB == "true") {
+          document.getElementById("pab").checked = true;
+        }
+
         // --------------------------------
         if (data.OthersPV == "true") {
           $("#otherspv").prop("checked", true);
@@ -269,13 +300,43 @@ $(document).ready(function () {
           if ($(this).is(":checked")) {
             // Show the hidden input
             $("#otherspv_text").show();
-          } else {
+          }
+          if ($(this).is(":unchecked")) {
             // Hide the hidden input
             $("#otherspv_text").val("");
             $("#otherspv_text").hide();
+          } else {
+            $("#otherspv_text").val(data.OthersPV_Text);
+            $("#otherspv_text").show();
           }
         });
         // -----------------------------------
+
+        //
+        if (data.Others == "true") {
+          $("#others").prop("checked", true);
+          $("#others_text").show();
+        } else {
+          $("#others_text").val = "";
+          $("#others_text").hide();
+        }
+
+        $("#others").click(function () {
+          if ($(this).is(":checked")) {
+            // Show the hidden input
+            $("#others_text").show();
+          }
+          if ($(this).is(":unchecked")) {
+            // Hide the hidden input
+            $("#others_text").val("");
+            $("#others_text").hide();
+          } else {
+            $("#others_text").val(data.Others_Text);
+            $("#others_text").show();
+          }
+        });
+
+        //
       },
     });
   });
@@ -376,6 +437,7 @@ $(document).ready(function () {
   });
 });
 
+// Create Record others checked check
 function others() {
   otherspv1 = document.getElementById("otherspv1");
   otherspv_text1 = document.getElementById("otherspv1_text");
@@ -387,13 +449,13 @@ function others() {
     otherspv_text1.style.display = "none";
   }
 
-  var others2 = document.getElementById("others2");
-  var display2 = document.getElementById("display2");
+  var others1 = document.getElementById("others1");
+  var others1_text = document.getElementById("others1_text");
 
-  if (others2.checked == true) {
-    display2.style.display = "block";
+  if (others1.checked == true) {
+    others1_text.style.display = "block";
   } else {
-    display2.style.display = "none";
+    others1_text.style.display = "none";
   }
 }
 

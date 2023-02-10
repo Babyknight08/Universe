@@ -32,6 +32,9 @@ class Records {
 	public $eia;
 	public $chwms;
 	public $solidwaste;
+	public $operating_day;
+	public $operating_week;
+	public $operating_year;
 	public $mhead;
 	public $pcoaccreditation;
 	public $VerifyAccuracy;
@@ -40,6 +43,9 @@ class Records {
 	public $HWTRegistration;
 	public $HWTSDRegistration;
 	public $PTOAPCI;
+	public $PCOA_Date;
+	public $ContactNumber;
+	public $EmailAddress;
 	public $DischargePermit;
 	public $OthersPV;
 	public $otherspv_text;
@@ -49,6 +55,8 @@ class Records {
 	public $EwatchProgram;
 	public $PEPP;
 	public $PAB;
+	public $Others;
+	public $Others_Text;
 
 
 
@@ -134,16 +142,16 @@ class Records {
 		if($this->id) {	
 			
 			$stmt = $this->conn->prepare("
-			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?, ReportRA8749 =?, ReportRA9275 =?, ReportPD1586 =?, ReportRA6969 =?, ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, ManagingHead = ?, PCOAccreditation = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ?, OthersPV = ?, OthersPV_Text = ? WHERE id = ?");
+			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?,ReportPD1586 =?, ReportRA6969 =?, ReportRA8749 =?, ReportRA9275 =?,  ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, OperatingDay = ?, OperatingWeek = ?, OperatingYear = ?, ManagingHead = ?, PCOAccreditation = ?, PCOA_Date = ?, ContactNumber = ?, EmailAddress = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ?, OthersPV = ?, OthersPV_Text = ?, DetermineCompliance = ?, InvestigateComplaints = ?, StatusCommitments = ?, EwatchProgram = ?, PEPP = ?, PAB = ?, Others =?, Others_Text = ? WHERE id = ?");
 	 
 			$this->id = htmlspecialchars(strip_tags($this->id));
 			$this->reportcontrol = htmlspecialchars(strip_tags($this->reportcontrol));
 			$this->doi = htmlspecialchars(strip_tags($this->doi));
 			$this->missionorder = htmlspecialchars(strip_tags($this->missionorder));
-			$this->air = htmlspecialchars(strip_tags($this->air));
-			$this->water = htmlspecialchars(strip_tags($this->water));
 			$this->eia = htmlspecialchars(strip_tags($this->eia));
 			$this->chwms = htmlspecialchars(strip_tags($this->chwms));
+			$this->air = htmlspecialchars(strip_tags($this->air));
+			$this->water = htmlspecialchars(strip_tags($this->water));
 			$this->solidwaste = htmlspecialchars(strip_tags($this->solidwaste));
 			$this->specificaddress = htmlspecialchars(strip_tags($this->specificaddress));
 			$this->nob = htmlspecialchars(strip_tags($this->nob));
@@ -152,8 +160,14 @@ class Records {
 			$this->latitude = htmlspecialchars(strip_tags($this->latitude));
 			$this->longitude = htmlspecialchars(strip_tags($this->longitude));
 			$this->yearestablished = htmlspecialchars(strip_tags($this->yearestablished));
+			$this->operating_day = htmlspecialchars(strip_tags($this->operating_day));
+			$this->operating_week = htmlspecialchars(strip_tags($this->operating_week));
+			$this->operating_year = htmlspecialchars(strip_tags($this->operating_year));
 			$this->mhead = htmlspecialchars(strip_tags($this->mhead));
 			$this->pcoaccreditation = htmlspecialchars(strip_tags($this->pcoaccreditation));
+			$this->pcoaccreditation = htmlspecialchars(strip_tags($this->PCOA_Date));
+			$this->ContactNumber = htmlspecialchars(strip_tags($this->ContactNumber));
+			$this->EmailAddress = htmlspecialchars(strip_tags($this->EmailAddress));
 			$this->VerifyAccuracy = htmlspecialchars(strip_tags($this->VerifyAccuracy));
 			$this->PMPIN_Hazardous = htmlspecialchars(strip_tags($this->PMPIN_Hazardous));
 			$this->HWIDRegistration = htmlspecialchars(strip_tags($this->HWIDRegistration));
@@ -163,8 +177,17 @@ class Records {
 			$this->DischargePermit = htmlspecialchars(strip_tags($this->DischargePermit));
 			$this->OthersPV = htmlspecialchars(strip_tags($this->OthersPV));
 			$this->otherspv_text = htmlspecialchars(strip_tags($this->otherspv_text));
+			$this->DetermineCompliance = htmlspecialchars(strip_tags($this->DetermineCompliance));
+			$this->InvestigateComplaints = htmlspecialchars(strip_tags($this->InvestigateComplaints));
+			$this->StatusCommitments = htmlspecialchars(strip_tags($this->StatusCommitments));
+			$this->EwatchProgram = htmlspecialchars(strip_tags($this->EwatchProgram));
+			$this->PEPP = htmlspecialchars(strip_tags($this->PEPP));
+			$this->PAB = htmlspecialchars(strip_tags($this->PAB));
+			$this->Others = htmlspecialchars(strip_tags($this->Others));
+			$this->Others_Text = htmlspecialchars(strip_tags($this->Others_Text));
+
 			
-			$stmt->bind_param("sssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text, $this->id);
+			$stmt->bind_param("sssssssssssssssssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text, $this->id);
 			if($stmt->execute()){
 				return true;
 			}	
@@ -198,8 +221,8 @@ class Records {
 			date_default_timezone_set('Asia/Manila');
 			$this->datecreated = date("Y/m/d h:i:s"); 	
 			$query = "
-			INSERT INTO ".$this->tblreports."(`ID`,`Reportcontrol`,`DateofInspection`,`MissionOrder`,`ReportRA8749`,`ReportRA9275`,`ReportPD1586`,`ReportRA6969`,`ReportRA9003`,`ProjectName`, `SpecificAddress`,`NatureofBusiness`,`PSIC`,`Product`,`Latitude`,`Longitude`,`YearEstablished`,`PCOName`,`ManagingHead`,`PCOAccreditation`,`VerifyAccuracy`,`PMPIN_Hazardous`,`HWIDRegistration`,`HWTRegistration`,`HWTSDRegistration`,`PTOAPCI`,`DischargePermit`,`OthersPV`,`OthersPV_text`,`DetermineCompliance`,`InvestigateComplaints`,`StatusCommitments`,`EwatchProgram`,`PEPP`,`PAB`,`datecreated`,`userid`)
-			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,$userid)";
+			INSERT INTO ".$this->tblreports."(`ID`,`Reportcontrol`,`DateofInspection`,`MissionOrder`,`ReportPD1586`,`ReportRA6969`,`ReportRA8749`,`ReportRA9275`,`ReportRA9003`,`ProjectName`, `SpecificAddress`,`NatureofBusiness`,`PSIC`,`Product`,`Latitude`,`Longitude`,`YearEstablished`,`PCOName`,`OperatingDay`,`OperatingWeek`,`OperatingYear`,`ManagingHead`,`PCOAccreditation`,`PCOA_Date`,`ContactNumber`,`EmailAddress`,`VerifyAccuracy`,`PMPIN_Hazardous`,`HWIDRegistration`,`HWTRegistration`,`HWTSDRegistration`,`PTOAPCI`,`DischargePermit`,`OthersPV`,`OthersPV_text`,`DetermineCompliance`,`InvestigateComplaints`,`StatusCommitments`,`EwatchProgram`,`PEPP`,`PAB`,`Others`,`Others_Text`,`datecreated`,`userid`)
+			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,$userid)";
 			$stmt = $this->conn->prepare($query);
 			
 			$this->id = htmlspecialchars(strip_tags(strtoupper($this->id)));
@@ -207,10 +230,10 @@ class Records {
 			$this->doi = htmlspecialchars(strip_tags($this->doi));
 			$this->missionorder = htmlspecialchars(strip_tags(strtoupper($this->missionorder)));
 			$this->name = htmlspecialchars(strip_tags($this->name));
-			$this->air = htmlspecialchars(strip_tags($this->air));
-			$this->water = htmlspecialchars(strip_tags($this->water));
 			$this->eia = htmlspecialchars(strip_tags($this->eia));
 			$this->chwms = htmlspecialchars(strip_tags($this->chwms));
+			$this->air = htmlspecialchars(strip_tags($this->air));
+			$this->water = htmlspecialchars(strip_tags($this->water));
 			$this->solidwaste = htmlspecialchars(strip_tags($this->solidwaste));
 			$this->specificaddress = htmlspecialchars(strip_tags($this->specificaddress));
 			$this->nob = htmlspecialchars(strip_tags($this->nob));
@@ -221,8 +244,14 @@ class Records {
 			$this->yearestablished = htmlspecialchars(strip_tags($this->yearestablished));
 			$this->pco = htmlspecialchars(strip_tags($this->pco));
 			$this->datecreated = htmlspecialchars(strip_tags($this->datecreated));
+			$this->operating_day = htmlspecialchars(strip_tags($this->operating_day));
+			$this->operating_week = htmlspecialchars(strip_tags($this->operating_week));
+			$this->operating_year = htmlspecialchars(strip_tags($this->operating_year));
 			$this->mhead = htmlspecialchars(strip_tags(ucwords($this->mhead)));
 			$this->pcoaccreditation = htmlspecialchars(strip_tags($this->pcoaccreditation));
+			$this->pcoaccreditation = htmlspecialchars(strip_tags($this->PCOA_Date));
+			$this->ContactNumber = htmlspecialchars(strip_tags($this->ContactNumber));
+			$this->EmailAddress = htmlspecialchars(strip_tags($this->EmailAddress));
 			$this->VerifyAccuracy = htmlspecialchars(strip_tags($this->VerifyAccuracy));
 			$this->PMPIN_Hazardous = htmlspecialchars(strip_tags($this->PMPIN_Hazardous));
 			$this->HWIDRegistration = htmlspecialchars(strip_tags($this->HWIDRegistration));
@@ -238,8 +267,10 @@ class Records {
 			$this->EwatchProgram = htmlspecialchars(strip_tags($this->EwatchProgram));
 			$this->PEPP = htmlspecialchars(strip_tags($this->PEPP));
 			$this->PAB = htmlspecialchars(strip_tags($this->PAB));
+			$this->Others = htmlspecialchars(strip_tags($this->Others));
+			$this->Others_Text = htmlspecialchars(strip_tags($this->Others_Text));
 			
-			$stmt->bind_param("ssssssssssssssssssssssssssssssssssss",$this->id,$this->reportcontrol,$this->doi,$this->missionorder,$this->air,$this->water,$this->eia,$this->chwms,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->mhead,$this->pcoaccreditation,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->datecreated);
+			$stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssss",$this->id,$this->reportcontrol,$this->doi,$this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text,$this->datecreated);
 				if($stmt->execute()){
 				return true;
 
@@ -296,7 +327,6 @@ class Records {
 				echo "Proponent: ". $row['Proponent']; echo "<br>";
 				echo "Latitude: ". $row['Latitude']; echo "<br>";
 				echo "Longitude: ". $row['Longitude']; echo "<br>";
-			
 			}
 			return $aahh;
 			
