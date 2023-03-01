@@ -504,8 +504,8 @@
           <div class="row ml-4">
             <div class="form-group">
                      <input type="hidden" name = "ewatchprogram" value = "false">
-                      <input type="checkbox" name = "ewatchprogram" id="ewatchprogram" value = "true">
-                      <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
+                     <input type="checkbox" name = "ewatchprogram" id="ewatchprogram" value = "true">
+                     <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
             </div>
           </div>
           
@@ -535,11 +535,95 @@
           </div>
 
 
-   
 
-        
-          
-          
+
+
+
+
+          <table class="table">
+            <thead>
+                  <tr>
+                      <th scope="col">Environmental Laws</th>
+                      <th scope="col">Permits</th> 
+                      <th scope="col">Permit No.</th> 
+                      <th scope="col">Date of Issue</th>
+                      <th scope="col">Expiry Date</th>
+                  </tr>
+            </thead>
+
+            <tbody>
+                  <tr>
+                      <td>PD1586</td>
+                      <td>ECC</td>
+                      <td><input type="text" class="form-control ECC" id="ECC" name="ECC"></td>
+                      <td><input type="date" class="form-control ECC_DOI" id="ECC_DOI" name="ECC_DOI"></td>
+                      <td><input type="date" class="form-control ECC_DE" id="ECC_DE" name="ECC_DE"></td>
+                  </tr>
+                  <tr>
+                      <td>RA6969</td>
+                      <td>DENR Registry ID</td>
+                      <td><input type="text" class="form-control DENRID" id="DENRID" name="DENRID"></td>
+                      <td><input type="date" class="form-control DENRID_DOI" id="DENRID_DOI" name="DENRID_DOI"></td>
+                      <td><input type="date" class="form-control DENRID_DE" id="DENRID_DE" name="DENRID_DE"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>PCL Compliance Certificate</td>            
+                      <td><input type="text" class="form-control PCL_Compliance" id="PCL_Compliance" name="PCL_Compliance"></td>
+                      <td><input type="date" class="form-control PCL_Compliance_DOI" id="PCL_Compliance_DOI" name="PCL_Compliance_DOI"></td>
+                      <td><input type="date" class="form-control PCL_Compliance_DE" id="PCL_Compliance_DE" name="PCL_Compliance_DE"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>CCO Registry</td>            
+                      <td><input type="text" class="form-control CCO_Registry" id="CCO_Registry" name="CCO_Registry"></td>
+                      <td><input type="date" class="form-control CCO_Registry_DOI" id="CCO_Registry_DOI" name="CCO_Registry_DOI"></td>
+                      <td><input type="date" class="form-control CCO_Registry_DE" id="CCO_Registry_DE" name="CCO_Registry_DE"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Importation Clearance No.</td>            
+                      <td><input type="text" class="form-control Importation_Clearance" id="Importation_Clearance" name="Importation_Clearance"></td>
+                      <td><input type="date" class="form-control Importation_Clearance_DOI" id="Importation_Clearance_DOI" name="Importation_Clearance_DOI"></td>
+                      <td><input type="date" class="form-control Importation_Clearance_DE" id="Importation_Clearance_DE" name="Importation_Clearance_DE"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Copy of COT issued by licensed TSD Facility</td>            
+                      <td><input type="text" class="form-control COT_Issued" id="COT_Issued" name="COT_Issued"></td>
+                      <td><input type="date" class="form-control COT_Issued_DOI" id="COT_Issued_DOI" name="COT_Issued_DOI"></td>
+                      <td><input type="date" class="form-control COT_Issued_DE" id="COT_Issued_DE" name="COT_Issued_DE"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>TSD Registration Certificate</td>            
+                      <td><input type="text" class="form-control TSD_RegistrationCert" id="TSD_RegistrationCert" name="TSD_RegistrationCert"></td>
+                      <td><input type="date" class="form-control TSD_RegistrationCert_DOI" id="TSD_RegistrationCert_DOI" name="TSD_RegistrationCert_DOI"></td>
+                      <td><input type="date" class="form-control TSD_RegistrationCert_DE" id="TSD_RegistrationCert_DE" name="TSD_RegistrationCert_DE"></td>
+                  </tr>
+                  <tr>
+                      <td>RA8749</td>
+                      <td>POA No.</td>            
+                      <td><input type="text" class="form-control POA_No" id="POA_No" name="POA_No"></td>
+                      <td><input type="date" class="form-control POA_No_DOI" id="POA_No_DOI" name="POA_No_DOI"></td>
+                      <td><input type="date" class="form-control POA_No_DE" id="POA_No_DE" name="POA_No_DE"></td>
+                  </tr>
+                  <tr>
+                      <td>RA9275</td>
+                      <td>Discharge Permit No.</td>            
+                      <td><input type="text" class="form-control Discharge_Permit" id="Discharge_Permit" name="Discharge_Permit"></td>
+                      <td><input type="date" class="form-control Discharge_Permit_DOI" id="Discharge_Permit_DOI" name="Discharge_Permit_DOI"></td>
+                      <td><input type="date" class="form-control Discharge_Permit_DE" id="Discharge_Permit_DE" name="Discharge_Permit_DE"></td>
+                  </tr>
+                  <tr>
+                      <td scope="row">RA9003</td>
+                      <td>With MOA/Agreement for residuals disposed off to SLF w/ ECC</td>            
+                      <td><input type="text" class="form-control MOA_Agreement" id="MOA_Agreement" name="MOA_Agreement"></td>
+                      <td><input type="date" class="form-control MOA_Agreement_DOI" id="MOA_Agreement_DOI" name="MOA_Agreement_DOI"></td>
+                      <td><input type="date" class="form-control MOA_Agreement_DE" id="MOA_Agreement_DE" name="MOA_Agreement_DE"></td>
+                  </tr>
+            </tbody>
+        </table>
 
     				</div>
     				<div class="modal-footer">
@@ -550,8 +634,6 @@
     				</div>
     			</div>
 
-
-       
     		</form>
     	</div>
     </div>
@@ -1030,8 +1112,126 @@
             </div>
           </div>
 
-   
+          <div class="row">
+                <div class="col-md-12">
+                  <h4 class="text-secondary"><em>3. Compliance Status</em></h4>
+                  <p class="text-secondary"><em>3.1 DENR Permits/Licenses/Clearances</em></p>
+                </div>
+          </div>
+           
+          <table class="table">
+            <thead>
+                  <tr>
+                      <th scope="col">Environmental Laws</th>
+                      <th scope="col">Permits</th> 
+                      <th scope="col">Permit No.</th> 
+                      <th scope="col">Date of Issue</th>
+                      <th scope="col">Expiry Date</th>
+                  </tr>
+            </thead>
 
+            <tbody>
+                  <tr>
+                      <td>PD1586</td>
+                      <td>ECC</td>
+                      <td><input type="text" class="form-control ECC1" id="ECC1" name="ECC1"></td>
+                      <td><input type="date" class="form-control ECC_DOI1" id="ECC_DOI1" name="ECC_DOI1"></td>
+                      <td><input type="date" class="form-control ECC_DE1" id="ECC_DE1" name="ECC_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td>RA6969</td>
+                      <td>DENR Registry ID</td>
+                      <td><input type="text" class="form-control DENRID1" id="DENRID1" name="DENRID1"></td>
+                      <td><input type="date" class="form-control DENRID_DOI1" id="DENRID_DOI1" name="DENRID_DOI1"></td>
+                      <td><input type="date" class="form-control DENRID_DE1" id="DENRID_DE1" name="DENRID_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>PCL Compliance Certificate</td>            
+                      <td><input type="text" class="form-control PCL_Compliance1" id="PCL_Compliance1" name="PCL_Compliance1"></td>
+                      <td><input type="date" class="form-control PCL_Compliance1" id="PCL_Compliance_DOI1" name="PCL_Compliance_DOI1"></td>
+                      <td><input type="date" class="form-control PCL_Compliance1" id="PCL_Compliance_DE1" name="PCL_Compliance_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>CCO Registry</td>            
+                      <td><input type="text" class="form-control CCO_Registry1" id="CCO_Registry1" name="CCO_Registry1"></td>
+                      <td><input type="date" class="form-control CCO_Registry_DOI1" id="CCO_Registry_DOI1" name="CCO_Registry_DOI1"></td>
+                      <td><input type="date" class="form-control CCO_Registry_DE1" id="CCO_Registry_DE1" name="CCO_Registry_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Importation Clearance No.</td>            
+                      <td><input type="text" class="form-control Importation_Clearance1" id="Importation_Clearance1" name="Importation_Clearance1"></td>
+                      <td><input type="date" class="form-control Importation_Clearance_DOI1" id="Importation_Clearance_DOI1" name="Importation_Clearance_DOI1"></td>
+                      <td><input type="date" class="form-control Importation_Clearance_DE1" id="Importation_Clearance_DE1" name="Importation_Clearance_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>Copy of COT issued by licensed TSD Facility</td>            
+                      <td><input type="text" class="form-control COT_Issued1" id="COT_Issued1" name="COT_Issued1"></td>
+                      <td><input type="date" class="form-control COT_Issued_DOI1" id="COT_Issued_DOI1" name="COT_Issued_DOI1"></td>
+                      <td><input type="date" class="form-control COT_Issued_DE1" id="COT_Issued_DE1" name="COT_Issued_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>TSD Registration Certificate</td>            
+                      <td><input type="text" class="form-control TSD_RegistrationCert1" id="TSD_RegistrationCert1" name="TSD_RegistrationCert1"></td>
+                      <td><input type="date" class="form-control TSD_RegistrationCert_DOI1" id="TSD_RegistrationCert_DOI1" name="TSD_RegistrationCert_DOI1"></td>
+                      <td><input type="date" class="form-control TSD_RegistrationCert_DE1" id="TSD_RegistrationCert_DE1" name="TSD_RegistrationCert_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td>RA8749</td>
+                      <td>POA No.</td>            
+                      <td><input type="text" class="form-control POA_No1" id="POA_No1" name="POA_No1"></td>
+                      <td><input type="date" class="form-control POA_No_DOI1" id="POA_No_DOI1" name="POA_No_DOI1"></td>
+                      <td><input type="date" class="form-control POA_No_DE1" id="POA_No_DE1" name="POA_No_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td>RA9275</td>
+                      <td>Discharge Permit No.</td>            
+                      <td><input type="text" class="form-control Discharge_Permit1" id="Discharge_Permit1" name="Discharge_Permit1"></td>
+                      <td><input type="date" class="form-control Discharge_Permit_DOI1" id="Discharge_Permit_DOI1" name="Discharge_Permit_DOI1"></td>
+                      <td><input type="date" class="form-control Discharge_Permit_DE1" id="Discharge_Permit_DE1" name="Discharge_Permit_DE1"></td>
+                  </tr>
+                  <tr>
+                      <td scope="row">RA9003</td>
+                      <td>With MOA/Agreement for residuals disposed off to SLF w/ ECC</td>            
+                      <td><input type="text" class="form-control MOA_Agreement1" id="MOA_Agreement1" name="MOA_Agreement1"></td>
+                      <td><input type="date" class="form-control MOA_Agreement_DOI1" id="MOA_Agreement_DOI1" name="MOA_Agreement_DOI1"></td>
+                      <td><input type="date" class="form-control MOA_Agreement_DE1" id="MOA_Agreement_DE1" name="MOA_Agreement_DE1"></td>
+                  </tr>
+            </tbody>
+        </table>
+          
+
+        <div class="row">
+            <div class="col-md-12">
+              <p class="text-secondary"><em>3.2 Summary of Compliance</em></p>
+              <p>The table below summarizes the compliance of ... </p>
+              
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+				<form name="add_name" id="add_name">
+					<div class="table-responsive">
+						<table class="table table-bordered" id="dynamic_field">
+							<tr>
+								<td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" /></td>
+								<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+							</tr>
+						</table>
+					</div>
+				</form>
+			</div>
+
+              <input type="hidden" name="SectionChief1" value="Engr. CARLOS A. CAYANONG">
+              <input type="hidden" name="DivisionChief1" value="FOR. MANUEL J. SACEDA JR.">
+              <input type="hidden" name="RegionalDirector1" value="MARTIN JOSE V. DESPI">
+      
           <div class="form-group">						
             <input type="hidden" class="form-control" id="userid" name="userid" placeholder="Age">							
           </div>		
@@ -1042,10 +1242,6 @@
             <input type="submit" name="save1" id="save1" class="btn btn-info" value="Save" />
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-    	
-
-
-      
 
     		</form>
     	</div>

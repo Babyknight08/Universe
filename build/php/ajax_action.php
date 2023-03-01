@@ -59,6 +59,36 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->PAB = $_POST["pab"];
 	$record->Others = $_POST["others"];
 	$record->Others_Text = $_POST["others_text"];
+	$record->ECC = $_POST["ECC"];
+	$record->ECC_DOI = $_POST["ECC_DOI"];
+	$record->ECC_DE = $_POST["ECC_DE"];
+	$record->DENRID = $_POST["DENRID"];
+	$record->DENRID_DOI = $_POST["DENRID_DOI"];
+	$record->DENRID_DE = $_POST["DENRID_DE"];
+	$record->PCL_Compliance = $_POST["PCL_Compliance"];
+	$record->PCL_Compliance_DOI = $_POST["PCL_Compliance_DOI"];
+	$record->PCL_Compliance_DE = $_POST["PCL_Compliance_DE"];
+	$record->CCO_Registry = $_POST["CCO_Registry"];
+	$record->CCO_Registry_DOI = $_POST["CCO_Registry_DOI"];
+	$record->CCO_Registry_DE = $_POST["CCO_Registry_DE"];
+	$record->Importation_Clearance = $_POST["Importation_Clearance"];
+	$record->Importation_Clearance_DOI = $_POST["Importation_Clearance_DOI"];
+	$record->Importation_Clearance_DE = $_POST["Importation_Clearance_DE"];
+	$record->COT_Issued = $_POST["COT_Issued"];
+	$record->COT_Issued_DOI = $_POST["COT_Issued_DOI"];
+	$record->COT_Issued_DE = $_POST["COT_Issued_DE"];
+	$record->TSD_RegistrationCert = $_POST["TSD_RegistrationCert"];
+	$record->TSD_RegistrationCert_DOI = $_POST["TSD_RegistrationCert_DOI"];
+	$record->TSD_RegistrationCert_DE = $_POST["TSD_RegistrationCert_DE"];
+	$record->POA_No = $_POST["POA_No"];
+	$record->POA_No_DOI = $_POST["POA_No_DOI"];
+	$record->POA_No_DE = $_POST["POA_No_DE"];
+	$record->Discharge_Permit = $_POST["Discharge_Permit"];
+	$record->Discharge_Permit_DOI = $_POST["Discharge_Permit_DOI"];
+	$record->Discharge_Permit_DE = $_POST["Discharge_Permit_DE"];
+	$record->MOA_Agreement = $_POST["MOA_Agreement"];
+	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI"];
+	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE"];
 
 	$record->updateRecord();
 }
@@ -111,6 +141,42 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->PAB = $_POST["pab1"];
 	$record->Others = $_POST["others1"];
 	$record->Others_Text = $_POST["others1_text"];
+	$record->ECC = $_POST["ECC1"];
+	$record->ECC_DOI = $_POST["ECC_DOI1"];
+	$record->ECC_DE = $_POST["ECC_DE1"];
+	$record->DENRID = $_POST["DENRID1"];
+	$record->DENRID_DOI = $_POST["DENRID_DOI1"];
+	$record->DENRID_DE = $_POST["DENRID_DE1"];
+	$record->PCL_Compliance = $_POST["PCL_Compliance1"];
+	$record->PCL_Compliance_DOI = $_POST["PCL_Compliance_DOI1"];
+	$record->PCL_Compliance_DE = $_POST["PCL_Compliance_DE1"];
+	$record->CCO_Registry = $_POST["CCO_Registry1"];
+	$record->CCO_Registry_DOI = $_POST["CCO_Registry_DOI1"];
+	$record->CCO_Registry_DE = $_POST["CCO_Registry_DE1"];
+	$record->Importation_Clearance = $_POST["Importation_Clearance1"];
+	$record->Importation_Clearance_DOI = $_POST["Importation_Clearance_DOI1"];
+	$record->Importation_Clearance_DE = $_POST["Importation_Clearance_DE1"];
+	$record->COT_Issued = $_POST["COT_Issued1"];
+	$record->COT_Issued_DOI = $_POST["COT_Issued_DOI1"];
+	$record->COT_Issued_DE = $_POST["COT_Issued_DE1"];
+	$record->TSD_RegistrationCert = $_POST["TSD_RegistrationCert1"];
+	$record->TSD_RegistrationCert_DOI = $_POST["TSD_RegistrationCert_DOI1"];
+	$record->TSD_RegistrationCert_DE = $_POST["TSD_RegistrationCert_DE1"];
+	$record->POA_No = $_POST["POA_No1"];
+	$record->POA_No_DOI = $_POST["POA_No_DOI1"];
+	$record->POA_No_DE = $_POST["POA_No_DE1"];
+	$record->Discharge_Permit = $_POST["Discharge_Permit1"];
+	$record->Discharge_Permit_DOI = $_POST["Discharge_Permit_DOI1"];
+	$record->Discharge_Permit_DE = $_POST["Discharge_Permit_DE1"];
+	$record->MOA_Agreement = $_POST["MOA_Agreement1"];
+	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI1"];
+	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE1"];
+	$record->ECC_Condition = $_POST["ECC_Condition"];
+
+	$record->SectionChief = $_POST["SectionChief1"];
+	$record->DivisionChief = $_POST["DivisionChief1"];
+	$record->RegionalDirector = $_POST["RegionalDirector1"];
+
 	$record->createRecord();
 }
 

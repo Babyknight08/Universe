@@ -62,7 +62,6 @@ name1.onchange = () => {
         latitude.value = data.Latitude;
         longitude.value = data.Longitude;
         nob.value = data.nob;
-        // pco.value = data.PCOName;
         nob.dataset.nobid = data.ProjectSpecificSubtype;
       }
     });
@@ -155,6 +154,36 @@ $(document).ready(function () {
         $("#email_address").val(data.EmailAddress);
         $("#otherspv_text").val(data.OthersPV_Text);
         $("#others_text").val(data.Others_Text);
+        $("#ECC").val(data.ECC);
+        $("#ECC_DOI").val(data.ECC_DOI);
+        $("#ECC_DE").val(data.ECC_DE);
+        $("#DENRID").val(data.DENRID);
+        $("#DENRID_DOI").val(data.DENRID_DOI);
+        $("#DENRID_DE").val(data.DENRID_DE);
+        $("#PCL_Compliance").val(data.PCL_Compliance);
+        $("#PCL_Compliance_DOI").val(data.PCL_Compliance_DOI);
+        $("#PCL_Compliance_DE").val(data.PCL_Compliance_DE);
+        $("#CCO_Registry").val(data.CCO_Registry);
+        $("#CCO_Registry_DOI").val(data.CCO_Registry_DOI);
+        $("#CCO_Registry_DE").val(data.CCO_Registry_DE);
+        $("#Importation_Clearance").val(data.Importation_Clearance);
+        $("#Importation_Clearance_DOI").val(data.Importation_Clearance_DOI);
+        $("#Importation_Clearance_DE").val(data.Importation_Clearance_DE);
+        $("#COT_Issued").val(data.COT_Issued);
+        $("#COT_Issued_DOI").val(data.COT_Issued_DOI);
+        $("#COT_Issued_DE").val(data.COT_Issued_DE);
+        $("#TSD_RegistrationCert").val(data.TSD_RegistrationCert);
+        $("#TSD_RegistrationCert_DOI").val(data.TSD_RegistrationCert_DOI);
+        $("#TSD_RegistrationCert_DE").val(data.TSD_RegistrationCert_DE);
+        $("#POA_No").val(data.POA_No);
+        $("#POA_No_DOI").val(data.POA_No_DOI);
+        $("#POA_No_DE").val(data.POA_No_DE);
+        $("#Discharge_Permit").val(data.Discharge_Permit);
+        $("#Discharge_Permit_DOI").val(data.Discharge_Permit_DOI);
+        $("#Discharge_Permit_DE").val(data.Discharge_Permit_DE);
+        $("#MOA_Agreement").val(data.MOA_Agreement);
+        $("#MOA_Agreement_DOI").val(data.MOA_Agreement_DOI);
+        $("#MOA_Agreement_DE").val(data.MOA_Agreement_DE);
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
         $("#save").val("Save");
@@ -469,4 +498,21 @@ $("#recordListing").on("click", ".pdf", function () {
     method: "POST",
     data: { id: id, action: action },
   });
+});
+
+var i = 1;
+$("#add").click(function () {
+  i++;
+  $("#dynamic_field").append(
+    '<tr id="row' +
+      i +
+      '"><td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+      i +
+      '" class="btn btn-danger btn_remove">X</button></td></tr>'
+  );
+});
+
+$(document).on("click", ".btn_remove", function () {
+  var button_id = $(this).attr("id");
+  $("#row" + button_id + "").remove();
 });

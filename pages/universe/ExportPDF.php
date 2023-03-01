@@ -24,7 +24,6 @@ foreach($array as $value) {
     $pdf->Cell(0,0,'Date of Inspection: '.$value["DateofInspection"].' ',0);
     $pdf->Ln(5);
     $pdf->Cell(0,0,'Mission Order Number: '.$value["MissionOrder"].' ',0);
-
     $pdf->SetDrawColor(50,0,0);
     $pdf->Ln(10);
     $pdf->SetFont('Arial','B',12);
@@ -32,7 +31,6 @@ foreach($array as $value) {
     $pdf->Ln(6);
     $pdf->SetFont('Arial','',11);
     $pdf->SetXY(10, 65);
-
     $pdf->MultiCell(0,7,'Applicable Environmental Laws: (Pls. check box)
 PD1586.Checked??    RA6969.Checked??     RA8749.Checked??    RA9275.Checked??     RA9003.Checked??','1','T');
     $pdf->SetXY(10, 79);
@@ -82,7 +80,31 @@ PD1586.Checked??    RA6969.Checked??     RA8749.Checked??    RA9275.Checked??   
     $pdf->SetFont('Arial','',11);
     $pdf->MultiCell(61,12, 'Operating days/year: '.' ',1,'J');
 
+    $pdf->SetXY(10, 200);
+    $pdf->SetFont('Arial','',11);
+    $pdf->Cell(0,0,'Approved By: ',0);
+    $pdf->SetXY(10, 205);
+    $pdf->Cell(0,0,''.$value["SectionChief"].' ',0);
+    $pdf->SetXY(10, 210);
+    $pdf->Cell(0,0, 'Chief WAQMS '.' ','','J');
+    $pdf->SetXY(10, 235);
+    $pdf->SetFont('Arial','',11);
+    $pdf->Cell(0,0,'Checked By: ',0);
+    $pdf->SetXY(10, 240);
+    $pdf->Cell(0,0,''.$value["DivisionChief"].' ',0);
+    $pdf->SetXY(10, 245);
+    $pdf->Cell(0,0, 'Chief Environmental Enforcement Division '.' ','','J');
+    $pdf->SetXY(10, 270);
+    $pdf->Cell(0,0,''.$value["RegionalDirector"].' ',0);
+    $pdf->SetXY(10, 275);
+    $pdf->Cell(0,0, 'Regional Director '.' ','','J');
+    $pdf->SetXY(10, 300);
+    
+
+
+
 }
+
 $pdf->SetTitle($value["ProjectName"]);
 $pdf->Output();
 ?>
