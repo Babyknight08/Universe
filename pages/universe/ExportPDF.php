@@ -98,8 +98,10 @@ PD1586.Checked??    RA6969.Checked??     RA8749.Checked??    RA9275.Checked??   
     $pdf->SetXY(10, 275);
     $pdf->Cell(0,0, 'Regional Director '.' ','','J');
     $pdf->SetXY(10, 300);
-    $pdf->Cell(0,0,''.$value["ECC_Condition"].' ',0);
 
+   
+
+ 
 }
 
 $pdf->SetTitle($value["ProjectName"]);

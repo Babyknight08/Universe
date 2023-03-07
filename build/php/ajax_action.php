@@ -89,6 +89,39 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->MOA_Agreement = $_POST["MOA_Agreement"];
 	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI"];
 	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE"];
+	$record->ECC_Condition = $_POST["ECC_Condition"];
+	$record->Haz_PCLCompliance = $_POST["Haz_PCLCompliance"];
+	$record->Haz_PCLComplianceText = $_POST["Haz_PCLComplianceText"];
+	$record->Annual_Reporting = $_POST["Annual_Reporting"];
+	$record->Annual_ReportingText = $_POST["Annual_ReportingText"];
+	$record->Biennial_Report = $_POST["Biennial_Report"];
+	$record->Biennial_ReportText = $_POST["Biennial_ReportText"];
+	$record->CCO_Registration = $_POST["CCO_Registration"];
+	$record->CCO_RegistrationText = $_POST["CCO_RegistrationText"];
+	$record->Importation = $_POST["Importation"];
+	$record->ImportationText = $_POST["ImportationText"];
+	$record->Valid_ImportanceClearance = $_POST["Valid_ImportanceClearance"];
+	$record->Valid_ImportanceClearanceText = $_POST["Valid_ImportanceClearanceText"];
+	$record->Bill_Lading = $_POST["Bill_Lading"];
+	$record->Bill_LadingText = $_POST["Bill_LadingText"];
+	$record->Registration_HWG = $_POST["Registration_HWG"];
+	$record->Registration_HWGText = $_POST["Registration_HWGText"];
+	$record->Temp_HazStorageFacility = $_POST["Temp_HazStorageFacility"];
+	$record->Temp_HazStorageFacilityText = $_POST["Temp_HazStorageFacilityText"];
+	$record->Report_HazGenerated = $_POST["Report_HazGenerated"];
+	$record->Report_HazGeneratedText = $_POST["Report_HazGeneratedText"];
+	$record->Haz_WasteLabelled = $_POST["Haz_WasteLabelled"];
+	$record->Haz_WasteLabelledText = $_POST["Haz_WasteLabelledText"];
+	$record->Valid_PermitTranspo = $_POST["Valid_PermitTranspo"];
+	$record->Valid_PermitTranspoText = $_POST["Valid_PermitTranspoText"];
+	$record->Valid_RegTranspoTreaters = $_POST["Valid_RegTranspoTreaters"];
+	$record->Valid_RegTranspoTreatersText = $_POST["Valid_RegTranspoTreatersText"];
+	$record->Waste_Transporter = $_POST["Waste_Transporter"];
+	$record->Waste_TransporterText = $_POST["Waste_TransporterText"];
+
+
+	$record->Valid_CertTreatment = $_POST["Valid_CertTreatment"];
+	$record->Valid_CertTreatmentText = $_POST["Valid_CertTreatmentText"];
 
 	$record->updateRecord();
 }
@@ -171,7 +204,40 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->MOA_Agreement = $_POST["MOA_Agreement1"];
 	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI1"];
 	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE1"];
-	$record->ECC_Condition = $_POST["ECC_Condition"];
+	$record->ECC_Condition = $_POST["ECC_Condition1"];
+	$record->Haz_PCLCompliance = $_POST["Haz_PCLCompliance1"];
+	$record->Haz_PCLComplianceText = $_POST["Haz_PCLComplianceText1"];
+	$record->Annual_Reporting = $_POST["Annual_Reporting1"];
+	$record->Annual_ReportingText = $_POST["Annual_ReportingText1"];
+	$record->Biennial_Report = $_POST["Biennial_Report1"];
+	$record->Biennial_ReportText = $_POST["Biennial_ReportText1"];
+	$record->CCO_Registration = $_POST["CCO_Registration1"];
+	$record->CCO_RegistrationText = $_POST["CCO_RegistrationText1"];
+	$record->Importation = $_POST["Importation1"];
+	$record->ImportationText = $_POST["ImportationText1"];
+	$record->Valid_ImportanceClearance = $_POST["Valid_ImportanceClearance1"];
+	$record->Valid_ImportanceClearanceText = $_POST["Valid_ImportanceClearanceText1"];
+	$record->Bill_Lading = $_POST["Bill_Lading1"];
+	$record->Bill_LadingText = $_POST["Bill_LadingText1"];
+	$record->Registration_HWG = $_POST["Registration_HWG1"];
+	$record->Registration_HWGText = $_POST["Registration_HWGText1"];
+	$record->Temp_HazStorageFacility = $_POST["Temp_HazStorageFacility1"];
+	$record->Temp_HazStorageFacilityText = $_POST["Temp_HazStorageFacilityText1"];
+	$record->Report_HazGenerated = $_POST["Report_HazGenerated1"];
+	$record->Report_HazGeneratedText = $_POST["Report_HazGeneratedText1"];
+	$record->Haz_WasteLabelled = $_POST["Haz_WasteLabelled1"];
+	$record->Haz_WasteLabelledText = $_POST["Haz_WasteLabelledText1"];
+	$record->Valid_PermitTranspo = $_POST["Valid_PermitTranspo1"];
+	$record->Valid_PermitTranspoText = $_POST["Valid_PermitTranspoText1"];
+	$record->Valid_RegTranspoTreaters = $_POST["Valid_RegTranspoTreaters1"];
+	$record->Valid_RegTranspoTreatersText = $_POST["Valid_RegTranspoTreatersText1"];
+	$record->Waste_Transporter = $_POST["Waste_Transporter1"];
+	$record->Waste_TransporterText = $_POST["Waste_TransporterText1"];
+	$record->Valid_CertTreatment = $_POST["Valid_CertTreatment1"];
+	$record->Valid_CertTreatmentText = $_POST["Valid_CertTreatmentText1"];
+
+
+
 
 	$record->SectionChief = $_POST["SectionChief1"];
 	$record->DivisionChief = $_POST["DivisionChief1"];

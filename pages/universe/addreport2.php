@@ -286,7 +286,7 @@
 
             <div class="form-group col-md-4">
               <label for="Product" class="control-label">Product</label>		
-							<select class="form-control" name="Product" id="Product">
+							<select class="form-control select2" name="Product" id="Product">
               <!-- <option value="">--Select Product--</option> -->
               <option value="">--Select Product--</option>
               <option value="Animal Production">Animal Production</option>
@@ -341,7 +341,7 @@
 
               <div class="form-group col-md-4" >
                 <label for="PCO" class="control-label">PCO</label>							
-                <input type="text" class="form-control"  id="PCO" name="PCO" placeholder="PCO" required>							
+                <input type="text" class="form-control"  id="PCO" name="PCO" placeholder="PCO">							
               </div>	
 
               <div class="form-group col-md-4" >
@@ -625,6 +625,658 @@
             </tbody>
         </table>
 
+
+        <div class="row">
+          <div class="col-md-12">
+            <p class="text-secondary"><em>3.2 Summary of Compliance</em></p>
+            <p>The table below summarizes the compliance of ... </p>
+            
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+				<form name="add_name" id="add_name">
+					<div class="table-responsive" >
+						<table class="table table-bordered" id="dynamic_field" >
+							<tr>
+								<td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" id="ECC_Condition" /></td>
+								<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+             	</tr>
+              <tr>
+                <td><div id="id123"></div></td>
+              </tr>
+						</table>
+					</div>
+				</form>
+			</div>
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="6"><p><em>6969 Toxic Substances and Hazardous and Nuclear Wastes Control Act.</em> </p></td></tr>
+            <td rowspan="2" class="font-weight-bold">Priority Chemical List</td>
+            <td>Valid PCL Compliance</td>
+            <td>
+              <select class="form-select select2" name="Haz_PCLCompliance" id="Haz_PCLCompliance">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Haz_PCLComplianceText" id="Haz_PCLComplianceText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Annual Reporting</td>
+              <td>
+              <select class="form-select select2" name="Annual_Reporting" id="Annual_Reporting">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Annual_ReportingText" id="Annual_ReportingText"></textarea></td>
+
+            <td></td>
+            </td>
+            </tr>
+
+
+
+            <tr>
+            <td rowspan="2" class="font-weight-bold">Chemical Control Orders</td>
+            <td>Biennial Report for those chemicals that are for issuance for CCO</td>
+            <td>
+              <select class="form-select select2" name="Biennial_Report" id="Biennial_Report">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Biennial_ReportText" id="Biennial_ReportText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>CCO Registration </td>
+              <td>
+              <select class="form-select select2" name="CCO_Registration" id="CCO_Registration">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="CCO_RegistrationText" id="CCO_RegistrationText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+
+
+
+            <tr>
+            <td rowspan="3" class="font-weight-bold">Importation</td>
+            <td>Valid Small Quantity</td>
+            <td>
+              <select class="form-select select2" name="Importation" id="Importation">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="ImportationText" id="ImportationText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Valid Importance Clearance</td>
+              <td>
+              <select class="form-select select2" name="Valid_ImportanceClearance" id="Valid_ImportanceClearance">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Valid_ImportanceClearanceText" id="Valid_ImportanceClearanceText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Bill of Lading</td>
+              <td>
+              <select class="form-select select2" name="Bill_Lading" id="Bill_Lading">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Bill_LadingText" id="Bill_LadingText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+
+            <tr>
+            <td rowspan="3" class="font-weight-bold">Hazardous Waste Generator</td>
+            <td>Registration as Hazardous Waste Generator</td>
+            <td>
+              <select class="form-select select2" name="Registration_HWG" id="Registration_HWG">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Registration_HWGText" id="Registration_HWGText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>With temporary Hazwaste storage facility</td>
+              <td>
+              <select class="form-select select2" name="Temp_HazStorageFacility" id="Temp_HazStorageFacility">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Temp_HazStorageFacilityText" id="Temp_HazStorageFacilityText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Reporting of hazardouswaste generated</td>
+              <td>
+              <select class="form-select select2" name="Report_HazGenerated" id="Report_HazGenerated">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Report_HazGeneratedText" id="Report_HazGeneratedText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+
+
+
+            <tr>
+            <td rowspan="3" class="font-weight-bold">Hazardous Waste and Labelling </td>
+            <td>Hazardous Waste Properly Labelled</td>
+            <td>
+              <select class="form-select select2" name="Haz_WasteLabelled" id="Haz_WasteLabelled">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Haz_WasteLabelledText" id="Haz_WasteLabelledText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Valid Permit to Transport</td>
+              <td>
+              <select class="form-select select2" name="Valid_PermitTranspo" id="Valid_PermitTranspo">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Valid_PermitTranspoText" id="Valid_PermitTranspoText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Valid Registration of Transporters and Treaters</td>
+              <td>
+              <select class="form-select select2" name="Valid_RegTranspoTreaters" id="Valid_RegTranspoTreaters">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Valid_RegTranspoTreatersText" id="Valid_RegTranspoTreatersText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+
+
+
+
+            <tr>
+            <td rowspan="2" class="font-weight-bold">Waste Transporter; Waste Transport Record; Waste Treatment and Disposal Premises </td>
+            <td>Compliance with Manifest System (Waste Transport Record)</td>
+            <td>
+              <select class="form-select select2" name="Waste_Transporter" id="Waste_Transporter">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3" name="Waste_TransporterText" id="Waste_TransporterText"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+              <td>Valid/completed certificate of treatment</td>
+              <td>
+              <select class="form-select select2" name="Valid_CertTreatment" id="Valid_CertTreatment">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td><textarea class="form-control" rows="3" name="Valid_CertTreatmentText" id="Valid_CertTreatmentText"></textarea></td>
+            <td></td>
+            </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
+
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="6"><p><em>RA 8749: Philippine Clean Air Act.</em> </p></td></tr>
+            <td rowspan="9" class="font-weight-bold">Permit to Operate Air</td>
+            <td>With Valid POA</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+
+            <tr>
+              <td>All emission sources is covered by a valid POA</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>POA is displayed in a conspicuous place near the installation</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>All permit conditions are complied with</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Wind direction device is installed (if applicable)</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Plant operational problems lasting for more than 1 hour should be reported to EMB within 24 hours</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>CCTV installed (for large sources only)</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>CEMS/PEMS installed (for petroleum refineries, power/cement plants or sources emitting 750 Tone/yr)</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Yearly RATA/Quarterly CGA conducted (for sources with CEMS)</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            
+            <td class="font-weight-bold">Emission Testing (If applicable)</td>
+            <td>Compliance with emission standards?</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+
+            <td class="font-weight-bold">Ambient Testing (if applicable)</td>
+            <td>Compliance with ambient air quality standards?</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+
+        
+
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="5"><p><em>RA 9275: Philippine Clean Water Act</em> </p></td></tr>
+            <td rowspan="5" class="font-weight-bold">Discharge Permit (DP)</td>
+            <td>With valid Discharge Permit </td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+
+            <tr>
+              <td>Volume of discharge consistent with DP issued?</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>All permit conditions are complied with?</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>With working flow metering device (if applicable)</td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td><textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Certified septage siphoning hauled by accredited service provider. </td>
+              <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+              </select>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
+              </td>
+            </tr>
+
+            
+
+            <td class="font-weight-bold">Effluent Test Results (if applicable)</td>
+            <td>In compliance with effluent standards</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            
+            </tr>
+
+
+            <td class="font-weight-bold">Ambient water quality monitoring (if applicable)</td>
+            <td>With ambient water quality monitoring results</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            
+            </tr>
+
+            <td class="font-weight-bold">Wastewater charge system (if applicable)</td>
+            <td>Payment of wastewater charges</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="5"><p><em>RA 9003 Ecological Solid Waste Management</em> </p></td></tr>
+            <td class="font-weight-bold">Waste Segregation</td>
+            <td>Practice of Waste Segregation </td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+            <tr>
+            <td class="font-weight-bold">Solid Waste Disposal Facilities</td>
+            <td>Installation of necessary controls for waste treatment and disposal facility</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+       </div>
+
+
+       <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="5"><p><em>Pollution Control Officer Accreditation</em> </p></td></tr>
+            <td class="font-weight-bold">DAO 1992-26 or Revised Guidelines on PCO Accreditation</td>
+            <td>Valid Accreditation of PCO </td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+           
+            </tbody>
+        </table>
+       </div>
+
+       <div class="row">
+        <table class="table">
+          <thead>
+            <th class="col-sm-3">Applicable Laws and Citation</th>
+            <th class="col-sm-3">Compliance Request</th>
+            <th class="col-sm-2">Compliance</th>
+            <th class="col-sm-4">Remarks</th>
+          </thead>
+        
+        
+          <tbody>
+            <tr><td colspan="5"><p><em>Self Monitoring Report</em> </p></td></tr>
+            <td class="font-weight-bold">DAO 2003-27</td>
+            <td>Complete and Timely submission of SMR's</td>
+            <td>
+              <select class="form-select select2" name="">
+              <Option selected>Please select</Option>
+              <Option value="Yes">Yes</Option>
+              <Option value = "No">No</Option>
+              <Option value="Not Applicable">N/A</Option>
+            </select>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
+            </td>
+            </tr>
+           
+            </tbody>
+        </table>
+       </div>
+
+
     				</div>
     				<div class="modal-footer">
     					<input type="hidden" name="id" id="id" />
@@ -637,6 +1289,43 @@
     		</form>
     	</div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
@@ -712,6 +1401,36 @@
               <input type="checkbox" name="SolidWaste1" value ="true">
 							<label for="SolidWaste1" class="control-label"><strong>RA9003(SOLID WASTE)</strong></label>
 						</div>
+
+
+            
+            <!-- <div class="checkbox icheck-success">				
+              <input type="checkbox" name="EIA1" id="EIA1">
+							<label for="EIA1" class="control-label"><strong>PD1586(EIA)</strong></label>
+						</div>  -->
+
+            <!-- <div class="checkbox icheck-success">				
+              <input type="checkbox" name="CHWMS1" id="CHWMS1">
+							<label for="CHWMS1" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
+						</div>
+
+
+            <div class="checkbox icheck-success">				
+              <input type="checkbox" name="Air1" id="Air1">
+							<label for="Air1" class="control-label"><strong>RA8749(AIR)</strong></label>
+						</div>
+
+            <div class="checkbox icheck-success">				
+              <input type="checkbox" name="Water1" id="Water1">
+							<label for="Water1" class="control-label"><strong>RA9275(WATER)</strong></label>
+						</div>
+
+  
+            <div class="checkbox icheck-success">				
+              <input type="checkbox" name="SolidWaste1" id="SolidWaste1">
+							<label for="SolidWaste1" class="control-label"><strong>RA9003(SOLID WASTE)</strong></label>
+						</div> -->
+
 					</div>
 
 
@@ -1222,10 +1941,10 @@
         <div class="form-group">
 				<form name="add_name" id="add_name">
 					<div class="table-responsive">
-						<table class="table table-bordered" id="dynamic_field">
+						<table class="table table-bordered" id="dynamic_field1">
 							<tr>
-								<td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" /></td>
-								<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
+								<td><input type="text" name="ECC_Condition1[]" placeholder="ECC Condition" class="form-control name_list" /></td>
+								<td><button type="button" name="add1" id="add1" class="btn btn-success">Add More</button></td>
 							</tr>
 						</table>
 					</div>
@@ -1247,25 +1966,25 @@
             <td rowspan="2" class="font-weight-bold">Priority Chemical List</td>
             <td>Valid PCL Compliance</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Haz_PCLCompliance1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Haz_PCLComplianceText1" id="Haz_PCLComplianceText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>Annual Reporting</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Annual_Reporting1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Annual_ReportingText1" id="Annual_ReportingText1"></textarea></td>
 
             <td></td>
             </td>
@@ -1277,25 +1996,25 @@
             <td rowspan="2" class="font-weight-bold">Chemical Control Orders</td>
             <td>Biennial Report for those chemicals that are for issuance for CCO</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Biennial_Report1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Biennial_ReportText1" id="Biennial_ReportText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>CCO Registration </td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="CCO_Registration1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" id="CCO_RegistrationText1" name="CCO_RegistrationText1"></textarea></td>
             <td></td>
             </td>
             </tr>
@@ -1306,80 +2025,78 @@
             <td rowspan="3" class="font-weight-bold">Importation</td>
             <td>Valid Small Quantity</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Importation1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="ImportationText1" id="ImportationText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>Valid Importance Clearance</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Valid_ImportanceClearance1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Valid_ImportanceClearanceText1" id="Valid_ImportanceClearanceText1"></textarea></td>
             <td></td>
             </td>
             </tr>
             <tr>
               <td>Bill of Lading</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Bill_Lading1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Bill_LadingText1" id="Bill_LadingText1"></textarea></td>
             <td></td>
             </td>
             </tr>
-
-
 
             <tr>
             <td rowspan="3" class="font-weight-bold">Hazardous Waste Generator</td>
             <td>Registration as Hazardous Waste Generator</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Registration_HWG1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Registration_HWGText1" id="Registration_HWGText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>With temporary Hazwaste storage facility</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Temp_HazStorageFacility1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Temp_HazStorageFacilityText1" id="Temp_HazStorageFacilityText1"></textarea></td>
             <td></td>
             </td>
             </tr>
             <tr>
               <td>Reporting of hazardouswaste generated</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Report_HazGenerated1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Report_HazGeneratedText1" id="Report_HazGeneratedTextText1"></textarea></td>
             <td></td>
             </td>
             </tr>
@@ -1390,38 +2107,38 @@
             <td rowspan="3" class="font-weight-bold">Hazardous Waste and Labelling </td>
             <td>Hazardous Waste Properly Labelled</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Haz_WasteLabelled1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Haz_WasteLabelledText1" id="Haz_WasteLabelledText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>Valid Permit to Transport</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Valid_PermitTranspo1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Valid_PermitTranspoText1" id="Valid_PermitTranspoText1"></textarea></td>
             <td></td>
             </td>
             </tr>
             <tr>
               <td>Valid Registration of Transporters and Treaters</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Valid_RegTranspoTreaters1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Valid_RegTranspoTreatersText1" id="Valid_RegTranspoTreatersText1"></textarea></td>
             <td></td>
             </td>
             </tr>
@@ -1433,25 +2150,25 @@
             <td rowspan="2" class="font-weight-bold">Waste Transporter; Waste Transport Record; Waste Treatment and Disposal Premises </td>
             <td>Compliance with Manifest System (Waste Transport Record)</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Waste_Transporter1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3" name="Waste_TransporterText1" id="Waste_TransporterText1"></textarea></td>
             </td>
             </tr>
             <tr>
               <td>Valid/completed certificate of treatment</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="Valid_CertTreatment1">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td><textarea class="form-control" rows="3" name="Valid_CertTreatmentText1" id="Valid_CertTreatmentText1"></textarea></td>
             <td></td>
             </td>
             </tr>
@@ -1481,117 +2198,117 @@
             <td rowspan="9" class="font-weight-bold">Permit to Operate Air</td>
             <td>With Valid POA</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
 
             <tr>
               <td>All emission sources is covered by a valid POA</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>POA is displayed in a conspicuous place near the installation</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>All permit conditions are complied with</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>Wind direction device is installed (if applicable)</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>Plant operational problems lasting for more than 1 hour should be reported to EMB within 24 hours</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>CCTV installed (for large sources only)</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>CEMS/PEMS installed (for petroleum refineries, power/cement plants or sources emitting 750 Tone/yr)</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>Yearly RATA/Quarterly CGA conducted (for sources with CEMS)</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
@@ -1599,26 +2316,26 @@
             <td class="font-weight-bold">Emission Testing (If applicable)</td>
             <td>Compliance with emission standards?</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
 
             <td class="font-weight-bold">Ambient Testing (if applicable)</td>
             <td>Compliance with ambient air quality standards?</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
 
@@ -1646,65 +2363,65 @@
             <td rowspan="5" class="font-weight-bold">Discharge Permit (DP)</td>
             <td>With valid Discharge Permit </td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
 
             <tr>
               <td>Volume of discharge consistent with DP issued?</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>All permit conditions are complied with?</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>With working flow metering device (if applicable)</td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td><textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td><textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
             <tr>
               <td>Certified septage siphoning hauled by accredited service provider. </td>
               <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
               </select>
-              <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+              <td> <textarea class="form-control" rows="3"></textarea></td>
               </td>
             </tr>
 
@@ -1713,13 +2430,13 @@
             <td class="font-weight-bold">Effluent Test Results (if applicable)</td>
             <td>In compliance with effluent standards</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             
             </tr>
@@ -1728,13 +2445,13 @@
             <td class="font-weight-bold">Ambient water quality monitoring (if applicable)</td>
             <td>With ambient water quality monitoring results</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             
             </tr>
@@ -1742,13 +2459,13 @@
             <td class="font-weight-bold">Wastewater charge system (if applicable)</td>
             <td>Payment of wastewater charges</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             
             </tr>
@@ -1773,26 +2490,26 @@
             <td class="font-weight-bold">Waste Segregation</td>
             <td>Practice of Waste Segregation </td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
             <tr>
             <td class="font-weight-bold">Solid Waste Disposal Facilities</td>
             <td>Installation of necessary controls for waste treatment and disposal facility</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
             </tbody>
@@ -1815,13 +2532,13 @@
             <td class="font-weight-bold">DAO 1992-26 or Revised Guidelines on PCO Accreditation</td>
             <td>Valid Accreditation of PCO </td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
            
@@ -1844,13 +2561,13 @@
             <td class="font-weight-bold">DAO 2003-27</td>
             <td>Complete and Timely submission of SMR's</td>
             <td>
-              <select class="form-select select2" name="" id="">
+              <select class="form-select select2" name="">
               <Option selected>Please select</Option>
               <Option value="Yes">Yes</Option>
               <Option value = "No">No</Option>
               <Option value="Not Applicable">N/A</Option>
             </select>
-            <td> <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea></td>
+            <td> <textarea class="form-control" rows="3"></textarea></td>
             </td>
             </tr>
            
@@ -1858,9 +2575,7 @@
         </table>
        </div>
 
-
-
-      
+ 
 
 
 
@@ -1949,5 +2664,3 @@
     ></script>
 	 <!-- CSS -->
 	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
-

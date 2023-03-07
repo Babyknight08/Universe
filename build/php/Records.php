@@ -88,6 +88,42 @@ class Records {
 	public $MOA_Agreement_DOI;
 	public $MOA_Agreement_DE;
 	public $ECC_Condition;
+	public $Haz_PCLCompliance;
+	public $Haz_PCLComplianceText;
+	public $Annual_Reporting;
+	public $Annual_ReportingText;
+	public $Biennial_Report;
+	public $Biennial_ReportText;
+	public $CCO_Registration;
+	public $CCO_RegistrationText;
+	public $Importation;
+	public $ImportationText;
+	public $Valid_ImportanceClearance;
+	public $Valid_ImportanceClearanceText;
+	public $Bill_Lading;
+	public $Bill_LadingText;
+	public $Registration_HWG;
+	public $Registration_HWGText;
+	public $Temp_HazStorageFacility;
+	public $Temp_HazStorageFacilityText;
+	public $Report_HazGenerated;
+	public $Report_HazGeneratedText;
+	public $Haz_WasteLabelled;
+	public $Haz_WasteLabelledText;
+	public $Valid_PermitTranspo;
+	public $Valid_PermitTranspoText;
+	public $Valid_RegTranspoTreaters;
+	public $Valid_RegTranspoTreatersText;
+	public $Waste_Transporter;
+	public $Waste_TransporterText;
+	public $Valid_CertTreatment;
+	public $Valid_CertTreatmentText;
+
+
+
+
+
+
 	public $SectionChief;
 	public $DivisionChief;
 	public $RegionalDirector;
@@ -172,9 +208,9 @@ class Records {
 	public function updateRecord(){
 		
 		if($this->id) {	
-			
+			$conditions = join("; ",$this->ECC_Condition);
 			$stmt = $this->conn->prepare("
-			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?,ReportPD1586 =?, ReportRA6969 =?, ReportRA8749 =?, ReportRA9275 =?,  ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, OperatingDay = ?, OperatingWeek = ?, OperatingYear = ?, ManagingHead = ?, PCOAccreditation = ?, PCOA_Date = ?, ContactNumber = ?, EmailAddress = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ?, OthersPV = ?, OthersPV_Text = ?, DetermineCompliance = ?, InvestigateComplaints = ?, StatusCommitments = ?, EwatchProgram = ?, PEPP = ?, PAB = ?, Others =?, Others_Text = ?, ECC = ?, ECC_DOI = ?, ECC_DE = ?, DENRID = ?, DENRID_DOI = ?, DENRID_DE = ?, PCL_Compliance = ?, PCL_Compliance_DOI = ?, PCL_Compliance_DE = ?, CCO_Registry = ?, CCO_Registry_DOI = ?, CCO_Registry_DE = ?, Importation_Clearance = ?, Importation_Clearance_DOI = ?, Importation_Clearance_DE = ?, COT_Issued =?, COT_Issued_DOI = ?, COT_Issued_DE = ?, TSD_RegistrationCert = ?, TSD_RegistrationCert_DOI = ?, TSD_RegistrationCert_DE = ?, POA_No = ?, POA_No_DOI = ?, POA_No_DE = ?, Discharge_Permit = ?, Discharge_Permit_DOI = ?, Discharge_Permit_DE = ?, MOA_Agreement = ?, MOA_Agreement_DOI = ?, MOA_Agreement_DE = ? WHERE id = ?");
+			UPDATE tblreports SET Reportcontrol = ?, DateofInspection = ?, MissionOrder = ?,ReportPD1586 =?, ReportRA6969 =?, ReportRA8749 =?, ReportRA9275 =?,  ReportRA9003 =?,  SpecificAddress = ?,NatureofBusiness = ?,PSIC = ?, Product = ?, Latitude = ?, Longitude = ?, YearEstablished = ?, OperatingDay = ?, OperatingWeek = ?, OperatingYear = ?, ManagingHead = ?, PCOAccreditation = ?, PCOA_Date = ?, ContactNumber = ?, EmailAddress = ?, VerifyAccuracy = ?, PMPIN_Hazardous = ? ,HWIDRegistration = ?, HWTRegistration = ?, HWTSDRegistration = ?, PTOAPCI = ?, DischargePermit = ?, OthersPV = ?, OthersPV_Text = ?, DetermineCompliance = ?, InvestigateComplaints = ?, StatusCommitments = ?, EwatchProgram = ?, PEPP = ?, PAB = ?, Others =?, Others_Text = ?, ECC = ?, ECC_DOI = ?, ECC_DE = ?, DENRID = ?, DENRID_DOI = ?, DENRID_DE = ?, PCL_Compliance = ?, PCL_Compliance_DOI = ?, PCL_Compliance_DE = ?, CCO_Registry = ?, CCO_Registry_DOI = ?, CCO_Registry_DE = ?, Importation_Clearance = ?, Importation_Clearance_DOI = ?, Importation_Clearance_DE = ?, COT_Issued =?, COT_Issued_DOI = ?, COT_Issued_DE = ?, TSD_RegistrationCert = ?, TSD_RegistrationCert_DOI = ?, TSD_RegistrationCert_DE = ?, POA_No = ?, POA_No_DOI = ?, POA_No_DE = ?, Discharge_Permit = ?, Discharge_Permit_DOI = ?, Discharge_Permit_DE = ?, MOA_Agreement = ?, MOA_Agreement_DOI = ?, MOA_Agreement_DE = ?, ECC_Condition = ?, Haz_PCLCompliance = ?, Haz_PCLComplianceText = ?, Annual_Reporting = ?, Annual_ReportingText = ?, Biennial_Report = ?, Biennial_ReportText = ?, CCO_Registration = ?, CCO_RegistrationText = ?, Importation = ?, ImportationText = ?, Valid_ImportanceClearance = ?, Valid_ImportanceClearanceText = ?, Bill_Lading = ?, Bill_LadingText = ?, Registration_HWG = ?, Registration_HWGText = ?, Temp_HazStorageFacility = ?,Temp_HazStorageFacilityText = ?, Report_HazGenerated = ?, Report_HazGeneratedText = ?, Haz_WasteLabelled = ?, Haz_WasteLabelledText = ?, Valid_PermitTranspo = ?, Valid_PermitTranspoText = ?, Valid_RegTranspoTreaters = ?, Valid_RegTranspoTreatersText = ?, Waste_Transporter = ?, Waste_TransporterText = ?, Valid_CertTreatment = ?, Valid_CertTreatmentText = ? WHERE id = ?");
 	 
 			$this->id = htmlspecialchars(strip_tags($this->id));
 			$this->reportcontrol = htmlspecialchars(strip_tags($this->reportcontrol));
@@ -247,11 +283,44 @@ class Records {
 			$this->MOA_Agreement = htmlspecialchars(strip_tags($this->MOA_Agreement));
 			$this->MOA_Agreement_DOI = htmlspecialchars(strip_tags($this->MOA_Agreement_DOI));
 			$this->MOA_Agreement_DE = htmlspecialchars(strip_tags($this->MOA_Agreement_DE));
+			$this->Haz_PCLCompliance = htmlspecialchars(strip_tags($this->Haz_PCLCompliance));
+			$this->Haz_PCLComplianceText = htmlspecialchars(strip_tags($this->Haz_PCLComplianceText));
+			$this->Annual_Reporting = htmlspecialchars(strip_tags($this->Annual_Reporting));
+			$this->Annual_ReportingText = htmlspecialchars(strip_tags($this->Annual_ReportingText));
+			$this->Biennial_Report = htmlspecialchars(strip_tags($this->Biennial_Report));
+			$this->Biennial_ReportText = htmlspecialchars(strip_tags($this->Biennial_ReportText));
+			$this->CCO_Registration = htmlspecialchars(strip_tags($this->CCO_Registration));
+			$this->CCO_RegistrationText = htmlspecialchars(strip_tags($this->CCO_RegistrationText));
+			$this->Importation = htmlspecialchars(strip_tags($this->Importation));
+			$this->ImportationText = htmlspecialchars(strip_tags($this->ImportationText));
+			$this->Valid_ImportanceClearance = htmlspecialchars(strip_tags($this->Valid_ImportanceClearance));
+			$this->Valid_ImportanceClearanceText = htmlspecialchars(strip_tags($this->Valid_ImportanceClearanceText));
+			$this->Bill_Lading = htmlspecialchars(strip_tags($this->Bill_Lading));
+			$this->Bill_LadingText = htmlspecialchars(strip_tags($this->Bill_LadingText));
+			$this->Registration_HWG = htmlspecialchars(strip_tags($this->Registration_HWG));
+			$this->Registration_HWGText = htmlspecialchars(strip_tags($this->Registration_HWGText));
+			$this->Temp_HazStorageFacility = htmlspecialchars(strip_tags($this->Temp_HazStorageFacility));
+			$this->Temp_HazStorageFacilityText = htmlspecialchars(strip_tags($this->Temp_HazStorageFacilityText));
+			$this->Report_HazGenerated = htmlspecialchars(strip_tags($this->Report_HazGenerated));
+			$this->Report_HazGeneratedText = htmlspecialchars(strip_tags($this->Report_HazGeneratedText));
+			$this->Haz_WasteLabelled = htmlspecialchars(strip_tags($this->Haz_WasteLabelled));
+			$this->Haz_WasteLabelledText = htmlspecialchars(strip_tags($this->Haz_WasteLabelledText));
+			$this->Valid_PermitTranspo = htmlspecialchars(strip_tags($this->Valid_PermitTranspo));
+			$this->Valid_PermitTranspoText = htmlspecialchars(strip_tags($this->Valid_PermitTranspoText));
+			$this->Valid_RegTranspoTreaters = htmlspecialchars(strip_tags($this->Valid_RegTranspoTreaters));
+			$this->Valid_RegTranspoTreatersText = htmlspecialchars(strip_tags($this->Valid_RegTranspoTreatersText));
+			
+
+			$this->Waste_Transporter = htmlspecialchars(strip_tags($this->Waste_Transporter));
+			$this->Waste_TransporterText = htmlspecialchars(strip_tags($this->Waste_TransporterText));
+			$this->Valid_CertTreatment = htmlspecialchars(strip_tags($this->Valid_CertTreatment));
+			$this->Valid_CertTreatmentText = htmlspecialchars(strip_tags($this->Valid_CertTreatmentText));
+	
 
 			
 
 			
-			$stmt->bind_param("sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text,	$this->ECC,$this->ECC_DOI,$this->ECC_DE,$this->DENRID,$this->DENRID_DOI,$this->DENRID_DE,$this->PCL_Compliance,$this->PCL_Compliance_DOI,$this->PCL_Compliance_DE,$this->CCO_Registry,$this->CCO_Registry_DOI,$this->CCO_Registry_DE,$this->Importation_Clearance,$this->Importation_Clearance_DOI,$this->Importation_Clearance_DE,$this->COT_Issued,$this->COT_Issued_DOI,$this->COT_Issued_DE,$this->TSD_RegistrationCert, $this->TSD_RegistrationCert_DOI, $this->TSD_RegistrationCert_DE,$this->POA_No, $this->POA_No_DOI, $this->POA_No_DE, $this->Discharge_Permit, $this->Discharge_Permit_DOI, $this->Discharge_Permit_DE, $this->MOA_Agreement, $this->MOA_Agreement_DOI, $this->MOA_Agreement_DE, $this->id);
+			$stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",$this->reportcontrol, $this->doi, $this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste, $this->specificaddress, $this->nob, $this->psiccode, $this->product, $this->latitude, $this->longitude,$this->yearestablished,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration, $this->PTOAPCI, $this->DischargePermit,$this->OthersPV ,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text,	$this->ECC,$this->ECC_DOI,$this->ECC_DE,$this->DENRID,$this->DENRID_DOI,$this->DENRID_DE,$this->PCL_Compliance,$this->PCL_Compliance_DOI,$this->PCL_Compliance_DE,$this->CCO_Registry,$this->CCO_Registry_DOI,$this->CCO_Registry_DE,$this->Importation_Clearance,$this->Importation_Clearance_DOI,$this->Importation_Clearance_DE,$this->COT_Issued,$this->COT_Issued_DOI,$this->COT_Issued_DE,$this->TSD_RegistrationCert, $this->TSD_RegistrationCert_DOI, $this->TSD_RegistrationCert_DE,$this->POA_No, $this->POA_No_DOI, $this->POA_No_DE, $this->Discharge_Permit, $this->Discharge_Permit_DOI, $this->Discharge_Permit_DE, $this->MOA_Agreement, $this->MOA_Agreement_DOI, $this->MOA_Agreement_DE,$conditions,$this->Haz_PCLCompliance,$this->Haz_PCLComplianceText,$this->Annual_Reporting,$this->Annual_ReportingText,$this->Biennial_Report,$this->Biennial_ReportText,$this->CCO_Registration,$this->CCO_RegistrationText,$this->Importation,$this->ImportationText,$this->Valid_ImportanceClearance,$this->Valid_ImportanceClearanceText,$this->Bill_Lading,$this->Bill_LadingText,$this->Registration_HWG,$this->Registration_HWGText,$this->Temp_HazStorageFacility,$this->Temp_HazStorageFacilityText,$this->Report_HazGenerated,$this->Report_HazGeneratedText,$this->Haz_WasteLabelled,$this->Haz_WasteLabelledText,$this->Valid_PermitTranspo,$this->Valid_PermitTranspoText,$this->Valid_RegTranspoTreaters,$this->Valid_RegTranspoTreatersText,$this->Waste_Transporter,$this->Waste_TransporterText,$this->Valid_CertTreatment,$this->Valid_CertTreatmentText,$this->id);
 			if($stmt->execute()){
 				return true;
 			}	
@@ -284,11 +353,12 @@ class Records {
 
 			date_default_timezone_set('Asia/Manila');
 			$this->datecreated = date("Y/m/d h:i:s"); 	
-			$conditions = join(" ",$this->ECC_Condition);
+
+			$conditions = join("; ",$this->ECC_Condition);
 
 			$query = "
-			INSERT INTO ".$this->tblreports."(`ID`,`Reportcontrol`,`DateofInspection`,`MissionOrder`,`ReportPD1586`,`ReportRA6969`,`ReportRA8749`,`ReportRA9275`,`ReportRA9003`,`ProjectName`, `SpecificAddress`,`NatureofBusiness`,`PSIC`,`Product`,`Latitude`,`Longitude`,`YearEstablished`,`PCOName`,`OperatingDay`,`OperatingWeek`,`OperatingYear`,`ManagingHead`,`PCOAccreditation`,`PCOA_Date`,`ContactNumber`,`EmailAddress`,`VerifyAccuracy`,`PMPIN_Hazardous`,`HWIDRegistration`,`HWTRegistration`,`HWTSDRegistration`,`PTOAPCI`,`DischargePermit`,`OthersPV`,`OthersPV_text`,`DetermineCompliance`,`InvestigateComplaints`,`StatusCommitments`,`EwatchProgram`,`PEPP`,`PAB`,`Others`,`Others_Text`,`ECC`,`ECC_DOI`,`ECC_DE`,`DENRID`,`DENRID_DOI`,`DENRID_DE`,`PCL_Compliance`,`PCL_Compliance_DOI`,`PCL_Compliance_DE`,`CCO_Registry`,`CCO_Registry_DOI`,`CCO_Registry_DE`,`Importation_Clearance`,`Importation_Clearance_DOI`,`Importation_Clearance_DE`,`COT_Issued`,`COT_Issued_DOI`,`COT_Issued_DE`,`TSD_RegistrationCert`,`TSD_RegistrationCert_DOI`,`TSD_RegistrationCert_DE`,`POA_No`,`POA_No_DOI`,`POA_No_DE`,`Discharge_Permit`,`Discharge_Permit_DOI`,`Discharge_Permit_DE`,`MOA_Agreement`,`MOA_Agreement_DOI`,`MOA_Agreement_DE`,`ECC_Condition`,`SectionChief`,`DivisionChief`,`RegionalDirector`,`datecreated`,`userid`)
-			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,$userid)";
+			INSERT INTO ".$this->tblreports."(`ID`,`Reportcontrol`,`DateofInspection`,`MissionOrder`,`ReportPD1586`,`ReportRA6969`,`ReportRA8749`,`ReportRA9275`,`ReportRA9003`,`ProjectName`, `SpecificAddress`,`NatureofBusiness`,`PSIC`,`Product`,`Latitude`,`Longitude`,`YearEstablished`,`PCOName`,`OperatingDay`,`OperatingWeek`,`OperatingYear`,`ManagingHead`,`PCOAccreditation`,`PCOA_Date`,`ContactNumber`,`EmailAddress`,`VerifyAccuracy`,`PMPIN_Hazardous`,`HWIDRegistration`,`HWTRegistration`,`HWTSDRegistration`,`PTOAPCI`,`DischargePermit`,`OthersPV`,`OthersPV_text`,`DetermineCompliance`,`InvestigateComplaints`,`StatusCommitments`,`EwatchProgram`,`PEPP`,`PAB`,`Others`,`Others_Text`,`ECC`,`ECC_DOI`,`ECC_DE`,`DENRID`,`DENRID_DOI`,`DENRID_DE`,`PCL_Compliance`,`PCL_Compliance_DOI`,`PCL_Compliance_DE`,`CCO_Registry`,`CCO_Registry_DOI`,`CCO_Registry_DE`,`Importation_Clearance`,`Importation_Clearance_DOI`,`Importation_Clearance_DE`,`COT_Issued`,`COT_Issued_DOI`,`COT_Issued_DE`,`TSD_RegistrationCert`,`TSD_RegistrationCert_DOI`,`TSD_RegistrationCert_DE`,`POA_No`,`POA_No_DOI`,`POA_No_DE`,`Discharge_Permit`,`Discharge_Permit_DOI`,`Discharge_Permit_DE`,`MOA_Agreement`,`MOA_Agreement_DOI`,`MOA_Agreement_DE`,`ECC_Condition`,`Haz_PCLCompliance`,`Haz_PCLComplianceText`,`Annual_Reporting`,`Annual_ReportingText`,`Biennial_Report`,`Biennial_ReportText`,`CCO_Registration`,`CCO_RegistrationText`,`Importation`,`ImportationText`,`Valid_ImportanceClearance`,`Valid_ImportanceClearanceText`,`Bill_Lading`,`Bill_LadingText`,`Registration_HWG`,`Registration_HWGText`,`Temp_HazStorageFacility`,`Temp_HazStorageFacilityText`,`Report_HazGenerated`,`Report_HazGeneratedText`,`Haz_WasteLabelled`,`Haz_WasteLabelledText`,`Valid_PermitTranspo`,`Valid_PermitTranspoText`,`Valid_RegTranspoTreaters`,`Valid_RegTranspoTreatersText`,`Waste_Transporter`,`Waste_TransporterText`,`Valid_CertTreatment`,`Valid_CertTreatmentText`,`SectionChief`,`DivisionChief`,`RegionalDirector`,`datecreated`,`userid`)
+			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,$userid)";
 			$stmt = $this->conn->prepare($query);
 			
 			$this->id = htmlspecialchars(strip_tags(strtoupper($this->id)));
@@ -365,11 +435,58 @@ class Records {
 			$this->MOA_Agreement = htmlspecialchars(strip_tags($this->MOA_Agreement));
 			$this->MOA_Agreement_DOI = htmlspecialchars(strip_tags($this->MOA_Agreement_DOI));
 			$this->MOA_Agreement_DE = htmlspecialchars(strip_tags($this->MOA_Agreement_DE));
+			$this->Haz_PCLCompliance = htmlspecialchars(strip_tags($this->Haz_PCLCompliance));
+			$this->Haz_PCLComplianceText = htmlspecialchars(strip_tags($this->Haz_PCLComplianceText));
+			$this->Annual_Reporting = htmlspecialchars(strip_tags($this->Annual_Reporting));
+			$this->Annual_ReportingText = htmlspecialchars(strip_tags($this->Annual_ReportingText));
+			$this->Biennial_Report = htmlspecialchars(strip_tags($this->Biennial_Report));
+			$this->Biennial_ReportText = htmlspecialchars(strip_tags($this->Biennial_ReportText));
+			$this->CCO_Registration = htmlspecialchars(strip_tags($this->CCO_Registration));
+			$this->CCO_RegistrationText = htmlspecialchars(strip_tags($this->CCO_RegistrationText));
+			$this->Importation = htmlspecialchars(strip_tags($this->Importation));
+			$this->ImportationText = htmlspecialchars(strip_tags($this->ImportationText));
+			$this->Valid_ImportanceClearance = htmlspecialchars(strip_tags($this->Valid_ImportanceClearance));
+			$this->Valid_ImportanceClearanceText = htmlspecialchars(strip_tags($this->Valid_ImportanceClearanceText));
+			$this->Bill_Lading = htmlspecialchars(strip_tags($this->Bill_Lading));
+			$this->Bill_LadingText = htmlspecialchars(strip_tags($this->Bill_LadingText));
+			$this->Registration_HWG = htmlspecialchars(strip_tags($this->Registration_HWG));
+			$this->Temp_HazStorageFacility = htmlspecialchars(strip_tags($this->Temp_HazStorageFacility));
+			$this->Report_HazGenerated = htmlspecialchars(strip_tags($this->Report_HazGenerated));
+			$this->Haz_WasteLabelled = htmlspecialchars(strip_tags($this->Haz_WasteLabelled));
+			$this->Valid_PermitTranspo = htmlspecialchars(strip_tags($this->Valid_PermitTranspo));
+			$this->Valid_RegTranspoTreaters = htmlspecialchars(strip_tags($this->Valid_RegTranspoTreaters));
+			$this->Waste_Transporter = htmlspecialchars(strip_tags($this->Waste_Transporter));
+			$this->Valid_CertTreatment = htmlspecialchars(strip_tags($this->Valid_CertTreatment));
+			$this->Bill_Lading = htmlspecialchars(strip_tags($this->Bill_Lading));
+			$this->Registration_HWG = htmlspecialchars(strip_tags($this->Registration_HWG));
+			$this->Registration_HWGText = htmlspecialchars(strip_tags($this->Registration_HWGText));
+			$this->Temp_HazStorageFacility = htmlspecialchars(strip_tags($this->Temp_HazStorageFacility));
+			$this->Temp_HazStorageFacilityText = htmlspecialchars(strip_tags($this->Temp_HazStorageFacilityText));
+			$this->Report_HazGenerated = htmlspecialchars(strip_tags($this->Report_HazGenerated));
+			$this->Report_HazGeneratedText = htmlspecialchars(strip_tags($this->Report_HazGeneratedText));
+			$this->Haz_WasteLabelled = htmlspecialchars(strip_tags($this->Haz_WasteLabelled));
+			$this->Haz_WasteLabelledText = htmlspecialchars(strip_tags($this->Haz_WasteLabelledText));
+			$this->Valid_PermitTranspo = htmlspecialchars(strip_tags($this->Valid_PermitTranspo));
+			$this->Valid_PermitTranspoText = htmlspecialchars(strip_tags($this->Valid_PermitTranspoText));
+			$this->Valid_RegTranspoTreaters = htmlspecialchars(strip_tags($this->Valid_RegTranspoTreaters));
+			$this->Valid_RegTranspoTreatersText = htmlspecialchars(strip_tags($this->Valid_RegTranspoTreatersText));
+			$this->Waste_Transporter = htmlspecialchars(strip_tags($this->Waste_Transporter));
+			$this->Waste_TransporterText = htmlspecialchars(strip_tags($this->Waste_TransporterText));
+			$this->Valid_CertTreatment = htmlspecialchars(strip_tags($this->Valid_CertTreatment));
+			$this->Valid_CertTreatmentText = htmlspecialchars(strip_tags($this->Valid_CertTreatmentText));
+
+
+
+
+
+
+
+
 			$this->SectionChief = htmlspecialchars(strip_tags($this->SectionChief));
 			$this->DivisionChief = htmlspecialchars(strip_tags($this->DivisionChief));
 			$this->RegionalDirector = htmlspecialchars(strip_tags($this->RegionalDirector));
 			
-			$stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",$this->id,$this->reportcontrol,$this->doi,$this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text,$this->ECC,$this->ECC_DOI,$this->ECC_DE,$this->DENRID,$this->DENRID_DOI,$this->DENRID_DE,$this->PCL_Compliance,$this->PCL_Compliance_DOI,$this->PCL_Compliance_DE,$this->CCO_Registry,$this->CCO_Registry_DOI,$this->CCO_Registry_DE,$this->Importation_Clearance,$this->Importation_Clearance_DOI,$this->Importation_Clearance_DE,$this->COT_Issued,$this->COT_Issued_DOI,$this->COT_Issued_DE,$this->TSD_RegistrationCert,$this->TSD_RegistrationCert_DOI,$this->TSD_RegistrationCert_DE,$this->POA_No,$this->POA_No_DOI,$this->POA_No_DE,$this->Discharge_Permit,$this->Discharge_Permit_DOI,$this->Discharge_Permit_DE,$this->MOA_Agreement,$this->MOA_Agreement_DOI,$this->MOA_Agreement_DE,$conditions,$this->SectionChief,$this->DivisionChief,$this->RegionalDirector,$this->datecreated);
+			$stmt->bind_param("ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",$this->id,$this->reportcontrol,$this->doi,$this->missionorder,$this->eia,$this->chwms,$this->air,$this->water,$this->solidwaste,$this->name, $this->specificaddress,$this->nob,$this->psiccode,$this->product,$this->latitude,$this->longitude,$this->yearestablished,$this->pco,$this->operating_day,$this->operating_week,$this->operating_year,$this->mhead,$this->pcoaccreditation,$this->PCOA_Date,$this->ContactNumber,$this->EmailAddress,$this->VerifyAccuracy,$this->PMPIN_Hazardous,$this->HWIDRegistration,$this->HWTRegistration,$this->HWTSDRegistration,$this->PTOAPCI,$this->DischargePermit,$this->OthersPV,$this->otherspv_text,$this->DetermineCompliance,$this->InvestigateComplaints,$this->StatusCommitments,$this->EwatchProgram,$this->PEPP,$this->PAB,$this->Others,$this->Others_Text,$this->ECC,$this->ECC_DOI,$this->ECC_DE,$this->DENRID,$this->DENRID_DOI,$this->DENRID_DE,$this->PCL_Compliance,$this->PCL_Compliance_DOI,$this->PCL_Compliance_DE,$this->CCO_Registry,$this->CCO_Registry_DOI,$this->CCO_Registry_DE,$this->Importation_Clearance,$this->Importation_Clearance_DOI,$this->Importation_Clearance_DE,$this->COT_Issued,$this->COT_Issued_DOI,$this->COT_Issued_DE,$this->TSD_RegistrationCert,$this->TSD_RegistrationCert_DOI,$this->TSD_RegistrationCert_DE,$this->POA_No,$this->POA_No_DOI,$this->POA_No_DE,$this->Discharge_Permit,$this->Discharge_Permit_DOI,$this->Discharge_Permit_DE,$this->MOA_Agreement,$this->MOA_Agreement_DOI,$this->MOA_Agreement_DE,$conditions,$this->Haz_PCLCompliance,$this->Haz_PCLComplianceText,$this->Annual_Reporting,$this->Annual_ReportingText,$this->Biennial_Report,$this->Biennial_ReportText,$this->CCO_Registration,$this->CCO_RegistrationText,$this->Importation,$this->ImportationText,$this->Valid_ImportanceClearance,$this->Valid_ImportanceClearanceText,$this->Bill_Lading,$this->Bill_LadingText,$this->Registration_HWG,$this->Registration_HWGText,$this->Temp_HazStorageFacility,$this->Temp_HazStorageFacilityText,$this->Report_HazGenerated,$this->Report_HazGeneratedText,$this->Haz_WasteLabelled,$this->Haz_WasteLabelledText,$this->Valid_PermitTranspo,$this->Valid_PermitTranspoText,$this->Valid_RegTranspoTreaters,$this->Valid_RegTranspoTreatersText,$this->Waste_Transporter,$this->Waste_TransporterText,$this->Valid_CertTreatment,$this->Valid_CertTreatmentText,$this->SectionChief,$this->DivisionChief,$this->RegionalDirector,$this->datecreated);
 				if($stmt->execute()){
 				return true;
 			}	

@@ -184,10 +184,43 @@ $(document).ready(function () {
         $("#MOA_Agreement").val(data.MOA_Agreement);
         $("#MOA_Agreement_DOI").val(data.MOA_Agreement_DOI);
         $("#MOA_Agreement_DE").val(data.MOA_Agreement_DE);
+        // $("#ECC_Condition").val(data.ECC_Condition);
+        $("#Haz_PCLCompliance").val(data.Haz_PCLCompliance);
+        $("#Haz_PCLComplianceText").val(data.Haz_PCLComplianceText);
+        $("#Annual_Reporting").val(data.Annual_Reporting);
+        $("#Annual_ReportingText").val(data.Annual_ReportingText);
+        $("#Biennial_Report").val(data.Biennial_Report);
+        $("#Biennial_ReportText").val(data.Biennial_ReportText);
+        $("#CCO_Registration").val(data.CCO_Registration);
+        $("#CCO_RegistrationText").val(data.CCO_RegistrationText);
+        $("#Importation").val(data.Importation);
+        $("#ImportationText").val(data.ImportationText);
+        $("#Valid_ImportanceClearance").val(data.Valid_ImportanceClearance);
+        $("#Valid_ImportanceClearanceText").val(
+          data.Valid_ImportanceClearanceText
+        );
+        $("#Bill_LadingText").val(data.Bill_LadingText);
+        $("#Registration_HWGText").val(data.Registration_HWGText);
+        $("#Temp_HazStorageFacilityText").val(data.Temp_HazStorageFacilityText);
+        $("#Report_HazGeneratedText").val(data.Report_HazGeneratedText);
+        $("#Haz_WasteLabelled").val(data.Haz_WasteLabelled);
+        $("#Haz_WasteLabelledText").val(data.Haz_WasteLabelledText);
+        $("#Valid_PermitTranspo").val(data.Valid_PermitTranspo);
+        $("#Valid_PermitTranspoText").val(data.Valid_PermitTranspoText);
+        $("#Valid_RegTranspoTreaters").val(data.Valid_RegTranspoTreaters);
+        $("#Valid_RegTranspoTreatersText").val(
+          data.Valid_RegTranspoTreatersText
+        );
+        $("#Waste_Transporter").val(data.Waste_Transporter);
+        $("#Waste_TransporterText").val(data.Waste_TransporterText);
+        $("#Valid_CertTreatment").val(data.Valid_CertTreatment);
+        $("#Valid_CertTreatmentText").val(data.Valid_CertTreatmentText);
+
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
         $("#save").val("Save");
 
+        // Checkbox
         if (data.ReportRA8749 == "true") {
           document.getElementById("Air").checked = true;
         }
@@ -316,7 +349,7 @@ $(document).ready(function () {
           document.getElementById("pab").checked = true;
         }
 
-        // --------------------------------
+        // Others Person Verification Button
         if (data.OthersPV == "true") {
           $("#otherspv").prop("checked", true);
           $("#otherspv_text").show();
@@ -339,9 +372,8 @@ $(document).ready(function () {
             $("#otherspv_text").show();
           }
         });
-        // -----------------------------------
 
-        //
+        //Others Check Button
         if (data.Others == "true") {
           $("#others").prop("checked", true);
           $("#others_text").show();
@@ -365,9 +397,155 @@ $(document).ready(function () {
           }
         });
 
+        // PSIC Select2 Show Value from Database
+        $("#PSICCode").val(data.PSIC).trigger("change");
+        var selectElementPSIC = $("#PSICCode");
+        var currentValuePSIC = selectElementPSIC.val();
+        selectElementPSIC.select2("destroy");
+        selectElementPSIC.val(currentValuePSIC).select2();
+
+        // Product Select2 Show Value from Database
+        $("#Product").val(data.Product).trigger("change");
+        var selectElementProduct = $("#Product");
+        var currentValueProduct = selectElementProduct.val();
+        selectElementProduct.select2("destroy");
+        selectElementProduct.val(currentValueProduct).select2();
+
+        // PCL Compliance Select2 Show Value from Database
+        $("#Haz_PCLCompliance").val(data.Haz_PCLCompliance).trigger("change");
+        var Haz_PCLCompliance = $("#Haz_PCLCompliance");
+        var currentValueHaz_PCLCompliance = Haz_PCLCompliance.val();
+        Haz_PCLCompliance.select2("destroy");
+        Haz_PCLCompliance.val(currentValueHaz_PCLCompliance).select2();
+
+        $("#Annual_Reporting").val(data.Annual_Reporting).trigger("change");
+        var Annual_Reporting = $("#Annual_Reporting");
+        var currentValueAnnual_Reporting = Annual_Reporting.val();
+        Annual_Reporting.select2("destroy");
+        Annual_Reporting.val(currentValueAnnual_Reporting).select2();
+
+        $("#Biennial_Report").val(data.Biennial_Report).trigger("change");
+        var Biennial_Report = $("#Biennial_Report");
+        var currentValueBiennial_Report = Biennial_Report.val();
+        Biennial_Report.select2("destroy");
+        Biennial_Report.val(currentValueBiennial_Report).select2();
+
+        $("#CCO_Registration").val(data.CCO_Registration).trigger("change");
+        var CCO_Registration = $("#CCO_Registration");
+        var currentValueCCO_Registration = CCO_Registration.val();
+        CCO_Registration.select2("destroy");
+        CCO_Registration.val(currentValueCCO_Registration).select2();
+
+        $("#Importation").val(data.Importation).trigger("change");
+        var Importation = $("#Importation");
+        var currentValueImportation = Importation.val();
+        Importation.select2("destroy");
+        Importation.val(currentValueImportation).select2();
+
+        $("#Valid_ImportanceClearance")
+          .val(data.Valid_ImportanceClearance)
+          .trigger("change");
+        var Valid_ImportanceClearance = $("#Valid_ImportanceClearance");
+        var currentValueValid_ImportanceClearance =
+          Valid_ImportanceClearance.val();
+        Valid_ImportanceClearance.select2("destroy");
+        Valid_ImportanceClearance.val(
+          currentValueValid_ImportanceClearance
+        ).select2();
+
+        $("#Bill_Lading").val(data.Bill_Lading).trigger("change");
+        var Bill_Lading = $("#Bill_Lading");
+        var currentValueBill_Lading = Bill_Lading.val();
+        Bill_Lading.select2("destroy");
+        Bill_Lading.val(currentValueBill_Lading).select2();
+
+        $("#Registration_HWG").val(data.Registration_HWG).trigger("change");
+        var Registration_HWG = $("#Registration_HWG");
+        var currentValueRegistration_HWG = Registration_HWG.val();
+        Registration_HWG.select2("destroy");
+        Registration_HWG.val(currentValueRegistration_HWG).select2();
+
+        $("#Temp_HazStorageFacility")
+          .val(data.Temp_HazStorageFacility)
+          .trigger("change");
+        var Temp_HazStorageFacility = $("#Temp_HazStorageFacility");
+        var currentValueTemp_HazStorageFacility = Temp_HazStorageFacility.val();
+        Temp_HazStorageFacility.select2("destroy");
+        Temp_HazStorageFacility.val(
+          currentValueTemp_HazStorageFacility
+        ).select2();
+
+        $("#Report_HazGenerated")
+          .val(data.Report_HazGenerated)
+          .trigger("change");
+        var Report_HazGenerated = $("#Report_HazGenerated");
+        var currentValueReport_HazGenerated = Report_HazGenerated.val();
+        Report_HazGenerated.select2("destroy");
+        Report_HazGenerated.val(currentValueReport_HazGenerated).select2();
+
+        $("#Haz_WasteLabelled").val(data.Haz_WasteLabelled).trigger("change");
+        var Haz_WasteLabelled = $("#Haz_WasteLabelled");
+        var currentValueHaz_WasteLabelled = Haz_WasteLabelled.val();
+        Haz_WasteLabelled.select2("destroy");
+        Haz_WasteLabelled.val(currentValueHaz_WasteLabelled).select2();
+
+        $("#Valid_PermitTranspo")
+          .val(data.Valid_PermitTranspo)
+          .trigger("change");
+        var Valid_PermitTranspo = $("#Valid_PermitTranspo");
+        var currentValueValid_PermitTranspo = Valid_PermitTranspo.val();
+        Valid_PermitTranspo.select2("destroy");
+        Valid_PermitTranspo.val(currentValueValid_PermitTranspo).select2();
+
+        $("#Valid_RegTranspoTreaters")
+          .val(data.Valid_RegTranspoTreaters)
+          .trigger("change");
+        var Valid_RegTranspoTreaters = $("#Valid_RegTranspoTreaters");
+        var currentValueValid_RegTranspoTreaters =
+          Valid_RegTranspoTreaters.val();
+        Valid_RegTranspoTreaters.select2("destroy");
+        Valid_RegTranspoTreaters.val(
+          currentValueValid_RegTranspoTreaters
+        ).select2();
+
+        $("#Waste_Transporter").val(data.Waste_Transporter).trigger("change");
+        var Waste_Transporter = $("#Waste_Transporter");
+        var currentValueWaste_Transporter = Waste_Transporter.val();
+        Waste_Transporter.select2("destroy");
+        Waste_Transporter.val(currentValueWaste_Transporter).select2();
+
+        $("#Valid_CertTreatment")
+          .val(data.Valid_CertTreatment)
+          .trigger("change");
+        var Valid_CertTreatment = $("#Valid_CertTreatment");
+        var currentValueValid_CertTreatment = Valid_CertTreatment.val();
+        Valid_CertTreatment.select2("destroy");
+        Valid_CertTreatment.val(currentValueValid_CertTreatment).select2();
+
+        // Please modify
+        var data = data.ECC_Condition;
+
+        var dataArray = data.split(";");
+
+        dataArray.forEach(function (value) {
+          var input = document.createElement("input");
+
+          input.type = "text";
+          input.className = "form-control";
+          input.value = value;
+
+          var container = document.getElementById("id123");
+          container.appendChild(input);
+        });
         //
       },
     });
+
+    $(document).on("click", ".btn_remove", function () {
+      var button_id = $(this).attr("id");
+      $("#row" + button_id + "").remove();
+    });
+    //
   });
 
   // open modal
@@ -500,19 +678,34 @@ $("#recordListing").on("click", ".pdf", function () {
   });
 });
 
+// Add and Remove row inserting data
+var i = 1;
+$("#add1").click(function () {
+  i++;
+  $("#dynamic_field1").append(
+    '<tr id="row1' +
+      i +
+      '"><td><input type="text" name="ECC_Condition1[]" placeholder="ECC Condition" class="form-control name_list"/></td><td><button type="button" name="remove" id="' +
+      i +
+      '" class="btn btn-danger btn_remove1">X</button></td></tr>'
+  );
+});
+
+$(document).on("click", ".btn_remove1", function () {
+  var button_id = $(this).attr("id");
+  $("#row1" + button_id + "").remove();
+});
+//
+
+// Add and Remove row Updating data
 var i = 1;
 $("#add").click(function () {
   i++;
   $("#dynamic_field").append(
     '<tr id="row' +
       i +
-      '"><td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" /></td><td><button type="button" name="remove" id="' +
+      '"><td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list"/></td><td><button type="button" name="remove" id="' +
       i +
       '" class="btn btn-danger btn_remove">X</button></td></tr>'
   );
-});
-
-$(document).on("click", ".btn_remove", function () {
-  var button_id = $(this).attr("id");
-  $("#row" + button_id + "").remove();
 });
