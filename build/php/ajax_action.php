@@ -90,6 +90,8 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI"];
 	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE"];
 	$record->ECC_Condition = $_POST["ECC_Condition"];
+
+
 	$record->Haz_PCLCompliance = $_POST["Haz_PCLCompliance"];
 	$record->Haz_PCLComplianceText = $_POST["Haz_PCLComplianceText"];
 	$record->Annual_Reporting = $_POST["Annual_Reporting"];
@@ -118,10 +120,31 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->Valid_RegTranspoTreatersText = $_POST["Valid_RegTranspoTreatersText"];
 	$record->Waste_Transporter = $_POST["Waste_Transporter"];
 	$record->Waste_TransporterText = $_POST["Waste_TransporterText"];
-
-
 	$record->Valid_CertTreatment = $_POST["Valid_CertTreatment"];
 	$record->Valid_CertTreatmentText = $_POST["Valid_CertTreatmentText"];
+	$record->Air_ValidPOA = $_POST["Air_ValidPOA"];
+	$record->Air_ValidPOAText = $_POST["Air_ValidPOAText"];
+	$record->Air_EmissionPOA = $_POST["Air_EmissionPOA"];
+	$record->Air_EmissionPOAText = $_POST["Air_EmissionPOAText"];
+	$record->Air_DisplayInstallation = $_POST["Air_DisplayInstallation"];
+	$record->Air_DisplayInstallationText = $_POST["Air_DisplayInstallationText"];
+	$record->Air_PermitCondition = $_POST["Air_PermitCondition"];
+	$record->Air_PermitConditionText = $_POST["Air_PermitConditionText"];
+	$record->Air_WindDevice = $_POST["Air_WindDevice"];
+	$record->Air_WindDeviceText = $_POST["Air_WindDeviceText"];
+	$record->Air_PlantOperationProblem = $_POST["Air_PlantOperationProblem"];
+	$record->Air_PlantOperationProblemText = $_POST["Air_PlantOperationProblemText"];
+	$record->Air_CCTVInstalled = $_POST["Air_CCTVInstalled"];
+	$record->Air_CCTVInstalledText = $_POST["Air_CCTVInstalledText"];
+	$record->Air_CEMSorPEMS = $_POST["Air_CEMSorPEMS"];
+	$record->Air_CEMSorPEMSText = $_POST["Air_CEMSorPEMSText"];
+	$record->Air_YearlyRATA = $_POST["Air_YearlyRATA"];
+	$record->Air_YearlyRATAText = $_POST["Air_YearlyRATAText"];
+	$record->Air_EmissionTestStandard = $_POST["Air_EmissionTestStandard"];
+	$record->Air_EmissionTestStandardText = $_POST["Air_EmissionTestStandardText"];
+	$record->Air_AmbientQualityStandard = $_POST["Air_AmbientQualityStandard"];
+	$record->Air_AmbientQualityStandardText = $_POST["Air_AmbientQualityStandardText"];
+
 
 	$record->updateRecord();
 }
@@ -235,6 +258,28 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->Waste_TransporterText = $_POST["Waste_TransporterText1"];
 	$record->Valid_CertTreatment = $_POST["Valid_CertTreatment1"];
 	$record->Valid_CertTreatmentText = $_POST["Valid_CertTreatmentText1"];
+	$record->Air_ValidPOA = $_POST["Air_ValidPOA1"];
+	$record->Air_ValidPOAText = $_POST["Air_ValidPOAText1"];
+	$record->Air_EmissionPOA = $_POST["Air_EmissionPOA1"];
+	$record->Air_EmissionPOAText = $_POST["Air_EmissionPOAText1"];
+	$record->Air_DisplayInstallation = $_POST["Air_DisplayInstallation1"];
+	$record->Air_DisplayInstallationText = $_POST["Air_DisplayInstallationText1"];
+	$record->Air_PermitCondition = $_POST["Air_PermitCondition1"];
+	$record->Air_PermitConditionText = $_POST["Air_PermitConditionText1"];
+	$record->Air_WindDevice = $_POST["Air_WindDevice1"];
+	$record->Air_WindDeviceText = $_POST["Air_WindDeviceText1"];
+	$record->Air_PlantOperationProblem = $_POST["Air_PlantOperationProblem1"];
+	$record->Air_PlantOperationProblemText = $_POST["Air_PlantOperationProblemText1"];
+	$record->Air_CCTVInstalled = $_POST["Air_CCTVInstalled1"];
+	$record->Air_CCTVInstalledText = $_POST["Air_CCTVInstalledText1"];
+	$record->Air_CEMSorPEMS = $_POST["Air_CEMSorPEMS1"];
+	$record->Air_CEMSorPEMSText = $_POST["Air_CEMSorPEMSText1"];
+	$record->Air_YearlyRATA = $_POST["Air_YearlyRATA1"];
+	$record->Air_YearlyRATAText = $_POST["Air_YearlyRATAText1"];
+	$record->Air_EmissionTestStandard = $_POST["Air_EmissionTestStandard1"];
+	$record->Air_EmissionTestStandardText = $_POST["Air_EmissionTestStandardText1"];
+	$record->Air_AmbientQualityStandard = $_POST["Air_AmbientQualityStandard1"];
+	$record->Air_AmbientQualityStandardText = $_POST["Air_AmbientQualityStandardText1"];
 
 
 

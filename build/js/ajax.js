@@ -216,6 +216,36 @@ $(document).ready(function () {
         $("#Valid_CertTreatment").val(data.Valid_CertTreatment);
         $("#Valid_CertTreatmentText").val(data.Valid_CertTreatmentText);
 
+        $("#Air_ValidPOA").val(data.Air_ValidPOA);
+        $("#Air_ValidPOAText").val(data.Air_ValidPOAText);
+        $("#Air_EmissionPOA").val(data.Air_EmissionPOA);
+        $("#Air_EmissionPOAText").val(data.Air_EmissionPOAText);
+        $("#Air_DisplayInstallation").val(data.Air_DisplayInstallation);
+        $("#Air_DisplayInstallationText").val(data.Air_DisplayInstallationText);
+        $("#Air_PermitCondition").val(data.Air_PermitCondition);
+        $("#Air_PermitConditionText").val(data.Air_PermitConditionText);
+        $("#Air_WindDevice").val(data.Air_WindDevice);
+        $("#Air_WindDeviceText").val(data.Air_WindDeviceText);
+        $("#Air_PlantOperationProblem").val(data.Air_PlantOperationProblem);
+        $("#Air_PlantOperationProblemText").val(
+          data.Air_PlantOperationProblemText
+        );
+
+        $("#Air_CCTVInstalled").val(data.Air_CCTVInstalled);
+        $("#Air_CCTVInstalledText").val(data.Air_CCTVInstalledText);
+        $("#Air_CEMSorPEMS").val(data.Air_CEMSorPEMS);
+        $("#Air_CEMSorPEMSText").val(data.Air_CEMSorPEMSText);
+        $("#Air_YearlyRATA").val(data.Air_YearlyRATA);
+        $("#Air_YearlyRATAText").val(data.Air_YearlyRATAText);
+        $("#Air_EmissionTestStandard").val(data.Air_EmissionTestStandard);
+        $("#Air_EmissionTestStandardText").val(
+          data.Air_EmissionTestStandardText
+        );
+        $("#Air_AmbientQualityStandard").val(data.Air_AmbientQualityStandard);
+        $("#Air_AmbientQualityStandardText").val(
+          data.Air_AmbientQualityStandardText
+        );
+
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
         $("#save").val("Save");
@@ -521,6 +551,93 @@ $(document).ready(function () {
         var currentValueValid_CertTreatment = Valid_CertTreatment.val();
         Valid_CertTreatment.select2("destroy");
         Valid_CertTreatment.val(currentValueValid_CertTreatment).select2();
+
+        $("#Air_ValidPOA").val(data.Air_ValidPOA).trigger("change");
+        var Air_ValidPOA = $("#Air_ValidPOA");
+        var currentValueAir_ValidPOA = Air_ValidPOA.val();
+        Air_ValidPOA.select2("destroy");
+        Air_ValidPOA.val(currentValueAir_ValidPOA).select2();
+
+        $("#Air_EmissionPOA").val(data.Air_EmissionPOA).trigger("change");
+        var Air_EmissionPOA = $("#Air_EmissionPOA");
+        var currentValueAir_EmissionPOA = Air_EmissionPOA.val();
+        Air_EmissionPOA.select2("destroy");
+        Air_EmissionPOA.val(currentValueAir_EmissionPOA).select2();
+
+        $("#Air_DisplayInstallation")
+          .val(data.Air_DisplayInstallation)
+          .trigger("change");
+        var Air_DisplayInstallation = $("#Air_DisplayInstallation");
+        var currentValueAir_DisplayInstallation = Air_DisplayInstallation.val();
+        Air_DisplayInstallation.select2("destroy");
+        Air_DisplayInstallation.val(
+          currentValueAir_DisplayInstallation
+        ).select2();
+
+        $("#Air_PermitCondition")
+          .val(data.Air_PermitCondition)
+          .trigger("change");
+        var Air_PermitCondition = $("#Air_PermitCondition");
+        var currentValueAir_PermitCondition = Air_PermitCondition.val();
+        Air_PermitCondition.select2("destroy");
+        Air_PermitCondition.val(currentValueAir_PermitCondition).select2();
+
+        $("#Air_WindDevice").val(data.Air_WindDevice).trigger("change");
+        var Air_WindDevice = $("#Air_WindDevice");
+        var currentValueAir_WindDevice = Air_WindDevice.val();
+        Air_WindDevice.select2("destroy");
+        Air_WindDevice.val(currentValueAir_WindDevice).select2();
+
+        $("#Air_PlantOperationProblem")
+          .val(data.Air_PlantOperationProblem)
+          .trigger("change");
+        var Air_PlantOperationProblem = $("#Air_PlantOperationProblem");
+        var currentValueAir_PlantOperationProblem =
+          Air_PlantOperationProblem.val();
+        Air_PlantOperationProblem.select2("destroy");
+        Air_PlantOperationProblem.val(
+          currentValueAir_PlantOperationProblem
+        ).select2();
+
+        $("#Air_CCTVInstalled").val(data.Air_CCTVInstalled).trigger("change");
+        var Air_CCTVInstalled = $("#Air_CCTVInstalled");
+        var currentValueAir_CCTVInstalled = Air_CCTVInstalled.val();
+        Air_CCTVInstalled.select2("destroy");
+        Air_CCTVInstalled.val(currentValueAir_CCTVInstalled).select2();
+
+        $("#Air_CEMSorPEMS").val(data.Air_CEMSorPEMS).trigger("change");
+        var Air_CEMSorPEMS = $("#Air_CEMSorPEMS");
+        var currentValueAir_CEMSorPEMS = Air_CEMSorPEMS.val();
+        Air_CEMSorPEMS.select2("destroy");
+        Air_CEMSorPEMS.val(currentValueAir_CEMSorPEMS).select2();
+
+        $("#Air_YearlyRATA").val(data.Air_YearlyRATA).trigger("change");
+        var Air_YearlyRATA = $("#Air_YearlyRATA");
+        var currentValueAir_YearlyRATA = Air_YearlyRATA.val();
+        Air_YearlyRATA.select2("destroy");
+        Air_YearlyRATA.val(currentValueAir_YearlyRATA).select2();
+
+        $("#Air_EmissionTestStandard")
+          .val(data.Air_EmissionTestStandard)
+          .trigger("change");
+        var Air_EmissionTestStandard = $("#Air_EmissionTestStandard");
+        var currentValueAir_EmissionTestStandard =
+          Air_EmissionTestStandard.val();
+        Air_EmissionTestStandard.select2("destroy");
+        Air_EmissionTestStandard.val(
+          currentValueAir_EmissionTestStandard
+        ).select2();
+
+        $("#Air_AmbientQualityStandard")
+          .val(data.Air_AmbientQualityStandard)
+          .trigger("change");
+        var Air_AmbientQualityStandard = $("#Air_AmbientQualityStandard");
+        var currentValueAir_AmbientQualityStandard =
+          Air_AmbientQualityStandard.val();
+        Air_AmbientQualityStandard.select2("destroy");
+        Air_AmbientQualityStandard.val(
+          currentValueAir_AmbientQualityStandard
+        ).select2();
 
         // Please modify
         var data = data.ECC_Condition;
