@@ -144,6 +144,36 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->Air_EmissionTestStandardText = $_POST["Air_EmissionTestStandardText"];
 	$record->Air_AmbientQualityStandard = $_POST["Air_AmbientQualityStandard"];
 	$record->Air_AmbientQualityStandardText = $_POST["Air_AmbientQualityStandardText"];
+	$record->Water_ValidDP = $_POST["Water_ValidDP"];
+	$record->Water_ValidDPText = $_POST["Water_ValidDPText"];
+	$record->Water_VolumeDP = $_POST["Water_VolumeDP"];
+	$record->Water_VolumeDPText = $_POST["Water_VolumeDPText"];
+	$record->Water_PermitsComplied = $_POST["Water_PermitsComplied"];
+	$record->Water_PermitsCompliedText = $_POST["Water_PermitsCompliedText"];
+	$record->Water_FlowMeterDevice = $_POST["Water_FlowMeterDevice"];
+	$record->Water_FlowMeterDeviceText = $_POST["Water_FlowMeterDeviceText"];
+	$record->Water_CertifiedSiphoning = $_POST["Water_CertifiedSiphoning"];
+	$record->Water_CertifiedSiphoningText = $_POST["Water_CertifiedSiphoningText"];
+	$record->Water_ComplianceEffluent = $_POST["Water_ComplianceEffluent"];
+	$record->Water_ComplianceEffluentText = $_POST["Water_ComplianceEffluentText"];
+	$record->Water_AmbientQualityMonitoring = $_POST["Water_AmbientQualityMonitoring"];
+	$record->Water_AmbientQualityMonitoringText = $_POST["Water_AmbientQualityMonitoringText"];
+	$record->Water_PaymentWastewater = $_POST["Water_PaymentWastewater"];
+	$record->Water_PaymentWastewaterText = $_POST["Water_PaymentWastewaterText"];
+	$record->SWM_WasteSegregation = $_POST["SWM_WasteSegregation"];
+	$record->SWM_WasteSegregationText = $_POST["SWM_WasteSegregationText"];
+	$record->SWM_WasteDisposalFacilities = $_POST["SWM_WasteDisposalFacilities"];
+	$record->SWM_WasteDisposalFacilitiesText = $_POST["SWM_WasteDisposalFacilitiesText"];
+
+
+	$record->PCO_Guidelines = $_POST["PCO_Guidelines"];
+	$record->PCO_GuidelinesText = $_POST["PCO_GuidelinesText"];
+	$record->DAO_SMRSubmission = $_POST["DAO_SMRSubmission"];
+	$record->DAO_SMRSubmissionText = $_POST["DAO_SMRSubmissionText"];
+
+
+
+	
 
 
 	$record->updateRecord();
@@ -280,7 +310,34 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->Air_EmissionTestStandardText = $_POST["Air_EmissionTestStandardText1"];
 	$record->Air_AmbientQualityStandard = $_POST["Air_AmbientQualityStandard1"];
 	$record->Air_AmbientQualityStandardText = $_POST["Air_AmbientQualityStandardText1"];
+	$record->Water_ValidDP = $_POST["Water_ValidDP1"];
+	$record->Water_ValidDPText = $_POST["Water_ValidDPText1"];
+	$record->Water_VolumeDP = $_POST["Water_VolumeDP1"];
+	$record->Water_VolumeDPText = $_POST["Water_VolumeDPText1"];
+	$record->Water_PermitsComplied = $_POST["Water_PermitsComplied1"];
+	$record->Water_PermitsCompliedText = $_POST["Water_PermitsCompliedText1"];
+	$record->Water_FlowMeterDevice = $_POST["Water_FlowMeterDevice1"];
+	$record->Water_FlowMeterDeviceText = $_POST["Water_FlowMeterDeviceText1"];
+	$record->Water_CertifiedSiphoning = $_POST["Water_CertifiedSiphoning1"];
+	$record->Water_CertifiedSiphoningText = $_POST["Water_CertifiedSiphoningText1"];
+	$record->Water_ComplianceEffluent = $_POST["Water_ComplianceEffluent1"];
+	$record->Water_ComplianceEffluentText = $_POST["Water_ComplianceEffluentText1"];
+	$record->Water_AmbientQualityMonitoring = $_POST["Water_AmbientQualityMonitoring1"];
+	$record->Water_AmbientQualityMonitoringText = $_POST["Water_AmbientQualityMonitoringText1"];
+	$record->Water_PaymentWastewater = $_POST["Water_PaymentWastewater1"];
+	$record->Water_PaymentWastewaterText = $_POST["Water_PaymentWastewaterText1"];
 
+
+
+	$record->SWM_WasteSegregation = $_POST["SWM_WasteSegregation1"];
+	$record->SWM_WasteSegregationText = $_POST["SWM_WasteSegregationText1"];
+	$record->SWM_WasteDisposalFacilities = $_POST["SWM_WasteDisposalFacilities1"];
+	$record->SWM_WasteDisposalFacilitiesText = $_POST["SWM_WasteDisposalFacilitiesText1"];
+	$record->PCO_Guidelines = $_POST["PCO_Guidelines1"];
+	$record->PCO_GuidelinesText = $_POST["PCO_GuidelinesText1"];
+	$record->DAO_SMRSubmission = $_POST["DAO_SMRSubmission1"];
+	$record->DAO_SMRSubmissionText = $_POST["DAO_SMRSubmissionText1"];
+	// 
 
 
 

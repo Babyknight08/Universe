@@ -230,7 +230,6 @@ $(document).ready(function () {
         $("#Air_PlantOperationProblemText").val(
           data.Air_PlantOperationProblemText
         );
-
         $("#Air_CCTVInstalled").val(data.Air_CCTVInstalled);
         $("#Air_CCTVInstalledText").val(data.Air_CCTVInstalledText);
         $("#Air_CEMSorPEMS").val(data.Air_CEMSorPEMS);
@@ -245,6 +244,42 @@ $(document).ready(function () {
         $("#Air_AmbientQualityStandardText").val(
           data.Air_AmbientQualityStandardText
         );
+
+        $("#Water_ValidDP").val(data.Water_ValidDP);
+        $("#Water_ValidDPText").val(data.Water_ValidDPText);
+        $("#Water_VolumeDP").val(data.Water_VolumeDP);
+        $("#Water_VolumeDPText").val(data.Water_VolumeDPText);
+        $("#Water_PermitsComplied").val(data.Water_PermitsComplied);
+        $("#Water_PermitsCompliedText").val(data.Water_PermitsCompliedText);
+        $("#Water_FlowMeterDevice").val(data.Water_FlowMeterDevice);
+        $("#Water_FlowMeterDeviceText").val(data.Water_FlowMeterDeviceText);
+        $("#Water_CertifiedSiphoning").val(data.Water_CertifiedSiphoning);
+        $("#Water_CertifiedSiphoningText").val(
+          data.Water_CertifiedSiphoningText
+        );
+        $("#Water_ComplianceEffluent").val(data.Water_ComplianceEffluent);
+        $("#Water_ComplianceEffluentText").val(
+          data.Water_ComplianceEffluentText
+        );
+        $("#Water_AmbientQualityMonitoring").val(
+          data.Water_AmbientQualityMonitoring
+        );
+        $("#Water_AmbientQualityMonitoringText").val(
+          data.Water_AmbientQualityMonitoringText
+        );
+        $("#Water_PaymentWastewater").val(data.Water_PaymentWastewater);
+        $("#Water_PaymentWastewaterText").val(data.Water_PaymentWastewaterText);
+
+        $("#SWM_WasteSegregation").val(data.SWM_WasteSegregation);
+        $("#SWM_WasteSegregationText").val(data.SWM_WasteSegregationText);
+        $("#SWM_WasteDisposalFacilities").val(data.SWM_WasteDisposalFacilities);
+        $("#SWM_WasteDisposalFacilitiesText").val(
+          data.SWM_WasteDisposalFacilitiesText
+        );
+        $("#PCO_Guidelines").val(data.PCO_Guidelines);
+        $("#PCO_GuidelinesText").val(data.PCO_GuidelinesText);
+        $("#DAO_SMRSubmission").val(data.DAO_SMRSubmission);
+        $("#DAO_SMRSubmissionText").val(data.DAO_SMRSubmissionText);
 
         $(".modal-title").html("<strong>Edit Report</strong>");
         $("#action").val("updateRecord");
@@ -639,6 +674,114 @@ $(document).ready(function () {
           currentValueAir_AmbientQualityStandard
         ).select2();
 
+        //
+
+        $("#Water_ValidDP").val(data.Water_ValidDP).trigger("change");
+        var Water_ValidDP = $("#Water_ValidDP");
+        var currentValueWater_ValidDP = Water_ValidDP.val();
+        Water_ValidDP.select2("destroy");
+        Water_ValidDP.val(currentValueWater_ValidDP).select2();
+
+        $("#Water_VolumeDP").val(data.Water_VolumeDP).trigger("change");
+        var Water_VolumeDP = $("#Water_VolumeDP");
+        var currentValueWater_VolumeDP = Water_VolumeDP.val();
+        Water_VolumeDP.select2("destroy");
+        Water_VolumeDP.val(currentValueWater_VolumeDP).select2();
+
+        $("#Water_PermitsComplied")
+          .val(data.Water_PermitsComplied)
+          .trigger("change");
+        var Water_PermitsComplied = $("#Water_PermitsComplied");
+        var currentValueWater_PermitsComplied = Water_PermitsComplied.val();
+        Water_PermitsComplied.select2("destroy");
+        Water_PermitsComplied.val(currentValueWater_PermitsComplied).select2();
+
+        $("#Water_FlowMeterDevice")
+          .val(data.Water_FlowMeterDevice)
+          .trigger("change");
+        var Water_FlowMeterDevice = $("#Water_FlowMeterDevice");
+        var currentValueWater_FlowMeterDevice = Water_FlowMeterDevice.val();
+        Water_FlowMeterDevice.select2("destroy");
+        Water_FlowMeterDevice.val(currentValueWater_FlowMeterDevice).select2();
+
+        $("#Water_CertifiedSiphoning")
+          .val(data.Water_CertifiedSiphoning)
+          .trigger("change");
+        var Water_CertifiedSiphoning = $("#Water_CertifiedSiphoning");
+        var currentValueWater_CertifiedSiphoning =
+          Water_CertifiedSiphoning.val();
+        Water_CertifiedSiphoning.select2("destroy");
+        Water_CertifiedSiphoning.val(
+          currentValueWater_CertifiedSiphoning
+        ).select2();
+
+        $("#Water_ComplianceEffluent")
+          .val(data.Water_ComplianceEffluent)
+          .trigger("change");
+        var Water_ComplianceEffluent = $("#Water_ComplianceEffluent");
+        var currentValueWater_ComplianceEffluent =
+          Water_ComplianceEffluent.val();
+        Water_ComplianceEffluent.select2("destroy");
+        Water_ComplianceEffluent.val(
+          currentValueWater_ComplianceEffluent
+        ).select2();
+
+        $("#Water_AmbientQualityMonitoring")
+          .val(data.Water_AmbientQualityMonitoring)
+          .trigger("change");
+        var Water_AmbientQualityMonitoring = $(
+          "#Water_AmbientQualityMonitoring"
+        );
+        var currentValueWater_AmbientQualityMonitoring =
+          Water_AmbientQualityMonitoring.val();
+        Water_AmbientQualityMonitoring.select2("destroy");
+        Water_AmbientQualityMonitoring.val(
+          currentValueWater_AmbientQualityMonitoring
+        ).select2();
+
+        $("#Water_PaymentWastewater")
+          .val(data.Water_PaymentWastewater)
+          .trigger("change");
+        var Water_PaymentWastewater = $("#Water_PaymentWastewater");
+        var currentValueWater_PaymentWastewater = Water_PaymentWastewater.val();
+        Water_PaymentWastewater.select2("destroy");
+        Water_PaymentWastewater.val(
+          currentValueWater_PaymentWastewater
+        ).select2();
+
+        $("#SWM_WasteSegregation")
+          .val(data.SWM_WasteSegregation)
+          .trigger("change");
+        var SWM_WasteSegregation = $("#SWM_WasteSegregation");
+        var currentValueSWM_WasteSegregation = SWM_WasteSegregation.val();
+        SWM_WasteSegregation.select2("destroy");
+        SWM_WasteSegregation.val(currentValueSWM_WasteSegregation).select2();
+
+        $("#SWM_WasteDisposalFacilities")
+          .val(data.SWM_WasteDisposalFacilities)
+          .trigger("change");
+        var SWM_WasteDisposalFacilities = $("#SWM_WasteDisposalFacilities");
+        var currentValueSWM_WasteDisposalFacilities =
+          SWM_WasteDisposalFacilities.val();
+        SWM_WasteDisposalFacilities.select2("destroy");
+        SWM_WasteDisposalFacilities.val(
+          currentValueSWM_WasteDisposalFacilities
+        ).select2();
+
+        $("#PCO_Guidelines").val(data.PCO_Guidelines).trigger("change");
+        var PCO_Guidelines = $("#PCO_Guidelines");
+        var currentValuePCO_Guidelines = PCO_Guidelines.val();
+        PCO_Guidelines.select2("destroy");
+        PCO_Guidelines.val(currentValuePCO_Guidelines).select2();
+
+        $("#DAO_SMRSubmission").val(data.DAO_SMRSubmission).trigger("change");
+        var DAO_SMRSubmission = $("#DAO_SMRSubmission");
+        var currentValueDAO_SMRSubmission = DAO_SMRSubmission.val();
+        DAO_SMRSubmission.select2("destroy");
+        DAO_SMRSubmission.val(currentValueDAO_SMRSubmission).select2();
+
+        //
+
         // Please modify
         var data = data.ECC_Condition;
 
@@ -646,11 +789,9 @@ $(document).ready(function () {
 
         dataArray.forEach(function (value) {
           var input = document.createElement("input");
-
           input.type = "text";
           input.className = "form-control";
           input.value = value;
-
           var container = document.getElementById("id123");
           container.appendChild(input);
         });
