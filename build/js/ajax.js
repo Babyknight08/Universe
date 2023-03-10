@@ -184,7 +184,6 @@ $(document).ready(function () {
         $("#MOA_Agreement").val(data.MOA_Agreement);
         $("#MOA_Agreement_DOI").val(data.MOA_Agreement_DOI);
         $("#MOA_Agreement_DE").val(data.MOA_Agreement_DE);
-        // $("#ECC_Condition").val(data.ECC_Condition);
         $("#Haz_PCLCompliance").val(data.Haz_PCLCompliance);
         $("#Haz_PCLComplianceText").val(data.Haz_PCLComplianceText);
         $("#Annual_Reporting").val(data.Annual_Reporting);
@@ -784,7 +783,6 @@ $(document).ready(function () {
 
         // Please modify
         var data = data.ECC_Condition;
-
         var dataArray = data.split(";");
 
         dataArray.forEach(function (value) {
@@ -967,3 +965,19 @@ $("#add").click(function () {
       '" class="btn btn-danger btn_remove">X</button></td></tr>'
   );
 });
+
+//
+exportPdf = ($recordid) => {
+  var exportPdfData = new FormData();
+  exportPdfData.append("action", "exportPdfData");
+  exportPdfData.append("recordid", $recordid);
+
+  fetch("../../build/php/records1.php", {
+    body: exportPdfData,
+    method: "POST",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.Air_AmbientQualityStandard);
+    });
+};

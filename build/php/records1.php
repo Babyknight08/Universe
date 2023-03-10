@@ -21,4 +21,9 @@
         echo json_encode($return_val);
     }
 
+    if($_POST['action'] == 'exportPdfData'){
+        $values = $record->pdfRecord($_POST['recordid']);
+        echo json_encode($values);
+    }
+
 ?>

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EMB8 IIMS</title>
 
+<!-- Wheel event -->
+  <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
@@ -26,6 +28,7 @@
   <link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+
 </head>
 <style>
   .swal-wide{
@@ -645,7 +648,7 @@
 								<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
              	</tr>
               <tr>
-                <td><div id="id123"></div></td>
+              <td id="id123"></td>
               </tr>
 						</table>
 					</div>
@@ -2524,3 +2527,6 @@
     ></script>
 	 <!-- CSS -->
 	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+
+   
