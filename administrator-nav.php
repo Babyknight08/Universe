@@ -11,6 +11,7 @@
   $usertype = $_SESSION['usertype'];
   $section = $_SESSION['section'];
   $userid = $_SESSION['userid'];
+  $username = $_SESSION['fullname'];
 
 
 ?>

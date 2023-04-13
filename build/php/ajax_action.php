@@ -38,6 +38,9 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->operating_week = $_POST["operating_week"];
 	$record->operating_year = $_POST["operating_year"];
 	$record->mhead = $_POST["MHead"];
+
+	$record->pco = $_POST["PCO"];
+
 	$record->pcoaccreditation = $_POST["PCOAccreditation"];
 	$record->PCOA_Date = $_POST["PCOA_Date"];
 	$record->ContactNumber = $_POST["contactnumber"];
@@ -90,8 +93,6 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI"];
 	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE"];
 	$record->ECC_Condition = $_POST["ECC_Condition"];
-
-
 	$record->Haz_PCLCompliance = $_POST["Haz_PCLCompliance"];
 	$record->Haz_PCLComplianceText = $_POST["Haz_PCLComplianceText"];
 	$record->Annual_Reporting = $_POST["Annual_Reporting"];
@@ -164,14 +165,28 @@ if(!empty($_POST['action']) && $_POST['action'] == 'updateRecord') {
 	$record->SWM_WasteSegregationText = $_POST["SWM_WasteSegregationText"];
 	$record->SWM_WasteDisposalFacilities = $_POST["SWM_WasteDisposalFacilities"];
 	$record->SWM_WasteDisposalFacilitiesText = $_POST["SWM_WasteDisposalFacilitiesText"];
-
-
 	$record->PCO_Guidelines = $_POST["PCO_Guidelines"];
 	$record->PCO_GuidelinesText = $_POST["PCO_GuidelinesText"];
 	$record->DAO_SMRSubmission = $_POST["DAO_SMRSubmission"];
 	$record->DAO_SMRSubmissionText = $_POST["DAO_SMRSubmissionText"];
+	$record->EIS_System = $_POST["EIS_System"];
+	$record->Chemical_Management = $_POST["Chemical_Management"];
+	$record->HW_Management = $_POST["HW_Management"];
+	$record->AQ_Management = $_POST["AQ_Management"];
+	$record->WQ_Management = $_POST["WQ_Management"];
+	$record->SW_Management = $_POST["SW_Management"];
+	$record->Commitment_TechCon = $_POST["Commitment_TechCon"];
 
 
+
+
+
+
+	$record->Inspector = $_POST["Inspector"];
+	$record->Checkedby = $_POST["SelectCheckedby"];
+	$record->SectionChief = $_POST["SectionChief"];
+	$record->DivisionChief = $_POST["DivisionChief"];
+	$record->RegionalDirector = $_POST["RegionalDirector"];
 
 	
 
@@ -205,6 +220,9 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->operating_day = $_POST["operating_day1"];
 	$record->operating_week = $_POST["operating_week1"];
 	$record->operating_year = $_POST["operating_year1"];
+	$record->Product_Line = $_POST["Product_Line1"];
+	$record->ProdRateECCDeclared = $_POST["ProdRateECCDeclared1"];
+	$record->ActualProdRate = $_POST["ActualProdRate1"];
 	$record->mhead = $_POST["MHead1"];
 	$record->pcoaccreditation = $_POST["PCOAccreditation1"];
 	$record->PCOA_Date = $_POST["PCOA_Date1"];
@@ -258,6 +276,8 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->MOA_Agreement_DOI = $_POST["MOA_Agreement_DOI1"];
 	$record->MOA_Agreement_DE = $_POST["MOA_Agreement_DE1"];
 	$record->ECC_Condition = $_POST["ECC_Condition1"];
+	$record->ECC_ConditionSelect = $_POST["ECC_ConditionSelect1"];
+	$record->ECC_ConditionRemarks = $_POST["ECC_ConditionRemarks1"];
 	$record->Haz_PCLCompliance = $_POST["Haz_PCLCompliance1"];
 	$record->Haz_PCLComplianceText = $_POST["Haz_PCLComplianceText1"];
 	$record->Annual_Reporting = $_POST["Annual_Reporting1"];
@@ -326,9 +346,6 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->Water_AmbientQualityMonitoringText = $_POST["Water_AmbientQualityMonitoringText1"];
 	$record->Water_PaymentWastewater = $_POST["Water_PaymentWastewater1"];
 	$record->Water_PaymentWastewaterText = $_POST["Water_PaymentWastewaterText1"];
-
-
-
 	$record->SWM_WasteSegregation = $_POST["SWM_WasteSegregation1"];
 	$record->SWM_WasteSegregationText = $_POST["SWM_WasteSegregationText1"];
 	$record->SWM_WasteDisposalFacilities = $_POST["SWM_WasteDisposalFacilities1"];
@@ -337,10 +354,47 @@ if(!empty($_POST['action1']) && $_POST['action1'] == 'createRecord') {
 	$record->PCO_GuidelinesText = $_POST["PCO_GuidelinesText1"];
 	$record->DAO_SMRSubmission = $_POST["DAO_SMRSubmission1"];
 	$record->DAO_SMRSubmissionText = $_POST["DAO_SMRSubmissionText1"];
-	// 
+	$record->EIS_System = $_POST["EIS_System1"];
+	$record->eissData = $_POST["eissData1"];
+	$record->Chemical_Management = $_POST["Chemical_Management1"];
+	$record->Chemical_Management_Data = $_POST["Chemical_Management1_Data"];
+	$record->HW_Management = $_POST["HW_Management1"];
+	$record->HW_Management_Data = $_POST["HW_Management1_Data"];
+	$record->AQ_Management = $_POST["AQ_Management1"];
+	$record->AQ_Management_Data = $_POST["AQ_Management1_Data"];
+	$record->WQ_Management = $_POST["WQ_Management1"];
+	$record->WQ_Management_Data = $_POST["WQ_Management1_Data"];
+	$record->SW_Management = $_POST["SW_Management1"];
+	$record->SW_Management_Data = $_POST["SW_Management1_Data"];
+	$record->Commitment_TechCon = $_POST["Commitment_TechCon1"];
+	$record->Commitment_TechCon_Data = $_POST["Commitment_TechCon1_Data"];
+	$record->Rec_ConfirmatorySampling = $_POST["Rec_confirmatorysampling1"];
+	$record->Rec_ConfirmatorySampling_Data = $_POST["Rec_confirmatorysampling1_Data"];
+	$record->Rec_tempPtoDp = $_POST["Rec_tempPtoDp1"];
+	$record->Rec_tempPtoDp_Data = $_POST["Rec_tempPtoDp1_Data"];
+	$record->Rec_PCOSem = $_POST["Rec_PCOSem1"];
+	$record->Rec_PCOSem_Data = $_POST["Rec_PCOSem1_Data"];
+	$record->Rec_NOVIssuance = $_POST["Rec_NOVIssuance1"];
+	$record->Rec_NOVIssuance_Data = $_POST["Rec_NOVIssuance1_Data"];
+	$record->Rec_NOMTC = $_POST["Rec_NOMTC1"];
+	$record->Rec_NOMTC_Data = $_POST["Rec_NOMTC1_Data"];
+	$record->Rec_SMRCMR_Submission = $_POST["Rec_SMRCMR_Submission1"];
+	$record->Rec_SMRCMR_Submission_Data = $_POST["Rec_SMRCMR_Submission1_Data"];
+	$record->Rec_Issuance5DayCDO = $_POST["Rec_Issuance5DayCDO1"];
+	$record->Rec_Issuance5DayCDO_Data = $_POST["Rec_Issuance5DayCDO1_Data"];
+	$record->Rec_EndorsementPAB = $_POST["Rec_EndorsementPAB1"];
+	$record->Rec_EndorsementPAB_Data = $_POST["Rec_EndorsementPAB1_Data"];
 
 
 
+
+	$record->OtherRecommendations = $_POST["OtherRecommendations1"];
+	$record->OtherRecommendations_Data = $_POST["OtherRecommendations1_Data"];
+
+
+
+	$record->Inspector = $_POST["Inspector1"];
+	$record->Checkedby = $_POST["SelectCheckedby1"];
 	$record->SectionChief = $_POST["SectionChief1"];
 	$record->DivisionChief = $_POST["DivisionChief1"];
 	$record->RegionalDirector = $_POST["RegionalDirector1"];

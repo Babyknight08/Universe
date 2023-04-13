@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EMB8 IIMS</title>
-
+  
 <!-- Wheel event -->
   <script type="text/javascript" src="https://unpkg.com/default-passive-events"></script>
   <!-- Google Font: Source Sans Pro -->
@@ -34,7 +34,6 @@
   .swal-wide{
     width:850px !important;
 }
-
 
 </style>
 
@@ -193,7 +192,7 @@
     			<div class="modal-content">
     				<div class="modal-header">
 					  	<h4 class="modal-title"><i class="fa fa-plus"></i> Edit Record</h4>
-    					<!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+    					<button type="button" class="close" data-dismiss="modal">&times;</button>
     				</div>
     				<div class="modal-body">
 
@@ -206,7 +205,14 @@
             <div class="row">
             <div class="form-group col-md-4">
               <label for="reportcontrol">Report Control No.</label>
-              <input type="text" name="reportcontrol" class="form-control" id="reportcontrol" placeholder="Report Control No." autocomplete="off">
+              <!-- <input type="text" name="reportcontrol" class="form-control" id="reportcontrol" placeholder="Report Control No." autocomplete="off"> -->
+              <select name="reportcontrol" id="reportcontrol" class="form-control select2">
+                <option value="EIA Monitoring">EIA Monitoring</option>
+                <option value="Air Monitoring">Air Monitoring</option>
+                <option value="Air Survey">Air Survey</option>
+                <option value="Water Monitoring">Water Monitoring</option>
+                <option value="Water Survey">Water Survey</option>
+              </select>
             </div>
 
             <div class="form-group col-md-4">
@@ -216,42 +222,85 @@
 
             <div class="form-group col-md-4">
               <label for="missionorder">Mission Order No.</label>
-              <input type="text" name="missionorder" class="form-control" id="missionorder" placeholder="Mission Order No." autocomplete="off">
+              <!-- <input type="text" name="missionorder" class="form-control" id="missionorder" placeholder="Mission Order No." autocomplete="off"> -->
+              <select name="missionorder" id="missionorder" class="form-control select2">
+                <option value="Site Monitoring">Site Monitoring</option>
+                <option value="Desk Monitoring">Desk Monitoring</option>
+              </select>
             </div>
             </div>
 
-            <div class="row d-flex justify-content-around p-3">
-            <div class="">				
-              <input type="hidden" name="EIA" value ="false">
-              <input type="checkbox" name="EIA" id="EIA" value ="true">
-							<label for="EIA" class="control-label"><strong>PD1586(EIA)</strong></label>
-						</div>
+          
 
-            <div class="">				
-              <input type="hidden" name="CHWMS" value ="false">
-              <input type="checkbox" name="CHWMS" id="CHWMS" value ="true">
-							<label for="CHWMS" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
-						</div>
+            <!-- --------------------------- -->
+            <div class="row justify-content-center">
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="EIA" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="EIA" id="EIA" value="true">
+              <label for="EIA"><strong>PD1586</strong></label>
+              </div>
+            </div>
+
+
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="CHWMS" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="CHWMS" id="CHWMS" value="true">
+              <label for="CHWMS"><strong>RA6969</strong></label>
+              </div>
+            </div>
+
+
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="Air" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Air" id="Air" value="true">
+              <label for="Air"><strong>RA8749</strong></label>
+              </div>
+            </div>
+
+
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="Water" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Water" id="Water" value="true">
+              <label for="Water"><strong>RA9275</strong></label>
+              </div>
+            </div>
+
+
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="SolidWaste" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="SolidWaste" id="SolidWaste" value="true">
+              <label for="SolidWaste"><strong>RA9003</strong></label>
+              </div>
+            </div>
+            </div>
+            <!-- --------------------------- -->
+
             
-            <div class="">				
-              <input type="hidden" name="Air" value ="false">
-              <input type="checkbox" name="Air" id="Air" value ="true">
-							<label for="Air" class="control-label"><strong>RA8749(AIR)</strong></label>
-						</div>
-                    
-            <div class="">				
-              <input type="hidden" name="Water" value ="false">
-              <input type="checkbox" name="Water" id="Water" value ="true">
-							<label for="Water" class="control-label"><strong>RA9275(WATER)</strong></label>
-						</div>
-
-            <div class="">				
-              <input type="hidden" name="SolidWaste" value ="false">
-              <input type="checkbox" name="SolidWaste" id="SolidWaste" value ="true">
-							<label for="SolidWaste" class="control-label"><strong>RA9003(SOLID WASTE)</strong></label>
-						</div>
-            </div>       
-
 						<div class="form-group">
 							<label for="name" class="control-label">Name of Establishment</label>
 							<input type="text" class="form-control" id="name" name="name" placeholder="Name" readonly required>			
@@ -282,9 +331,6 @@
               <option value="0722">0722</option>
               </select>
 						</div>	
-
-
-
 
 
             <div class="form-group col-md-4">
@@ -336,6 +382,27 @@
 
 
 
+
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="Product_Line">Product Line </label>
+                <input type="text" class="form-control" name="Product_Line" id="Product_Line" placeholder="Product_Line">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="ProdRateECCDeclared">Production Rate ECC Declared(Unit/Day) </label>
+                <input type="text" class="form-control" name="ProdRateECCDeclared" id="ProdRateECCDeclared" placeholder="Production Rate Declared">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="ActualProdRate">Actual Production Rate</label>
+                <input type="text" class="form-control" name="ActualProdRate" id="ActualProdRate" placeholder="Actual Production Rate">
+              </div>
+            </div>
+
+
+
+
+
+
           <div class="row">
             <div class="form-group col-md-4" >
                 <label for="Mhead" class="control-label">Managing Head</label>							
@@ -378,169 +445,360 @@
           </div>
 
           <div class="row">
-          <div class="">
-              <input type="hidden" value="false" name="VerifyAccuracy">
-              <input type="checkbox" id="verify" value="true" name="VerifyAccuracy"/>
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="VerifyAccuracy" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="VerifyAccuracy" id="verify" value="true">
               <label for="verify">Verify accuracy of information submitted by the establishment pertaining to new permit
                     applications, renewals, or modifications.</label>
+              </div>
+            </div>
+            </div>
+
+
+
+
+  <table class="table table-borderless mx-auto" style="width:70%;">
+  <thead>
+    <tr>
+      <th colspan="3">Permit</th>
+      <th>NEW</th>
+      <th>RENEW</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>PMPIN Hazardous</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PMPIN_Hazardous" id="PMPIN_HazardousNone" value="" checked>
+                <label for="PMPIN_HazardousNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PMPIN_Hazardous" id="PMPIN_HazardousNew" value="NEW">
+                <label for="PMPIN_HazardousNew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PMPIN_Hazardous" id="PMPIN_HazardousRenew" value="RENEW">
+                <label for="PMPIN_HazardousRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+
+    <tr>
+      <td>Hazardous Waste ID Registration</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWIDRegistration" id="HWIDRegistrationNone" value="" checked>
+                <label for="HWIDRegistrationNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWIDRegistration" id="HWIDRegistrationNew" value="NEW">
+                <label for="HWIDRegistrationNew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWIDRegistration" id="HWIDRegistrationRenew" value="RENEW">
+                <label for="HWIDRegistrationRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+
+    <tr>
+      <td>Hazardous Waste Transporter Registration</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTRegistration" id="HWTRegistrationNone" value="" checked>
+                <label for="HWTRegistrationNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTRegistration" id="HWTRegistrationNew" value="NEW">
+                <label for="HWTRegistrationNew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTRegistration" id="HWTRegistrationRenew" value="RENEW">
+                <label for="HWTRegistrationRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+
+    <tr>
+      <td>HAZARDOUS WASTE TSD REGISTRATION</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTSDRegistration" id="HWTSDRegistrationNone" value="" checked>
+                <label for="HWTSDRegistrationNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTSDRegistration" id="HWTSDRegistrationNew" value="NEW">
+                <label for="HWTSDRegistrationNew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="HWTSDRegistration" id="HWTSDRegistrationRenew" value="RENEW">
+                <label for="HWTSDRegistrationRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+
+    <tr>
+      <td>Permit to Operate Air Pollution Control Installation</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PTOAPCI" id="PTOAPCINewNone" value="" checked>
+                <label for="PTOAPCINewNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PTOAPCI" id="PTOAPCINew" value="NEW">
+                <label for="PTOAPCINew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="PTOAPCI" id="PTOAPCIRenew" value="RENEW">
+                <label for="PTOAPCIRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+
+    <tr>
+      <td>DischargePermit</td>
+      <td></td>
+      <td></td>
+      <td style="width:15%; display:none;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="DischargePermit" id="DischargePermitNone" value="" checked>
+                <label for="DischargePermitNone"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;"> 
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="DischargePermit" id="DischargePermitNew" value="NEW">
+                <label for="DischargePermitNew"></label>
+              </div>
+            </div>
+      </td>
+      <td style="width:15%;">
+            <div class="col-md-4">
+              <div class="icheck-primary">
+                <input type="checkbox" name="DischargePermit" id="DischargePermitRenew" value="RENEW">
+                <label for="DischargePermitRenew"></label>
+              </div>
+            </div>
+       </td>
+    </tr>
+    <tr>
+      <td>
+      <div class="row">
+            <div class="col-xs">
+              <div class="">
+              <input type="hidden" name="otherspv" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs">
+              <div class="icheck-primary">
+              <input type="checkbox" name="otherspv" id="otherspv" value="true">
+              <label for="otherspv">Others</label>
+              </div>
+              <div class="col-xs">
+              <input type="text" class="form-control" style="display:none" id="otherspv_text" name="otherspv_text">
+              </div>
             </div>
           </div>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+   
 
 
-          <div class="row justify-content-around m-2">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around">
-              <label for="" style="width:20rem">&nbsp; PERMIT</label>
+
+            <div class="row"> 
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="determinecompliance" value="false" checked style="display:none;">
               </div>
-              <div class = "p-2">
-             <label for="">NEW/</label>
-             <label for="">RENEW/</label>
-             <label for="">NOT APPLICABLE</label>
               </div>
-          </div>
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">PMPIN Hazardous </label>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="determinecompliance" id="determinecompliance" value="true" checked>
+              <label for="determinecompliance">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>
               </div>
-              <div>
-              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousNew" value="NEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousRenew" value="RENEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous" id="PMPIN_HazardousNA" value="NOT APPLICABLE" class="mr-5">
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="investigatecomplaints" value="false" checked style="display:none;">
               </div>
-          </div>
-
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">Hazardous Waste ID Registration </label>
               </div>
-              <div>
-              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationNew" value="NEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationRenew" value="RENEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration" id = "HWIDRegistrationNA" value="NOT APPLICABLE" class="mr-5">
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="investigatecomplaints" id="investigatecomplaints" value="true">
+              <label for="investigatecomplaints">Investigate community complaints</label>
               </div>
-          </div>
+            </div>
+            </div>
 
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="statuscommitments" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="statuscommitments" id="statuscommitments" value="true">
+              <label for="statuscommitments">Check status of commitment(s)</label>
+              </div>
+            </div>
+            </div>
 
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="ewatchprogram" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="ewatchprogram" id="ewatchprogram" value="true">
+              <label for="ewatchprogram">Industrial Ecowatch Program</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="PEPP" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="PEPP" id="PEPP" value="true">
+              <label for="PEPP">Philippine Environmental Partnership Program (PEPP)</label>
+              </div>
+            </div>
+            </div>
+
+     
           
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">Hazardous Waste Transporter Registration </label>
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="pab" value="false" checked style="display:none;">
               </div>
-              <div>
-              <input type="radio" name="HWTRegistration" id = "HWTRegistrationNew" value="NEW" class="mr-5">
-              <input type="radio" name="HWTRegistration" id = "HWTRegistrationRenew" value="RENEW" class="mr-5">
-              <input type="radio" name="HWTRegistration" id = "HWTRegistrationNA" value="NOT APPLICABLE" class="mr-5">
               </div>
-          </div>
-
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="pab" id="pab" value="true">
+              <label for="pab">Pollution Adjudication Board (PAB)</label>
+              </div>
+            </div>
+            </div>
           
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">HAZARDOUS WASTE TSD REGISTRATION </label>
-              </div>
-              <div>
-              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationNew" value="NEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationRenew"value="RENEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration" id ="HWTSDRegistrationNA" value="NOT APPLICABLE" class="mr-5">
-              </div>
-          </div>
 
-             <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem"> Permit to Operate Air Pollution Control Installation </label>
-              </div>
-              <div>
-              <input type="radio" name="PTOAPCI" id="PTOAPCINew" value="NEW" class="mr-5">
-              <input type="radio" name="PTOAPCI" id="PTOAPCIRenew" value="RENEW" class="mr-5">
-              <input type="radio" name="PTOAPCI" id="PTOAPCINA" value="NOT APPLICABLE" class="mr-5">
-              </div>
-          </div>
 
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem"> Discharge Permit </label>
+            
+           <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="others" value="false" style="display:none;">
               </div>
-              <div>
-              <input type="radio" name="DischargePermit" id="DischargePermitNew" value="NEW" class="mr-5">
-              <input type="radio" name="DischargePermit" id="DischargePermitRenew" value="RENEW" class="mr-5">
-              <input type="radio" name="DischargePermit" id="DischargePermitNA" value="NOT APPLICABLE" class="mr-5">
               </div>
-          </div>
-
-          <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
-            <input type="hidden" name="otherspv" value="false">
-            <input type="checkbox" id="otherspv" name="otherspv" value="true">
-            <label for="">Others: &nbsp; </label>
-            <input type="text" class="form-control" style="display:none" id="otherspv_text" name="otherspv_text">
-          </div>
-          <div class="row">
-              <div class="form-group">
-                        <input type="hidden" name = "determinecompliance" value = "false">
-                        <input type="checkbox" name = "determinecompliance" id="determinecompliance" value = "true">
-                        <label for="determinecompliance">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>                   
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="others" id="others" value="true">
+              <label for="others">Others</label>
+              </div>
+              <div class="col-xs">
+              <input type="text" class="form-control" name="others_text" style="display:none" id="others_text"> 
               </div>
             </div>
-
-          <div class="row">
-            <div class="form-group">
-                      <input type="hidden" name = "investigatecomplaints" value = "false">
-                      <input type="checkbox" name = "investigatecomplaints" id="investigatecomplaints" value = "true">
-                      <label for="investigatecomplaints">Investigate community complaints</label>                          
             </div>
+
+
+
+      
+
+
+            
+            <div class="row">
+                <div class="col-md-12">
+                  <h4 class="text-secondary"><em>3. Compliance Status</em></h4>
+                  <p class="text-secondary"><em>3.1 DENR Permits/Licenses/Clearances</em></p>
+                </div>
           </div>
-
-          <div class="row">
-            <div class="form-group">
-                      <input type="hidden" name = "statuscommitments" value = "false">
-                      <input type="checkbox" name = "statuscommitments" id="statuscommitments" value = "true">
-                      <label for="statuscommitments">Check status of commitment(s)</label>                           
-            </div>
-          </div>
-
-          <div class="row ml-4">
-            <div class="form-group">
-                     <input type="hidden" name = "ewatchprogram" value = "false">
-                     <input type="checkbox" name = "ewatchprogram" id="ewatchprogram" value = "true">
-                     <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
-            </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                     <input type="hidden" name = "PEPP" value = "false">
-                      <input type="checkbox" name = "PEPP" id="PEPP" value = "true">
-                      <label for="PEPP">Philippine Environmental Partnership Program (PEPP)</label>                       
-            </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                    <input type="hidden" name = "pab" value = "false">
-                    <input type="checkbox" name = "pab" id = "pab" value = "true">
-                    <label for="pab">Pollution Adjudication Board (PAB)</label>                     
-              </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                    <input type="hidden" name = "others" value ="false">
-                    <input type="checkbox" id="others" name="others" value ="true">
-                    <label for="">Others</label>
-                    <input type="text" class="form-control" name="others_text" style="display:none" id="others_text">                            
-            </div>
-          </div>
-
-
-
-
-
 
 
           <table class="table">
@@ -629,26 +887,19 @@
         </table>
 
 
-        <div class="row">
-          <div class="col-md-12">
-            <p class="text-secondary"><em>3.2 Summary of Compliance</em></p>
-            <p>The table below summarizes the compliance of ... </p>
-            
-          </div>
-        </div>
 
 
 
         <div class="form-group">
 				<form name="add_name" id="add_name">
 					<div class="table-responsive" >
-						<table class="table table-bordered" id="dynamic_field" >
+						<table class="table table-bordered " id="dynamic_field" >
 							<tr>
-								<td><input type="text" name="ECC_Condition[]" placeholder="ECC Condition" class="form-control name_list" id="ECC_Condition" /></td>
+								<td><label>ECC Conditions below..<label></td>
+								<!-- <td><input type="text" name="ECC_Condition123[]" placeholder="ECC Condition" class="form-control name_list" id="ECC_Condition" /></td> -->
 								<td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
              	</tr>
-              <tr>
-              <td id="id123"></td>
+              <tr id="id123">
               </tr>
 						</table>
 					</div>
@@ -1236,10 +1487,271 @@
             <td> <textarea class="form-control" rows="3" name="DAO_SMRSubmissionText" id="DAO_SMRSubmissionText"></textarea></td>
             </td>
             </tr>
-           
             </tbody>
         </table>
        </div>
+
+
+
+       <div class="row">
+                <div class="col-md-12">
+                  <h4 class="text-secondary"><em>3.3 Summary of Findings and Observations</em></h4>
+                  <p class="text-secondary"><em>3.3.1 Environmental Impact System</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System" id="checkboxEIS_SystemA" value="Compliant">
+                <label for="checkboxEIS_SystemA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System" id="checkboxEIS_SystemB" value="Non-Compliant">
+                <label for="checkboxEIS_SystemB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System" id="checkboxEIS_SystemC" value="Not Applicable" checked>
+                <label for="checkboxEIS_SystemC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.2 Chemical Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management" id="Chemical_ManagementA" value="Compliant">
+                <label for="Chemical_ManagementA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management" id="Chemical_ManagementB" value="Non-Compliant">
+                <label for="Chemical_ManagementB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management" id="Chemical_ManagementC" value="Not Applicable" checked>
+                <label for="Chemical_ManagementC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.3 Hazardous Waste Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management" id="HW_ManagementA" value="Compliant">
+                <label for="HW_ManagementA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management" id="HW_ManagementB" value="Non-Compliant">
+                <label for="HW_ManagementB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management" id="HW_ManagementC" value="Not Applicable" checked>
+                <label for="HW_ManagementC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.4 Air Quality Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management" id="AQ_ManagementA" value="Compliant">
+                <label for="AQ_ManagementA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management" id="AQ_ManagementB" value="Non-Compliant">
+                <label for="AQ_ManagementB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management" id="AQ_ManagementC" value="Not Applicable" checked>
+                <label for="AQ_ManagementC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.5 Water Quality Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management" id="WQ_ManagementA" value="Compliant">
+                <label for="WQ_ManagementA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management" id="WQ_ManagementB" value="Non-Compliant">
+                <label for="WQ_ManagementB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management" id="WQ_ManagementC" value="Not Applicable" checked>
+                <label for="WQ_ManagementC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.6 Solid Waste Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management" id="SW_ManagementA" value="Compliant">
+                <label for="SW_ManagementA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management" id="SW_ManagementB" value="Non-Compliant">
+                <label for="SW_ManagementB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management" id="SW_ManagementC" value="Not Applicable" checked>
+                <label for="SW_ManagementC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.7 Commitment/s from the previous Technical Conference</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon" id="Commitment_TechConA" value="Compliant">
+                <label for="Commitment_TechConA">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon" id="Commitment_TechConB" value="Non-Compliant">
+                <label for="Commitment_TechConB">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon" id="Commitment_TechConC" value="Not Applicable" checked>
+                <label for="Commitment_TechConC">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- --------------------------- -->
+
+          <div class="nspector">
+            <label for="submitted">Submitted by: </label>
+            <select id="Inspector" class="select2 Inspector" name="Inspector" required>
+              <option value="">Select an option</option>
+              <option value="ALMIRA O. RIPALDA">Almira O. Ripalda</option>
+              <option value="ALEJANDROQUE G. MACATIGUE">Alejandroque G. Macatigue</option>
+              <option value="ANAMERIE D. CAVAÑERO">Anamarie D. Cavañero</option>
+              <option value="ARNEL L. IFE">Arnel L. Ife</option>
+              <option value="CYRIL ANN B. BADEO">Cyril Ann B. Badeo</option>
+              <option value="CARLOS A. CAYANONG">Carlos A. Cayanong</option>
+              <option value="GINNALYN A. ESPOSA">Ginnalyn A. Esposa</option>
+              <option value="JEROME C. SALVADOR">Jerome C. Salvador</option>
+              <option value="JO ANNE JOY M. DAÑAL-VILLERO">Jo Anne Joy, M. Dañal-Villero</option>
+              <option value="JOSEPH R. AURE">Joseph R. Aure</option>
+              <option value="JOSEPHINE L. FUENTES">Josephine L. Fuentes</option>
+              <option value="LEDANE JOY Y. LAURENTE">Ledane Joy Y. Laurente</option>
+              <option value="LIZA A. TAN">Liza A. Tan</option>
+              <option value="ROWENA B. PABIA">Rowena B. Pabia</option>
+              <option value="ROY ALEXANDER H. TABOADA">Roy Alexander H. Taboada</option>
+              <option value="SHARMAINE I. SILLEZA">Sharmaine I. Silleza</option>
+              <option value="SHARMAINE RUTH A. LAUZON">Sharmaine Ruth A. Lauzon</option>
+              <option value="SWEET ADEL PRIMA">Sweet Adel Prima</option>
+              <option value="XAVIER R. LUBIANO">Xavier R. Lubiano</option>
+              <option value="ZEUS BRYAN B. LORETO">Zeus Bryan B. Loreto</option>
+            </select>
+            <br>
+            </div>
+
+            <div id="DivSignatories">
+              <div id="DivCheckedby" style="display:none;">
+              <label for="checkedby">Checked by: <span style="color:red">*</span></label>
+              <select class="select2" id="SelectCheckedby" name="SelectCheckedby">
+              <option value="">Please Select: </option>
+              <option value="JOSEPHINE L. FUENTES">Josephine L. Fuentes</option>
+              <option value="ARNEL L. IFE">Arnel L. Ife</option>
+              <option value="ROWENA B. PABIA">Rowena B. Pabia</option>
+              <option value="ALEJANDROQUE G. MACATIGUE">Alejandroque G. Macatigue</option>
+              <option value="ANAMERIE D. CAVAÑERO">Anamarie D. Cavañero</option>
+            </select>
+              </div>
+
+              <div id="DivSectionChief" style="display:none;">
+              <label for="sectionchief">Recommending Approval: <span style="color:red">*</span></label>
+              <select class="select2" name="SectionChief" id="SelectSectionChief">
+              <option value="">Please Select</option>
+              <option value="CARLOS A. CAYANONG">Carlos A. Cayanong</option>
+              <option value="LIZA A. TAN">Liza A. Tan</option>
+              <option value="REGGIE R. URMENETA">Reggie R. Urmeneta</option>
+            </select>
+              </div>
+              <div id="DivDivisionChief" style="display:none;">
+              <label for="divisionchief">Approval: </label>
+              <select class="select2" name="DivisionChief" id="SelectDivisionChief">
+              <option value="MANUEL J. SACEDA JR.">Manuel J. Saceda Jr.</option>
+              </select>
+              </div>
+              <div id="DivRD" style="display:none;">
+              <label for="RD">Noted: </label>
+              <select class="select2" name="RegionalDirector" id="SelectRD">
+              <option value="MARTIN JOSE V. DESPI">Martin Jose V. Despi</option>
+              </select>
+              </div>
+            </div>
+      
+
+
+          <!-- --------------------------- -->
+
+
 
     				</div>
     				<div class="modal-footer">
@@ -1259,6 +1771,18 @@
    
     
 
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Insert Form -->
       <!-- --------------------------------------------- -->
       <div id="searchModal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
@@ -1276,11 +1800,16 @@
                         <h4 class="text-secondary"><em>1. General Information</em></h4>
                       </div>
             </div>
-
             <div class="row">
             <div class="form-group col-md-4">
-              <label for="reportcontrol">Report Control No.<span style="color:red">*</span></label>
-              <input type="text" name="reportcontrol1" class="form-control" id="reportcontrol1" placeholder="Report Control No." autocomplete="off" style="text-transform:uppercase">
+              <label for="reportcontrol">Type of Monitoring<span style="color:red">*</span></label>
+              <select name="reportcontrol1" id="reportcontrol1" class="select2">
+                <option value="EIA Monitoring">EIA Monitoring</option>
+                <option value="Air Monitoring">Air Monitoring</option>
+                <option value="Air Survey">Air Survey</option>
+                <option value="Water Monitoring">Water Monitoring</option>
+                <option value="Water Survey">Water Survey</option>
+              </select>
             </div>
 
             <div class="form-group col-md-4">
@@ -1290,59 +1819,90 @@
 
             <div class="form-group col-md-4">
               <label for="missionorder">Mission Order No.<span style="color:red">*</span></label>
-              <input type="text" name="missionorder1" class="form-control" id="missionorder1" placeholder="Mission Order No." autocomplete="off" style="text-transform:uppercase">
+              <select name="missionorder1" id="missionorder1" class="select2">
+                <option value="Site Monitoring">Site Monitoring</option>
+                <option value="Desk Monitoring">Desk Monitoring</option>
+              </select>
             </div>
             </div>
 
                     
-  
-
-            <div class="row d-flex justify-content-around p-3">
 
 
-            <div class="">				
-              <input type="hidden" name="EIA1" value ="false"> 
-              <input type="checkbox" name="EIA1" value ="true">
-							<label for="EIA1" class="control-label"><strong>PD1586(EIA)</strong></label>
-						</div>
+            <div class="row justify-content-center">
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="EIA1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="EIA1" id="EIA1" value="true">
+              <label for="EIA1"><strong>PD1586</strong></label>
+              </div>
+            </div>
 
 
-            <div class="">				
-              <input type="hidden" name="CHWMS1" value ="false">
-              <input type="checkbox" name="CHWMS1" value ="true">
-							<label for="CHWMS1" class="control-label"><strong>RA6969(HAZARDOUS WASTE)</strong></label>
-						</div>
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="CHWMS1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="CHWMS1" id="CHWMS1" value="true">
+              <label for="CHWMS1"><strong>RA6969</strong></label>
+              </div>
+            </div>
 
 
-            <div class="">				
-              <input type="hidden" name="Air1" value ="false">
-              <input type="checkbox" name="Air1" value = "true">
-							<label for="Air1" class="control-label"><strong>RA8749(AIR)</strong></label>
-						</div>
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="Air1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Air1" id="Air1" value="true">
+              <label for="Air1"><strong>RA8749</strong></label>
+              </div>
+            </div>
 
-            <div class="">				
-              <input type="hidden" name="Water1" value ="false">
-              <input type="checkbox" name="Water1" value ="true">
-							<label for="Water1" class="control-label"><strong>RA9275(WATER)</strong></label>
-						</div>
 
-  
-            <div class="">				
-              <input type="hidden" name="SolidWaste1" value ="false">
-              <input type="checkbox" name="SolidWaste1" value ="true">
-							<label for="SolidWaste1" class="control-label"><strong>RA9003(SOLID WASTE)</strong></label>
-						</div>
-					</div>
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="Water1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Water1" id="Water1" value="true">
+              <label for="Water1"><strong>RA9275</strong></label>
+              </div>
+            </div>
 
+
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="SolidWaste1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="SolidWaste1" id="SolidWaste1" value="true">
+              <label for="SolidWaste1"><strong>RA9003</strong></label>
+              </div>
+            </div>
+            </div>
 
 
             <div class="form-group">				
 							<label for="name1" class="control-label"><strong>Establishment Name<span style="color:red">*</span></strong></label>
-              <select name="name1" id="name1" class="form-select select2" required></select>
-							<span class="success"></span>	
-						</div>
-
+              <select name="name1" id="name1" class="form-select select2" required>
+            </select>
             
+							<span class="success"></span>	
+						</div>           
            
 
 						<div class="form-group">
@@ -1358,7 +1918,7 @@
 
             <div class="form-group col-md-4">
               <label for="PSICCode" class="control-label">PSIC Code<span style="color:red">*</span></label>		
-							<select class="form-control select2" name="PSICCode1" id="PSICCode1">
+							<select class="form-control select2 PSICCode1" name="PSICCode1" id="PSICCode1">
               <option value="">--Select PSIC Code--</option>
               <option value="014">014</option>
               <option value="032">032</option>
@@ -1389,7 +1949,6 @@
               <option value="12">12</option>
               <option value="13">13</option>
               <option value="14">14</option>
-              <option value="15110">15110</option>
               <option value="1621">1621</option>
               <option value="17012">17012</option>
               <option value="17013">17013</option>
@@ -1398,13 +1957,18 @@
               <option value="19200">19200</option>
               <option value="19900">19900</option>
               <option value="20111">20111</option>
+              <option value="20114">20114</option>
               <option value="20112">20112</option>
               <option value="20113">20113</option>
+              <option value="20116">20116</option>
+              <option value="20117">20117</option>
+              <option value="20119">20119</option>
               <option value="20115">20115</option>
               <option value="20120">20120</option>
               <option value="2013">2013</option>
               <option value="20210">20210</option>
               <option value="2022">2022</option>
+              <option value="20293">20293</option>
               <option value="2023">2023</option>
               <option value="20294">20294</option>
               <option value="20299">20299</option>
@@ -1414,6 +1978,7 @@
               <option value="239">239</option>
               <option value="23940">23940</option>
               <option value="241">241</option>
+              <option value="2431">2431</option>
               <option value="24210">24210</option>
               <option value="24220">24220</option>
               <option value="24230">24230</option>
@@ -1433,74 +1998,120 @@
               <option value="38220">38220</option>
               <option value="39000">39000</option>
               <option value="452">452</option>
+              <option value="454">454</option>
               <option value="47300">47300</option>
+              <option value="4661">4661</option>
               <option value="52104">52104</option>
               <option value="55">55</option>
               <option value="56">56</option>
               <option value="681">681</option>
               <option value="71200">71200</option>
-              <option value="72100">72100</option>
+              <option value="7210">7210</option>
               <option value="75">75</option>
+              <option value="85">85</option>
               <option value="86">86</option>
+              <option value="87">87</option>
               <option value="86900">86900</option>
               <option value="96210">96210</option>
               <option value="96300">96300</option>
-              <option value="OC1">OC1</option>
-              <option value="OC2">OC2</option>
-              <option value="OC3">OC3</option>
-              <option value="OC4">OC4</option>
               </select>
 						</div>	
 
             <div class="form-group col-md-4">
               <label for="Product" class="control-label">Product<span style="color:red">*</span></label>		
-							<select class="form-control select2" name="Product1" id="Product1">
+							<select class="form-control select2 Product1" name="Product1" id="Product1">
               <option value="">--Select Product--</option>
               <option value="Animal Production">Animal Production</option>
-              <option value="Aquaculture (Excluding Fish Pens)">Aquaculture (Excluding Fish Pens)</option>
-              <option value="Mining of Coal and Lignite">Mining of Coal and Lignite</option>
-              <option value="Extraction of Crude and Petroleum and Natural Gas, and Support Activities">Extraction of Crude and Petroleum and Natural Gas, and Support Activities</option>
-              <option value="Mining of Iron Ores">Mining of Iron Ores</option>
-              <option value="Mining of Precious Metal Ores">Mining of Precious Metal Ores</option>
-              <option value="Gold Ore Mining">Gold Ore Mining</option>
-              <option value="Silver Ore Mining">Silver Ore Mining</option>
-              <option value="Platinum Ore Mining">Platinum Ore Mining</option>
-              <option value="Copper One Mining">Copper One Mining</option>
-              <option value="Chromite Ore Mining">Chromite Ore Mining</option>
-              <option value="Manganese Mining">Manganese Mining</option>
-              <option value="Nickel Ore Mining">Nickel Ore Mining</option>
-              <option value="Pyrite Mining">Pyrite Mining</option>
-              <option value="Rock Phosphate Mining">Rock Phosphate Mining</option>
-              <option value="Slaughtering and Meat Packing">Slaughtering and Meat Packing</option>
-              <option value="Production Processing and Preserving of Meat and Meat Products">Production Processing and Preserving of meat and meat Products</option>
-              <option value="Processing and Preserving of Fish, Crustaceans and Mollusks(Except Carrageenan)">Processing and Preserving of Fish, Crustaceans and Mollusks(Except Carrageenan)</option>
-              <option value="Processing of Seaweeds; Manufacture of Agar-Agar of Carrageenan">Processing of Seaweeds; Manufacture of Agar-Agar of Carrageenan</option>
-              <option value="Manufacure of Animal Oils and Fats">Manufacure of Animal Oils and Fats</option>
-              <option value="Manufacture of Dairy Products">Manufacture of Dairy Products</option>
-              <option value="Manufacture of Grain Mill Products, Starches and Starch Products (Except Rice, Corn, and Cassava Flour Milling">Manufacture of Grain Mill Products, Starches and Starch Products (Except Rice, Corn, and Cassava Flour Milling</option>
-              <option value="Rice/Corn Milling">Rice/Corn Milling</option>
-              <option value="Manufacture of Other Food Products(Except Sugar)">Manufacture of Other Food Products(Except Sugar)</option>
-              <option value="Manufacture of Sugar">Manufacture of Sugar</option>
-              <option value="Sugar Milling">Sugar Milling</option>
-              <option value="Manufacture of Prepared Animal Feeds">Manufacture of Prepared Animal Feeds</option>
-              <option value="Manufacture of Beverages">Manufacture of Beverages</option>
-              <option value="Manufacture of Tobacco Products">Manufacture of Tobacco Products</option>
-              <option value="Manufacture of Textile">Manufacture of Textile</option>
-              <option value="Manufacture of Wearing Apparel">Manufacture of Wearing Apparel</option>
-              <option value="Tanning and Dressing of Leather">Tanning and Dressing of Leather</option>
-              <option value="Manufacture of Veener Sheets; Manufacture of Plywood, Laminated Board, Particle Board and Other Panels and Board; Wooden Window and Screens">Manufacture of Veener Sheets; Manufacture of Plywood, Laminated Board, Particle Board and Other Panels and Board; Wooden Window and Screens</option>
-              <option value="Pulp Mining Including Manufacture of Pulp, Paper and Paperboard">Pulp Mining Including Manufacture of Pulp, Paper and Paperboard</option>
-              <option value="Paper and Paperboard Milling">Paper and Paperboard Milling</option>
+              <option value="Aquaculture (excluding fish pens)">Aquaculture (excluding fish pens)</option>
+              <option value="Mining of coal and lignite">Mining of coal and lignite</option>
+              <option value="Extraction of crude petroleum and natural gas, and support activities">Extraction of crude petroleum and natural gas, and support activities</option>
+              <option value="Mining of iron ores">Mining of iron ores</option>
+              <option value="Mining of precious metal ores - gold, silver, platinum">Mining of precious metal ores - gold, silver, platinum</option>
+              <option value="Copper ore mining">Copper ore mining</option>
+              <option value="Chromite ore mining">Chromite ore mining</option>
+              <option value="Manganese ore mining">Manganese ore mining</option>
+              <option value="Nickel ore mining">Nickel ore mining</option>
+              <option value="Pyrite mining">Pyrite mining</option>
+              <option value="Rock phosphate mining">Rock phosphate mining</option>
+              <option value="Slaughtering and meat packing">Slaughtering and meat packing</option>
+              <option value="Production processing and preserving of meat and meat products">Production processing and preserving of meat and meat products</option>
+              <option value="Processing and preserving of fish, crustaceans and mollusks (except carrageenan)">Processing and preserving of fish, crustaceans and mollusks (except carrageenan)</option>
+              <option value="Processing of seaweeds; manufacture of agar-agar or carrageenan">Processing of seaweeds; manufacture of agar-agar or carrageenan</option>
+              <option value="Processing and preserving of fruits and vegetables">Processing and preserving of fruits and vegetables</option>
+              <option value="Manufacture of vegetable and animal oils and fats">Manufacture of vegetable and animal oils and fats</option>
+              <option value="Manufacture of dairy products">Manufacture of dairy products</option>
+              <option value="Manufacture of grain mill, products, starches and starch products (except rice, corn, and cassava flour milling)">Manufacture of grain mill, products, starches and starch products (except rice, corn, and cassava flour milling)</option>
+              <option value="Rice/ corn milling">Rice/ corn milling</option>
+              <option value="Cassava flour milling">Cassava flour milling</option>
+              <option value="Manufacture of other food products (except sugar)">Manufacture of other food products (except sugar)</option>
+              <option value="Manufacture of sugar - milling and refining">Manufacture of sugar - milling and refining</option>
+              <option value="Manufacture of prepared animal feeds">Manufacture of prepared animal feeds</option>
+              <option value="Manufacture of beverages">Manufacture of beverages</option>
+              <option value="Manufacture of tobacco products">Manufacture of tobacco products</option>
+              <option value="Manufacture of textiles">Manufacture of textiles</option>
+              <option value="Tanning and dressing of leather">Tanning and dressing of leather</option>
+              <option value="Manufacture of veneer sheets; manufacture of plywood, laminated board, particle board and other panels and board; wooden window and screens">Manufacture of veneer sheets; manufacture of plywood, laminated board, particle board and other panels and board; wooden window and screens</option>
+              <option value="Pulp milling including manufacture of pulp, paper, and paperboard">Pulp milling including manufacture of pulp, paper, and paperboard</option>
+              <option value="Paper and paperboard milling">Paper and paperboard milling</option>
               <option value="Printing">Printing</option>
-              <option value="Manufacture of Coke Oven Products">Manufacture of Coke Oven Products</option>
-              <option value="Manufacture of Refined Petroleum Products">Manufacture of Refined Petroleum Products</option>
-              <option value="Manufacture of Other Fuel Products(Biodiesel)">Manufacture of Other Fuel Products(Biodiesel)</option>
-              <option value="Tanning">Tanning</option>
-              <option value="Tanning">Tanning</option>
-              <option value="Tanning">Tanning</option>
-              <option value="Tanning">Tanning</option>
-
-              </select>
+              <option value="Manufacture of coke oven products">Manufacture of coke oven products</option>
+              <option value="Manufacture of refined petroleum products">Manufacture of refined petroleum products</option>
+              <option value="Manufacture of other fuel products (biodiesel)">Manufacture of other fuel products (biodiesel)</option>
+              <option value="Manufacture of ethanol; Manufacture of ethanol for food, beverage and fuel application; Blending of ethanol for antiseptic and solvent (denatured)">Manufacture of ethanol; Manufacture of ethanol for food, beverage and fuel application; Blending of ethanol for antiseptic and solvent (denatured)</option>
+              <option value="Manufacture of industrial (compressed/ liquefied) gases">Manufacture of industrial (compressed/ liquefied) gases</option>
+              <option value="Manufacture of inorganic, organic and other basic chemicals">Manufacture of inorganic, organic and other basic chemicals</option>
+              <option value="Manufacture of alcohol except ethyl alcohol">Manufacture of alcohol except ethyl alcohol</option>
+              <option value="Manufacture of fertilizers and nitrogen compounds">Manufacture of fertilizers and nitrogen compounds</option>
+              <option value="Manufacturing of plastics and synthetic rubber in primary forms">Manufacturing of plastics and synthetic rubber in primary forms</option>
+              <option value="Manufacture of pesticides and other agro-chemical products">Manufacture of pesticides and other agro-chemical products</option>
+              <option value="Manufacture of paints, ink, varnishes and similar coating materials">Manufacture of paints, ink, varnishes and similar coating materials</option>
+              <option value="Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations">Manufacture of soap and detergents, cleaning and polishing preparations, perfumes and toilet preparations</option>
+              <option value="Manufacture of glues and adhesives; synthetic glues and adhesives; animal/plant derived glues and adhesives">Manufacture of glues and adhesives; synthetic glues and adhesives; animal/plant derived glues and adhesives</option>
+              <option value="Manufacture of miscellaneous chemical products, not elsewhere classified">Manufacture of miscellaneous chemical products, not elsewhere classified</option>
+              <option value="Manufacture of man-made fibers (except glass fibers)">Manufacture of man-made fibers (except glass fibers)</option>
+              <option value="Manufacture of drugs and medicines includingbiological products such as bacterial and virus vaccines, sera and plasma">Manufacture of drugs and medicines includingbiological products such as bacterial and virus vaccines, sera and plasma</option>
+              <option value="Manufacture of glass and glass products">Manufacture of glass and glass products</option>
+              <option value="Manufacture of ceramics, clay products, construction aggregates, asphalt, asbestos, and other non-metallic minerals (except cement)">Manufacture of ceramics, clay products, construction aggregates, asphalt, asbestos, and other non-metallic minerals (except cement)</option>
+              <option value="Manufacture of cement">Manufacture of cement</option>
+              <option value="Manufacture of iron and steel">Manufacture of iron and steel</option>
+              <option value="Manufacture of precious metals">Manufacture of precious metals</option>
+              <option value="Non-ferrous smelting and refining, except precious metals">Non-ferrous smelting and refining, except precious metals</option>
+              <option value="Non-ferrous rolling, drawing and extrusion mills">Non-ferrous rolling, drawing and extrusion mills</option>
+              <option value="Manufacture of pipe fittings of non-ferrous metal">Manufacture of pipe fittings of non-ferrous metal</option>
+              <option value="Manufacture of basic precious and non-ferrous metal, not elsewhere classified">Manufacture of basic precious and non-ferrous metal, not elsewhere classified</option>
+              <option value="Casting/ foundry of iron and steel">Casting/ foundry of iron and steel</option>
+              <option value="Casting of Non-ferrous metal casting such as aluminum, copper and zinc alloys">Casting of Non-ferrous metal casting such as aluminum, copper and zinc alloys</option>
+              <option value="Treatment, coating and machining of metals">Treatment, coating and machining of metals</option>
+              <option value="Manufacture of electronic components">Manufacture of electronic components</option>
+              <option value="Manufacture of batteries and accumulators">Manufacture of batteries and accumulators</option>
+              <option value="Electric power generation (except transmission and distribution): coal, natural">gas; oil (petroleum); geothermal; hydro; biomass;</option>
+              <option value="Manufacture of gas; distribution of gaseous fuels through mains">Manufacture of gas; distribution of gaseous fuels through mains</option>
+              <option value="Air conditioning supply and production of ice (except steam production)">Air conditioning supply and production of ice (except steam production)</option>
+              <option value="Water collection, treatment and supply (except those intended to prevent pollution)">Water collection, treatment and supply (except those intended to prevent pollution)</option>
+              <option value="Sewerage (operation of sewer systems or sewage treatment facilities that collect, treat, and dispose of sewage)">Sewerage (operation of sewer systems or sewage treatment facilities that collect, treat, and dispose of sewage)</option>
+              <option value="Treatment and disposal of non-hazardous waste">Treatment and disposal of non-hazardous waste</option>
+              <option value="Treatment and disposal of hazardous waste">Treatment and disposal of hazardous waste</option>
+              <option value="Remediation activities and other waste management services">Remediation activities and other waste management services</option>
+              <option value="Maintenance and repair of vehicles, their parts and components (excluding vulcanizing/ tire related preparations)">Maintenance and repair of vehicles, their parts and components (excluding vulcanizing/ tire related preparations)</option>
+              <option value="Wholesale and retail sale of automotive fuels">Wholesale and retail sale of automotive fuels</option>
+              <option value="Cold Storage">Cold Storage</option>
+              <option value="Hotels, motels, resorts, dormitories, and other accommodation services">Hotels, motels, resorts, dormitories, and other accommodation services</option>
+              <option value="Restaurants, food chains, bars and other food/ beverage services">Restaurants, food chains, bars and other food/ beverage services</option>
+              <option value="Real Estate activities with own or leased property">Real Estate activities with own or leased property</option>
+              <option value="Technical Testing and analysis">Technical Testing and analysis</option>
+              
+              
+              
+              
+              <option value="Research and experimental development and natural sciences and engineering">Research and experimental development and natural sciences and engineering</option>
+              <option value="Veterinary activities">Veterinary activities</option>
+              <option value="Public and private education (including support activities)">Public and private education (including support activities)</option>
+              <option value="Hospitals, clinics, nursing homes and other human health and residential care activities">Hospitals, clinics, nursing homes and other human health and residential care activities</option>
+              <option value="Other human health activities- medical laboratories inside and outside of medical facilities">Other human health activities- medical laboratories inside and outside of medical facilities</option>
+              <option value="Washing and dry cleaning of textile and fur products">Washing and dry cleaning of textile and fur products</option>
+              <option value="Funeral and related activities">Funeral and related activities</option>
+             
+            </select>
 						</div>
             </div>
 
@@ -1519,7 +2130,9 @@
 							<input type="date" class="form-control"  id="YearEstablished1" name="YearEstablished1" placeholder="Year Established" required>							
 						</div>
             </div>
-            
+ 
+
+
             <div class="row">
               <div class="form-group col-md-4">
                 <label for="operating_day1">Operating Hours/Day </label>
@@ -1536,8 +2149,27 @@
             </div>
 
 
-            <div class="row">
 
+
+                
+            <div class="row">
+                <div class="form-group col-md-4">
+                <label for="Product_Line1">Product Line </label>
+                <input type="text" class="form-control" name="Product_Line1" id="Product_Line1" placeholder="Product_Line">
+                </div>
+                 <div class="form-group col-md-4">
+                <label for="ProdRateECCDeclared1">Production Rate ECC Declared(Unit/Day) </label>
+                <input type="text" class="form-control" name="ProdRateECCDeclared1" id="ProdRateECCDeclared1" placeholder="Production Rate Declared">
+                </div>
+                <div class="form-group col-md-4">
+                <label for="ActualProdRate1">Actual Production Rate</label>
+                <input type="text" class="form-control" name="ActualProdRate1" id="ActualProdRate1" placeholder="Actual Production Rate">
+                </div>
+            </div>
+
+
+
+            <div class="row">
             <div class="form-group col-md-4" >
 							<label for="Mhead1" class="control-label">Managing Head<span style="color:red">*</span></label>							
 							<input type="text" class="form-control"  id="MHead1" name="MHead1" placeholder="Managing Head" >							
@@ -1575,164 +2207,344 @@
             </div>
             </div>
 
-            <div class="">
-              <input type="hidden" value="false" name="VerifyAccuracy1">
-               <input type="checkbox" checked id="verify1" value="true" name="VerifyAccuracy1"/>
-              <label for="verify">Verify accuracy of information submitted by the establishment pertaining to new permit
-                    applications, renewals, or modifications.</label>
-            </div>
-
       
-          <div class="row justify-content-around m-2">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around">
-              <label for="" style="width:20rem">&nbsp; PERMIT</label>
+            <div class="row">
+            <div class="col-xs m-2">
+              <div class="">
+              <input type="hidden" name="VerifyAccuracy1" value="false" checked style="display:none;">
               </div>
-              <div>
-              <label for="">NEW/</label>
-              <label for="">RENEW/</label>
-              <label for="">NOT APPLICABLE</label>
-            </div>
-          </div>
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">PMPIN Hazardous </label>
               </div>
-              <div>
-              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1New" value="NEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1Renew" value="RENEW" class="mr-5">
-              <input type="radio" name="PMPIN_Hazardous1" id="PMPIN_Hazardous1NA" value="NOT APPLICABLE" class="mr-5" checked>
-              </div>
-          </div>
-          
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">Hazardous Waste ID Registration </label>
-              </div>
-              <div>
-              <input type="radio" name="HWIDRegistration1" value="NEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration1" value="RENEW" class="mr-5">
-              <input type="radio" name="HWIDRegistration1" value="NOT APPLICABLE" class="mr-5" checked>
-              </div>
-          </div>
-
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">Hazardous Waste Transporter Registration </label>
-              </div>
-              <div>
-              <input type="radio" name="HWTRegistration1" value="NEW" class="mr-5">
-              <input type="radio" name="HWTRegistration1" value="RENEW" class="mr-5">
-              <input type="radio" name="HWTRegistration1" value="NOT APPLICABLE" class="mr-5" checked>
-              </div>
-          </div>
-   
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem">Hazardous Waste TSD Registration </label>
-              </div>
-              <div>
-              <input type="radio" name="HWTSDRegistration1" value="NEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration1" value="RENEW" class="mr-5">
-              <input type="radio" name="HWTSDRegistration1" value="NOT APPLICABLE" class="mr-5" checked>
-              </div>
-          </div>
-
-
-          <div class="row justify-content-around">
-            <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-             
-              <label for="" style="width:20rem"> Permit to Operate Air Pollution Control Installation </label>
-              </div>
-              <div>
-              <input type="radio" name="PTOAPCI1" id="PTOAPCI1New" value="NEW" class="mr-5">
-              <input type="radio" name="PTOAPCI1" id="PTOAPCI1Renew" value="RENEW" class="mr-5">
-              <input type="radio" name="PTOAPCI1" id="PTOAPCI1NA" value="NOT APPLICABLE" class="mr-5" checked>
-              </div>
-          </div>
-
-
-            <div class="row justify-content-around">
-              <div class="form-group d-flex flex-row bd-highlight justify-content-around mb-3">
-              
-                <label for="" style="width:20rem"> Discharge Permit </label>
-                </div>
-                <div class="">
-                <input type="radio" name="DischargePermit1" id="DischargePermit1New" value="NEW" class="mr-5">
-                <input type="radio" name="DischargePermit1" id="DischargePermit1Renew" value="RENEW" class="mr-5">
-                <input type="radio" name="DischargePermit1" id="DischargePermit1NA" value="NOT APPLICABLE" class="mr-5" checked>
-                </div>
-            </div>
-
-
-          <div class="justify-content-center" style="width: 72%; margin-left: 8.7rem;">
-            <input type="hidden" name="otherspv1" value="false">
-            <input type="checkbox" id="otherspv1" name="otherspv1" onclick="others()" value="true">
-            <label for="">Others: &nbsp;</label><br>
-            <input type="text" class="form-control" style="display:none" id="otherspv1_text" name="otherspv1_text">
-          </div><br>
-
-          <div class="row">
-              <div class="form-group">
-                        <input type="hidden" name = "determinecompliance1" value = "false">
-                        <input type="checkbox" name = "determinecompliance1" value = "true">
-                        <label for="determinecompliance">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>                   
+              <div class="col-xs m-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="VerifyAccuracy1" id="VerifyAccuracy1" value="true">
+              <label for="VerifyAccuracy1">Verify accuracy of information submitted by the establishment pertaining to new permit
+                    applications, renewals, or modifications.</label>
               </div>
             </div>
+            </div>
 
-          <div class="row">
-            <div class="form-group">
-                      <input type="hidden" name = "investigatecomplaints1" value = "false">
-                      <input type="checkbox" name = "investigatecomplaints1" value = "true">
-                      <label for="investigatecomplaints">Investigate community complaints</label>                          
-            </div>
-          </div>
+              <table class="table table-borderless mx-auto" style="width:70%;">
+              <thead>
+                <tr>
+                  <th colspan="3">Permit</th>
+                  <th>NEW</th>
+                  <th>RENEW</th>
+                </tr>
+              </thead>
+              <tbody>
 
-          <div class="row">
-            <div class="form-group">
-                      <input type="hidden" name = "statuscommitments1" value = "false">
-                      <input type="checkbox" name = "statuscommitments1" value = "true">
-                      <label for="statuscommitments">Check status of commitment(s)</label>                           
-            </div>
-          </div>
+                <tr>
+                  <td>PMPIN Hazardous</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PMPIN_Hazardous1" id="PMPIN_HazardousNone1" value="" checked>
+                            <label for="PMPIN_HazardousNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PMPIN_Hazardous1" id="PMPIN_HazardousNew1" value="NEW">
+                            <label for="PMPIN_HazardousNew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PMPIN_Hazardous1" id="PMPIN_HazardousRenew1" value="RENEW">
+                            <label for="PMPIN_HazardousRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
 
-          <div class="row ml-4">
-            <div class="form-group">
-                     <input type="hidden" name = "ewatchprogram1" value = "false">
-                      <input type="checkbox" name = "ewatchprogram1" value = "true">
-                      <label for="ewatchprogram">Industrial EcoWatch Program</label>                            
-            </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                     <input type="hidden" name = "PEPP1" value = "false">
-                      <input type="checkbox" name = "PEPP1" value = "true">
-                      <label for="PEPP">Philippine Environmental Partnership Program (PEPP)</label>                       
-            </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                      <input type="hidden" name = "pab1" value = "false">
-                      <input type="checkbox" name = "pab1" value = "true">
-                      <label for="pab">Pollution Adjudication Board (PAB)</label>                     
+                <tr>
+                  <td>Hazardous Waste ID Registration</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWIDRegistration1" id="HWIDRegistrationNone1" value="" checked>
+                            <label for="HWIDRegistrationNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWIDRegistration1" id="HWIDRegistrationNew1" value="NEW">
+                            <label for="HWIDRegistrationNew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWIDRegistration1" id="HWIDRegistrationRenew1" value="RENEW">
+                            <label for="HWIDRegistrationRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Hazardous Waste Transporter Registration</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTRegistration1" id="HWTRegistrationNone1" value="" checked>
+                            <label for="HWTRegistrationNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTRegistration1" id="HWTRegistrationNew1" value="NEW">
+                            <label for="HWTRegistrationNew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTRegistration1" id="HWTRegistrationRenew1" value="RENEW">
+                            <label for="HWTRegistrationRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>HAZARDOUS WASTE TSD REGISTRATION</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTSDRegistration1" id="HWTSDRegistrationNone1" value="" checked>
+                            <label for="HWTSDRegistrationNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTSDRegistration1" id="HWTSDRegistrationNew1" value="NEW">
+                            <label for="HWTSDRegistrationNew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="HWTSDRegistration1" id="HWTSDRegistrationRenew1" value="RENEW">
+                            <label for="HWTSDRegistrationRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Permit to Operate Air Pollution Control Installation</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PTOAPCI1" id="PTOAPCINewNone1" value="" checked>
+                            <label for="PTOAPCINewNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PTOAPCI1" id="PTOAPCINew1" value="NEW">
+                            <label for="PTOAPCINew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="PTOAPCI1" id="PTOAPCIRenew1" value="RENEW">
+                            <label for="PTOAPCIRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>DischargePermit</td>
+                  <td></td>
+                  <td></td>
+                  <td style="width:15%; display:none;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="DischargePermit1" id="DischargePermitNone1" value="" checked>
+                            <label for="DischargePermitNone1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;"> 
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="DischargePermit1" id="DischargePermitNew1" value="NEW">
+                            <label for="DischargePermitNew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                  <td style="width:15%;">
+                        <div class="col-md-4">
+                          <div class="icheck-primary">
+                            <input type="checkbox" name="DischargePermit1" id="DischargePermitRenew1" value="RENEW">
+                            <label for="DischargePermitRenew1"></label>
+                          </div>
+                        </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <div class="row">
+                      <div class="col-xs">
+                        <div class="">
+                        <input type="hidden" name="otherspv1" value="false" checked style="display:none;">
+                        </div>
+                        </div>
+                        <div class="col-xs">
+                        <div class="icheck-primary">
+                        <input type="checkbox" name="otherspv1" id="otherspv1" onclick="others();" value="true">
+                        <label for="otherspv1">Others</label>
+                        </div>
+                        <div class="col-xs">
+                        <input type="text" class="form-control" style="display:none" id="otherspv1_text" name="otherspv1_text">
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+
+
+
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="determinecompliance1" value="false" checked style="display:none;">
               </div>
-          </div>
-          
-          <div class="row ml-4">
-            <div class="form-group">
-                      <input type="hidden" name="others1" value="false">
-                      <input type="checkbox" name="others1" id="others1" onclick="others()" value = "true">
-                      <label for="others">Others</label>
-                      <input type="text" class="form-control" name="others1_text" style="display:none" id="others1_text">                       
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="determinecompliance1" id="determinecompliance1" value="true" checked>
+              <label for="determinecompliance1">Determine compliance status with environmental regulation, permit conditions, and other requirements</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="investigatecomplaints1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="investigatecomplaints1" id="investigatecomplaints1" value="true">
+              <label for="investigatecomplaints1">Investigate community complaints</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="statuscommitments1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="statuscommitments1" id="statuscommitments1" value="true">
+              <label for="statuscommitments1">Check status of commitment(s)</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="ewatchprogram1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="ewatchprogram1" id="ewatchprogram1" value="true">
+              <label for="ewatchprogram1">Industrial Ecowatch Program</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="PEPP1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="PEPP1" id="PEPP1" value="true">
+              <label for="PEPP1">Philippine Environmental Partnership Program (PEPP)</label>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="pab1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="pab1" id="pab1" value="true">
+              <label for="pab1">Pollution Adjudication Board (PAB)</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="others1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs  ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="others1" id="others1" onclick="others();" value="true">
+              <label for="others1">Others</label>
+              </div>
+              <div class="col-xs">
+              <input type="text" class="form-control" style="display:none" id="others1_text" name="others1_text">
+              </div>
             </div>
           </div>
 
@@ -1827,26 +2639,35 @@
                   </tr>
             </tbody>
         </table>
-          
-
-        <div class="row">
-          <div class="col-md-12">
-            <p class="text-secondary"><em>3.2 Summary of Compliance</em></p>
-            <p>The table below summarizes the compliance of ... </p>
-            
-          </div>
+  
+        <div class="form-group">
+        <button type="button" name="add1" id="add1" class="btn btn-success">Add More Conditions</button><br>
         </div>
-
-
 
         <div class="form-group">
 				<form name="add_name" id="add_name">
 					<div class="table-responsive">
 						<table class="table table-bordered" id="dynamic_field1">
-							<tr>
-								<td><input type="text" name="ECC_Condition1[]" placeholder="ECC Condition" class="form-control name_list" /></td>
-								<td><button type="button" name="add1" id="add1" class="btn btn-success">Add More</button></td>
-							</tr>
+              <thead>
+                <tr>
+                  <th>ECC Condition</th>
+                  <th>Compliance</th>
+                  <th>Remarks</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><textarea name="ECC_Condition1[]" id="ECC_Condition1[]" placeholder="ECC Condition" class="form-control name_list" ></textarea></td>
+                  <td>
+                    <select class="select2" name="ECC_ConditionSelect1[]" id="ECC_ConditionSelect1[]">
+                    <Option values="Yes">Yes</Option>
+                    <Option value="No">No</Option>
+                    <Option value="Partial">Partial</Option></select></td>
+                  <td><textarea class="form-control" name="ECC_ConditionRemarks1[]" id="ECC_ConditionRemarks1[]"></textarea></td>
+                  <td><button type="button" name="remove" id="" class="btn btn-danger btn_remove">X</button></td>
+                </tr>
+              </tbody>
 						</table>
 					</div>
 				</form>
@@ -1860,8 +2681,7 @@
             <th class="col-sm-2">Compliance</th>
             <th class="col-sm-4">Remarks</th>
           </thead>
-        
-        
+                
           <tbody>
             <tr><td colspan="6"><p><em>6969 Toxic Substances and Hazardous and Nuclear Wastes Control Act.</em> </p></td></tr>
             <td rowspan="2" class="font-weight-bold">Priority Chemical List</td>
@@ -1884,7 +2704,6 @@
               <Option value = "No">No</Option>
             </select>
             <td> <textarea class="form-control" rows="3" name="Annual_ReportingText1" id="Annual_ReportingText1"></textarea></td>
-
             <td></td>
             </td>
             </tr>
@@ -2307,7 +3126,6 @@
             </select>
             <td> <textarea class="form-control" rows="3" name="Water_ComplianceEffluentText1" id="Water_ComplianceEffluentText1"></textarea></td>
             </td>
-            
             </tr>
 
 
@@ -2433,19 +3251,816 @@
             <td> <textarea class="form-control" rows="3" name="DAO_SMRSubmissionText1" id="DAO_SMRSubmissionText1"></textarea></td>
             </td>
             </tr>
-           
-            </tbody>
+          </tbody>
         </table>
        </div>
 
- 
+
+          <div class="row">
+                <div class="col-md-12">
+                  <h4 class="text-secondary"><em>3.3 Summary of Findings and Observations</em></h4>
+                  <p class="text-secondary"><em>3.3.1 Environmental Impact System</em></p>
+                </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System1" id="checkboxEIS_SystemA1" value="Compliant">
+                <label for="checkboxEIS_SystemA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System1" id="checkboxEIS_SystemB1" value="Non-Compliant">
+                <label for="checkboxEIS_SystemB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="EIS_System1" id="checkboxEIS_SystemC1" value="Not Applicable" checked>
+                <label for="checkboxEIS_SystemC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+                 
+
+
+                <div class="container mt-3" id="eissData1Container" style="display:none;">
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-success mb-2" id="add_eiss">Add</button>
+                      <table class="table table-bordered" id="table_eiss">
+                        <thead>
+                          <tr>
+                            <th>Recommendations</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr id="row">
+                            <td><input type="text" name="eissData1[]" id="eissData1[]" class="form-control" /></td>
+                            <td><button type="button" name="remove" class="btn btn-danger btn-sm eiss_remove" id="eiss_remove">X</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+    
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.2 Chemical Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management1" id="Chemical_ManagementA1" value="Compliant">
+                <label for="Chemical_ManagementA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management1" id="Chemical_ManagementB1" value="Non-Compliant">
+                <label for="Chemical_ManagementB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Chemical_Management1" id="Chemical_ManagementC1" value="Not Applicable" checked>
+                <label for="Chemical_ManagementC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container mt-3" id="Chemical_Management1Container" style="display:none;">
+                  <div class="row">
+                    <div class="col-12">
+                      <button type="button" class="btn btn-success mb-2" id="add_Chemical_Management1">Add</button>
+                      <table class="table table-bordered" id="table_Chemical_Management1">
+                        <thead>
+                          <tr>
+                            <th>Recommendations</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr id="row">
+                            <td><input type="text" name="Chemical_Management1_Data[]" id="Chemical_Management1_Data[]" class="form-control" /></td>
+                            <td><button type="button" name="remove" class="btn btn-danger btn-sm Chemical_Management1_remove" id="Chemical_Management1_remove">X</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.3 Hazardous Waste Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management1" id="HW_ManagementA1" value="Compliant">
+                <label for="HW_ManagementA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management1" id="HW_ManagementB1" value="Non-Compliant">
+                <label for="HW_ManagementB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="HW_Management1" id="HW_ManagementC1" value="Not Applicable" checked>
+                <label for="HW_ManagementC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          
+          <div class="container mt-3" id="HW_ManagementA1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_HW_Management1">Add</button>
+                <table class="table table-bordered" id="table_HW_Management1">
+                  <thead>
+                    <tr>
+                      <th>Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="HW_Management1_Data[]" id="HW_Management1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm HW_Management1_remove" id="HW_Management1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.4 Air Quality Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management1" id="AQ_ManagementA1" value="Compliant">
+                <label for="AQ_ManagementA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management1" id="AQ_ManagementB1" value="Non-Compliant">
+                <label for="AQ_ManagementB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="AQ_Management1" id="AQ_ManagementC1" value="Not Applicable" checked>
+                <label for="AQ_ManagementC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container mt-3" id="AQ_Management1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_AQ_Management1">Add</button>
+                <table class="table table-bordered" id="table_AQ_Management1">
+                  <thead>
+                    <tr>
+                      <th>Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="AQ_Management1_Data[]" id="AQ_Management1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm AQ_Management1_remove" id="AQ_Management1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.5 Water Quality Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management1" id="WQ_ManagementA1" value="Compliant">
+                <label for="WQ_ManagementA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management1" id="WQ_ManagementB1" value="Non-Compliant">
+                <label for="WQ_ManagementB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="WQ_Management1" id="WQ_ManagementC1" value="Not Applicable" checked>
+                <label for="WQ_ManagementC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container mt-3" id="WQ_Management1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_WQ_Management1">Add</button>
+                <table class="table table-bordered" id="table_WQ_Management1">
+                  <thead>
+                    <tr>
+                      <th>Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="WQ_Management1_Data[]" id="WQ_Management1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm WQ_Management1_remove" id="WQ_Management1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
 
 
 
-              <input type="hidden" name="SectionChief1" value="Engr. CARLOS A. CAYANONG">
-              <input type="hidden" name="DivisionChief1" value="FOR. MANUEL J. SACEDA JR.">
-              <input type="hidden" name="RegionalDirector1" value="MARTIN JOSE V. DESPI">
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.6 Solid Waste Management</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management1" id="SW_ManagementA1" value="Compliant">
+                <label for="SW_ManagementA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management1" id="SW_ManagementB1" value="Non-Compliant">
+                <label for="SW_ManagementB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="SW_Management1" id="SW_ManagementC1" value="Not Applicable" checked>
+                <label for="SW_ManagementC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+          
+
+          
+          <div class="container mt-3" id="SW_Management1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_SW_Management1">Add</button>
+                <table class="table table-bordered" id="table_SW_Management1">
+                  <thead>
+                    <tr>
+                      <th>Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="SW_Management1_Data[]" id="SW_Management1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm SW_Management1_remove" id="SW_Management1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+                <div class="col-md-12">
+                  <p class="text-secondary"><em>3.3.7 Commitment/s from the previous Technical Conference</em></p>
+                </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon1" id="Commitment_TechConA1" value="Compliant">
+                <label for="Commitment_TechConA1">Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon1" id="Commitment_TechConB1" value="Non-Compliant">
+                <label for="Commitment_TechConB1">Non-Compliant</label>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icheck-success">
+                <input type="radio" name="Commitment_TechCon1" id="Commitment_TechConC1" value="Not Applicable" checked>
+                <label for="Commitment_TechConC1">Not Applicable</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="container mt-3" id="Commitment_TechConA1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Commitment_TechConA1">Add</button>
+                <table class="table table-bordered" id="table_Chemical_Management1">
+                  <thead>
+                    <tr>
+                      <th>Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Commitment_TechCon1_Data[]" id="Commitment_TechCon1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Commitment_TechCon1_remove" id="Commitment_TechCon1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+
+          
+
+<!-- --------------------------------------------------REMARKS START---------------------------------------------- -->
+            <div class="row mt-4 ml-2"><h4>Recommendations</h4></div>
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_confirmatorysampling1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_confirmatorysampling1" id="Rec_confirmatorysampling1" value="true">
+              <label for="Rec_confirmatorysampling1">For confirmatory sampling/ further monitoring</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="container mt-3" id="Rec_confirmatorysampling1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_confirmatorysampling1">Add</button>
+                <table class="table table-bordered" id="table_Rec_confirmatorysampling1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_confirmatorysampling1_Data[]" id="Rec_confirmatorysampling1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_confirmatorysampling1_remove" id="Rec_confirmatorysampling1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_tempPtoDp1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_tempPtoDp1" id="Rec_tempPtoDp1" value="true">
+              <label for="Rec_tempPtoDp1">For issuance of Temporary/Renewal of Permit to Operate (POA) and/or Renewal of Discharge Permit(DP)</label>
+              </div>
+            </div>
+            </div>
+
+
+
+            <div class="container mt-3" id="Rec_tempPtoDp1Container" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_tempPtoDp1">Add</button>
+                <table class="table table-bordered" id="table_Rec_tempPtoDp1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_tempPtoDp1_Data[]" id="Rec_tempPtoDp1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_tempPtoDp1_remove" id="Rec_tempPtoDp1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_PCOSem1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_PCOSem1" id="Rec_PCOSem1" value="true">
+              <label for="Rec_PCOSem1">For accreditation of Pollution Control Officer (PCO)/Seminar requirement of Managing Head</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="container mt-3" id="Rec_PCOSemContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_PCOSem">Add</button>
+                <table class="table table-bordered" id="table_Rec_PCOSem1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_PCOSem1_Data[]" id="Rec_PCOSem1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_PCOSem_remove" id="Rec_PCOSem_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_SMRCMR_Submission1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_SMRCMR_Submission1" id="Rec_SMRCMR_Submission1" value="true">
+              <label for="Rec_SMRCMR_Submission1">For submission of Self Monitoring Report (SMR)/Compliance Monitoring Report (CMR) online</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="container mt-3" id="Rec_SMRCMR_SubmissionContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_SMRCMR_Submission1">Add</button>
+                <table class="table table-bordered" id="table_Rec_SMRCMR_Submission1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_SMRCMR_Submission1_Data[]" id="Rec_SMRCMR_Submission1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_SMRCMR_Submission1_remove" id="Rec_SMRCMR_Submission1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_NOMTC1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_NOMTC1" id="Rec_NOMTC1" value="true">
+              <label for="Rec_NOMTC1">For issuance of Notice of Meeting (NOM)/Technical Conference (TC)</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="container mt-3" id="Rec_NOMTCContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_NOMTC1">Add</button>
+                <table class="table table-bordered" id="table_Rec_NOMTC1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_NOMTC1_Data[]" id="Rec_NOMTC_Data1[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_NOMTC1_remove" id="Rec_NOMTC1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_NOVIssuance1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_NOVIssuance1" id="Rec_NOVIssuance1" value="true">
+              <label for="Rec_NOVIssuance1">For issuance of Notice of Violation (NOV)</label>
+              </div>
+            </div>
+            </div>
+
+
+            
+            <div class="container mt-3" id="Rec_NOVIssuanceContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_NOVIssuance1">Add</button>
+                <table class="table table-bordered" id="table_Rec_NOVIssuance1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_NOVIssuance1_Data[]" id="Rec_NOVIssuance1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_NOVIssuance1_remove" id="Rec_NOVIssuance1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_Issuance5DayCDO1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_Issuance5DayCDO1" id="Rec_Issuance5DayCDO1" value="true">
+              <label for="Rec_Issuance5DayCDO1">For issuance of suspension of ECC/5-day CDO </label>
+              </div>
+            </div>
+            </div>
+
+
+
+            <div class="container mt-3" id="Rec_Issuance5DayCDOContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_Issuance5DayCDO1">Add</button>
+                <table class="table table-bordered" id="table_Rec_Issuance5DayCDO1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_Issuance5DayCDO1_Data[]" id="Rec_Issuance5DayCDO1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_Issuance5DayCDO1_remove" id="Rec_Issuance5DayCDO1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="Rec_EndorsementPAB1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="Rec_EndorsementPAB1" id="Rec_EndorsementPAB1" value="true">
+              <label for="Rec_EndorsementPAB1">For endorsement to Pollution Adjudication Board (PAB)</label>
+              </div>
+            </div>
+            </div>
+
+            
+
+            <div class="container mt-3" id="Rec_EndorsementPABContainer1" style="display:none;">
+            <div class="row">
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_Rec_EndorsementPAB1">Add</button>
+                <table class="table table-bordered" id="table_Rec_EndorsementPAB1">
+                  <thead>
+                    <tr>
+                      <th>Others</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="Rec_EndorsementPAB1_Data[]" id="Rec_EndorsementPAB1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm Rec_EndorsementPAB1_remove" id="Rec_EndorsementPAB1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+            <div class="row">
+            <div class="col-xs ml-2">
+              <div class="">
+              <input type="hidden" name="OtherRecommendations1" value="false" checked style="display:none;">
+              </div>
+              </div>
+              <div class="col-xs ml-2">
+              <div class="icheck-primary">
+              <input type="checkbox" name="OtherRecommendations1" id="OtherRecommendations1" value="true">
+              <label for="OtherRecommendations1">Other Recommendations</label>
+              </div>
+            </div>
+            </div>
+
+
+            <div class="container mt-3" id="OtherRecommendations1Container" style="display:none;">
+            <div class="row" >
+              <div class="col-12">
+                <button type="button" class="btn btn-success mb-2" id="add_recommendation">Add</button>
+                <table class="table table-bordered" id="table_OtherRecommendations1">
+                  <thead>
+                    <tr>
+                      <th>Others Recommendations</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="row1">
+                      <td><input type="text" name="OtherRecommendations1_Data[]" id="OtherRecommendations1_Data[]" class="form-control" /></td>
+                      <td><button type="button" name="remove" class="btn btn-danger btn-sm OtherRecommendations1_remove" id="OtherRecommendations1_remove">X</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+ <!-- --------------------------------------------------REMARKS END---------------------------------------------- -->
+
+
+
+
+<!-- ------------------------------------------------------------------------------- -->
+            <div class="Inspector1">
+            <label for="submitted">Submitted by: </label>
+            <select id="Inspector1" class="select2 multiple Inspector1" name="Inspector1" required>
+              <option value="">Select an option</option>
+              <option value="ALMIRA O. RIPALDA">Almira O. Ripalda</option>
+              <option value="ALEJANDROQUE G. MACATIGUE">Alejandroque G. Macatigue</option>
+              <option value="ANAMERIE D. CAVAÑERO">Anamarie D. Cavañero</option>
+              <option value="ARNEL L. IFE">Arnel L. Ife</option>
+              <option value="CYRIL ANN B. BADEO">Cyril Ann B. Badeo</option>
+              <option value="CARLOS A. CAYANONG">Carlos A. Cayanong</option>
+              <option value="GINNALYN A. ESPOSA">Ginnalyn A. Esposa</option>
+              <option value="JEROME C. SALVADOR">Jerome C. Salvador</option>
+              <option value="JO ANNE JOY M. DAÑAL-VILLERO">Jo Anne Joy, M. Dañal-Villero</option>
+              <option value="JOSEPH R. AURE">Joseph R. Aure</option>
+              <option value="JOSEPHINE L. FUENTES">Josephine L. Fuentes</option>
+              <option value="LEDANE JOY Y. LAURENTE">Ledane Joy Y. Laurente</option>
+              <option value="LIZA A. TAN">Liza A. Tan</option>
+              <option value="ROWENA B. PABIA">Rowena B. Pabia</option>
+              <option value="ROY ALEXANDER H. TABOADA">Roy Alexander H. Taboada</option>
+              <option value="SHARMAINE I. SILLEZA">Sharmaine I. Silleza</option>
+              <option value="SHARMAINE RUTH A. LAUZON">Sharmaine Ruth A. Lauzon</option>
+              <option value="SWEET ADEL PRIMA">Sweet Adel Prima</option>
+              <option value="XAVIER R. LUBIANO">Xavier R. Lubiano</option>
+              <option value="ZEUS BRYAN B. LORETO">Zeus Bryan B. Loreto</option>
+            </select>
+            <br>
+            </div>
+
+            <div id="DivSignatories1">
+              <div id="DivCheckedby1" style="display:none;">
+              <label for="checkedby">Checked by: <span style="color:red">*</span></label>
+              <select class="select2" id="SelectCheckedby1" name="SelectCheckedby1">
+              <option value="">Please Select: </option>
+              <option value="JOSEPHINE L. FUENTES">Josephine L. Fuentes</option>
+              <option value="ARNEL L. IFE">Arnel L. Ife</option>
+              <option value="ROWENA B. PABIA">Rowena B. Pabia</option>
+              <option value="ALEJANDROQUE G. MACATIGUE">Alejandroque G. Macatigue</option>
+              <option value="ANAMERIE D. CAVAÑERO">Anamarie D. Cavañero</option>
+            </select>
+              </div>
+              <div id="DivSectionChief1" style="display:none;">
+              <label for="sectionchief">Recommending Approval: <span style="color:red">*</span></label>
+              <select class="select2" name="SectionChief1" id="SelectSectionChief1">
+              <option value="">Please Select</option>
+              <option value="CARLOS A. CAYANONG">Carlos A. Cayanong</option>
+              <option value="LIZA A. TAN">Liza A. Tan</option>
+              <option value="REGGIE R. URMENETA">Reggie R. Urmeneta</option>
+            </select>
+              </div>
+              <div id="DivDivisionChief1" style="display:none;">
+              <label for="divisionchief">Approval: </label>
+              <select class="select2" name="DivisionChief1" id="SelectDivisionChief1">
+              <option value="MANUEL J. SACEDA JR.">Manuel J. Saceda Jr.</option>
+              </select>
+              </div>
+              <div id="DivRD1" style="display:none;">
+              <label for="RD">Noted: </label>
+              <select class="select2" name="RegionalDirector1" id="DivRD1">
+              <option value="MARTIN JOSE V. DESPI">Martin Jose V. Despi</option>
+              </select>
+              </div>
+            </div>
+      
+
+<!-- ------------------------------------------------------------------------------- -->
+
+          <!-- <input type="hidden" name="SectionChief1" value="Engr. CARLOS A. CAYANONG">
+          <input type="hidden" name="DivisionChief1" value="FOR. MANUEL J. SACEDA JR.">
+          <input type="hidden" name="RegionalDirector1" value="MARTIN JOSE V. DESPI"> -->
       
           <div class="form-group">						
             <input type="hidden" class="form-control" id="userid" name="userid" placeholder="Age">							
@@ -2459,6 +4074,7 @@
           </div>
 
     		</form>
+    	</div>
     	</div>
 
     <!------------------------------------------------->
@@ -2519,14 +4135,12 @@
 </html>
 <script src="../../build/js/ajax.js"></script>
 <script src="../../build/js/validation.js"></script>
-<script
+<script src="../../build/js/recommendations.js"></script>
+<!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
       integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    ></script>
+    ></script> -->
 	 <!-- CSS -->
-	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
-
-   
+	 <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"> -->
