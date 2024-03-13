@@ -24,12 +24,14 @@
                                 </div>
                                     <div class="card-body" style="display: block;">
                                         <form id="eia-form">
+
                                             <div class="row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="monitored-date-eia">Date Monitored</label>
-                                                    <input type="date" id="monitored-date-eia" class="form-control" required>
+                                                    <label for="monitored_date_eia">Date Monitored</label>
+                                                    <input type="date" id="monitored_date_eia" class="form-control" required>
                                                 </div>
                                             </div>
+                                            
                                             <div class="row">
                                                 <div class="form-group col-md-12">
                                                     <label for="eia-file">Monitoring Report</label>

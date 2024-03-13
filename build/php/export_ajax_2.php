@@ -56,9 +56,9 @@
     $resultCount = 0;
 
     // HIDE CMR COLUMNS
-    $fsem = array('BX', 'BZ', 'CB', 'CD', 'CF');
-    $ssem = array('BY', 'CA', 'CC', 'CE', 'CG');
-    $year_arr = array(2018, 2019, 2020, 2021, 2022);
+    $fsem = array('BX', 'BZ', 'CB', 'CD', 'CF', 'CH');
+    $ssem = array('BY', 'CA', 'CC', 'CE', 'CG' ,'CI');
+    $year_arr = array(2018, 2019, 2020, 2021, 2022, 2023);
     for($i=0;$i<count($year_arr);$i++) {
         $sheet->getColumnDimension($fsem[$i])->setVisible(false);
         $sheet->getColumnDimension($ssem[$i])->setVisible(false);

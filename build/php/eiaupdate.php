@@ -2,7 +2,7 @@
 
     include_once 'dbcon.php';
 
-    $dateMonitored = $_POST['datemonitored'];
+    $dateMonitored = $_POST['date_monitored'];
     $id = $_POST['id'];
 
     if (isset($_FILES['eiafile']['size']) == 0 && isset($_FILES['eiafile']['error']) == 0){

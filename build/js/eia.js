@@ -1,10 +1,15 @@
 var eiastate = "add";
 
-var datemonitored = document.getElementById("monitored-date-eia");
+// var datemonitored = document.getElementById("monitored-date-eia");
+var date_monitored = document.getElementById("monitored_date_eia");
 var eia_file = document.getElementById("eia-file");
 var span_filename = document.getElementById("attachment-name-eia");
 var span_filesize = document.getElementById("attachment-size-eia");
 var reset_button_eia = document.getElementById("button-reset-eia");
+
+date_monitored.addEventListener("change", function () {
+  console.log(date_monitored.value);
+});
 
 load_eia();
 
@@ -51,7 +56,10 @@ eia_form.addEventListener("submit", function (event) {
   if (eiastate == "add") {
     var data = new FormData();
     data.append("projectid", projectid);
-    data.append("datemonitored", datemonitored.value);
+    // data.append("datemonitored", datemonitored.value);
+    data.append("date_monitored", date_monitored.value);
+
+    console.log(date_monitored.value);
     data.append("eiafile", eia_file.files[0]);
     var request = new XMLHttpRequest();
     request.open("POST", "../../build/php/eia_add.php");
@@ -77,7 +85,9 @@ eia_form.addEventListener("submit", function (event) {
   } else if (eiastate == "update") {
     var formdata = new FormData();
     formdata.append("id", eiaupdateid);
-    formdata.append("datemonitored", datemonitored.value);
+    // formdata.append("datemonitored", datemonitored.value);
+    formdata.append("date_monitored", date_monitored.value);
+
     formdata.append("eiafile", eia_file.files[0]);
     var request = new XMLHttpRequest();
     request.open("POST", "../../build/php/eiaupdate.php");
@@ -149,7 +159,9 @@ function updateEIA(event) {
     var response = JSON.parse(request.responseText);
     console.log(response);
     if (response.message == "success") {
-      datemonitored.value = response.datemonitored;
+      // datemonitored.value = response.datemonitored;
+      date_monitored.value = response.date_monitored;
+
       Toast.fire({
         icon: "warning",
         title: " Edit Mode",
