@@ -55,7 +55,7 @@ bower_components/
 !/plugins/**/license
 !/plugins/**/COPYING
 
-
+/build/php/uploads/
 # Docs
 /docs/_site/
 /docs/vendor/
